@@ -1,0 +1,30 @@
+# dependências
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ambiente
+.env
+.env.*
+
+# sistema
+.DS_Store
+Thumbs.db
+
+# build
+dist/
+build/
+
+# docker (opcional)
+docker-compose.override.yml
+
+# IDE
+.vscode/
+.idea/
+
+# arquivos temporários
+*.tmp
+*.log

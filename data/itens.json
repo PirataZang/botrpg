@@ -1,0 +1,242 @@
+[
+  {
+    "nome": "Moeda Antiga",
+    "descricao": "Uma moeda desgastada de origem desconhecida."
+  },
+  {
+    "nome": "Adaga Enferrujada",
+    "descricao": "Ainda corta... mais ou menos."
+  },
+  {
+    "nome": "Pedaço de Mapa Rasgado",
+    "descricao": "Mostra apenas parte de uma região desconhecida."
+  },
+  {
+    "nome": "Poção Turva",
+    "descricao": "Cheiro estranho. Pode curar... ou não."
+  },
+  {
+    "nome": "Colar Quebrado",
+    "descricao": "Faltam algumas pedras preciosas."
+  },
+  {
+    "nome": "Livro Velho",
+    "descricao": "Escrito em uma língua difícil de entender."
+  },
+  {
+    "nome": "Chave Misteriosa",
+    "descricao": "Não se sabe qual porta ela abre."
+  },
+  {
+    "nome": "Corda Gasta",
+    "descricao": "Pode arrebentar a qualquer momento."
+  },
+  {
+    "nome": "Anel Simples",
+    "descricao": "Sem valor aparente."
+  },
+  {
+    "nome": "Frasco Vazio",
+    "descricao": "Já conteve algo importante."
+  },
+  {
+    "nome": "Pena Dourada",
+    "descricao": "Brilha levemente à luz."
+  },
+  {
+    "nome": "Bolsa de Couro",
+    "descricao": "Contém 3 moedas de cobre."
+  },
+  {
+    "nome": "Flecha Quebrada",
+    "descricao": "Inútil para combate."
+  },
+  {
+    "nome": "Máscara Rachada",
+    "descricao": "Usada em rituais antigos."
+  },
+  {
+    "nome": "Pedra Lisa",
+    "descricao": "Perfeitamente polida pela natureza."
+  },
+  {
+    "nome": "Amuleto Estranho",
+    "descricao": "Emite uma leve vibração."
+  },
+  {
+    "nome": "Luva Solitária",
+    "descricao": "Cadê a outra?"
+  },
+  {
+    "nome": "Pergaminho Vazio",
+    "descricao": "Esperando para ser escrito."
+  },
+  {
+    "nome": "Dente de Criatura",
+    "descricao": "Provavelmente de um monstro pequeno."
+  },
+  {
+    "nome": "Relógio Parado",
+    "descricao": "Quebrou há muito tempo."
+  },
+  {
+    "nome": "Pedra Brilhante",
+    "descricao": "Reflete luz de forma incomum."
+  },
+  {
+    "nome": "Cantil Vazio",
+    "descricao": "Precisa ser reabastecido."
+  },
+  {
+    "nome": "Capuz Rasgado",
+    "descricao": "Ainda pode ser usado."
+  },
+  {
+    "nome": "Fragmento de Espelho",
+    "descricao": "Reflexo distorcido."
+  },
+  {
+    "nome": "Osso Pequeno",
+    "descricao": "Talvez de um animal."
+  },
+  {
+    "nome": "Pingente de Madeira",
+    "descricao": "Entalhado à mão."
+  },
+  {
+    "nome": "Garrafa com Areia",
+    "descricao": "Areia fina e dourada."
+  },
+  {
+    "nome": "Moeda Estrangeira",
+    "descricao": "Não é usada nesta região."
+  },
+  {
+    "nome": "Fita Vermelha",
+    "descricao": "Cheira a perfume antigo."
+  },
+  {
+    "nome": "Mini Estatueta",
+    "descricao": "Representa um deus desconhecido."
+  },
+  {
+    "nome": "Caderno Velho",
+    "descricao": "Contém anotações ilegíveis."
+  },
+  {
+    "nome": "Chapéu Amassado",
+    "descricao": "Já foi elegante."
+  },
+  {
+    "nome": "Botão de Ouro",
+    "descricao": "Provavelmente de uma roupa nobre."
+  },
+  {
+    "nome": "Cadeado Sem Chave",
+    "descricao": "Bem resistente."
+  },
+  {
+    "nome": "Pequena Caixa",
+    "descricao": "Vazia, mas bonita."
+  },
+  {
+    "nome": "Lente Quebrada",
+    "descricao": "Parte de um óculos antigo."
+  },
+  {
+    "nome": "Tinta Seca",
+    "descricao": "Não serve mais."
+  },
+  {
+    "nome": "Colher de Prata",
+    "descricao": "Levemente manchada."
+  },
+  {
+    "nome": "Flauta Simples",
+    "descricao": "Ainda toca."
+  },
+  {
+    "nome": "Cordão Desgastado",
+    "descricao": "Quase arrebentando."
+  },
+  {
+    "nome": "Pedra Negra",
+    "descricao": "Absorve a luz ao redor."
+  },
+  {
+    "nome": "Anel com Runa",
+    "descricao": "Possui símbolos estranhos."
+  },
+  {
+    "nome": "Pedaço de Armadura",
+    "descricao": "Marcado por batalha."
+  },
+  {
+    "nome": "Faca Cega",
+    "descricao": "Precisa ser afiada."
+  },
+  {
+    "nome": "Bolsa com Poeira",
+    "descricao": "Não parece útil."
+  },
+  {
+    "nome": "Garrafa com Líquido Azul",
+    "descricao": "Levemente luminosa."
+  },
+  {
+    "nome": "Coroa de Flores Secas",
+    "descricao": "Muito frágil."
+  },
+  {
+    "nome": "Cinto de Couro",
+    "descricao": "Resistente."
+  },
+  {
+    "nome": "Pulseira Simples",
+    "descricao": "Sem valor mágico."
+  },
+  {
+    "nome": "Fragmento de Cristal",
+    "descricao": "Brilha sob luz."
+  },
+  {
+    "nome": "Chave Dourada",
+    "descricao": "Parece importante."
+  },
+  {
+    "nome": "Pequeno Sino",
+    "descricao": "Faz pouco barulho."
+  },
+  {
+    "nome": "Corda Nova",
+    "descricao": "Forte e confiável."
+  },
+  {
+    "nome": "Livro de Magias Incompleto",
+    "descricao": "Faltam páginas."
+  },
+  {
+    "nome": "Frasco com Fumaça",
+    "descricao": "Algo se move dentro."
+  },
+  {
+    "nome": "Pedaço de Pano",
+    "descricao": "Talvez parte de uma bandeira."
+  },
+  {
+    "nome": "Moeda de Prata",
+    "descricao": "Relativamente valiosa."
+  },
+  {
+    "nome": "Anel Quebrado",
+    "descricao": "Pode ser consertado."
+  },
+  {
+    "nome": "Cálice Pequeno",
+    "descricao": "Decorado."
+  },
+  {
+    "nome": "Pedra com Símbolo",
+    "descricao": "Talhado à mão."
+  }
+]
