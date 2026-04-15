@@ -49,12 +49,12 @@ function generateNPC() {
 🧙 Classe: ${random(classes)}
 
 📊 *Atributos*
-FOR: ${str = rollStat()} (${getModifier(str)})
-DES: ${dex = rollStat()} (${getModifier(dex)})
-CON: ${con = rollStat()} (${getModifier(con)})
-INT: ${int = rollStat()} (${getModifier(int)})
-SAB: ${sab = rollStat()} (${getModifier(sab)})
-CAR: ${car = rollStat()} (${getModifier(car)})
+FOR: ${str = rollStat()} ( ${getModifier(str)} )
+DES: ${dex = rollStat()} ( ${getModifier(dex)} )
+CON: ${con = rollStat()} ( ${getModifier(con)} )
+INT: ${int = rollStat()} ( ${getModifier(int)} )
+SAB: ${sab = rollStat()} ( ${getModifier(sab)} )
+CAR: ${car = rollStat()} ( ${getModifier(car)} )
     `;
 }
 
