@@ -6,6 +6,8 @@ const itens = require('./itens');
 const monsters = require('./monsters');
 const beasts = require('./beast');
 const npc = require('./npc');
+const weather = require('./weather');
+const loot = require('./loot');
 
 // DICA: Mantenha o TOKEN no .env por segurança, mas para teste deixamos aqui
 const TOKEN = "8689733515:AAG5REtRFUxysZHLcrCKntIxdslIZ9f7HQM";
@@ -69,10 +71,25 @@ bot.onText(/\/npc/, (msg) => {
     bot.sendMessage(chatId, npc.generateNPC(), { parse_mode: 'Markdown' });
 });
 
+// ☁️ CLIMA
+bot.onText(/\/clima/, (msg) => {
+    const chatId = msg.chat.id;
+    const clima = weather.getRandomWeather();
+    bot.sendMessage(chatId, `☁️ *Clima Sorteado:*\n\n*${clima.nome}*\n${clima.descricao}`, { parse_mode: 'Markdown' });
+});
+
+// 👑 LOOT DO MESTRE
+bot.onText(/\/loot/, (msg) => {
+    const chatId = msg.chat.id;
+    bot.sendMessage(chatId, loot.generateLoot(), { parse_mode: 'Markdown' });
+});
+
 // 📚 HELP
 bot.onText(/\/help/, (msg) => {
-    const chatId = msg.chat.id;
-    const helpText = `
+    sendMenu(msg.chat.id);
+});
+
+const helpText = `
 ✨ *GUIA DE COMANDOS - BOT RPG* ✨
 ━━━━━━━━━━━━━━━━━━━━
 
@@ -90,11 +107,30 @@ bot.onText(/\/help/, (msg) => {
 🎒 *UTILITÁRIOS*
 • \`/item\` - Item aleatório.
 • \`/npc\` - Gera um NPC completo.
+• \`/clima\` - Gera um clima aleatório.
+• \`/loot\` - Gera opções de loot para o mestre.
 
 ━━━━━━━━━━━━━━━━━━━━
 _Dica: Comandos sem nome abrem filtros!_`;
 
-    bot.sendMessage(chatId, helpText, { parse_mode: 'Markdown' });
+const menuMarkup = {
+    inline_keyboard: [
+        [{ text: "🎲 Rolar Dado", callback_data: "cmd_roll" }, { text: "🎒 Item Aleatório", callback_data: "cmd_item" }],
+        [{ text: "👹 Monstros", callback_data: "cmd_monster" }, { text: "🐾 Feras", callback_data: "cmd_beast" }],
+        [{ text: "🎭 Gerar NPC", callback_data: "cmd_npc" }, { text: "☁️ Clima", callback_data: "cmd_weather" }],
+        [{ text: "👑 Loot do Mestre", callback_data: "cmd_loot" }]
+    ]
+};
+
+function sendMenu(chatId) {
+    bot.sendMessage(chatId, helpText, { parse_mode: 'Markdown', reply_markup: menuMarkup });
+}
+
+// Captura qualquer mensagem que não seja comando
+bot.on('message', (msg) => {
+    if (msg.text && !msg.text.startsWith('/')) {
+        sendMenu(msg.chat.id);
+    }
 });
 
 // 🔘 CALLBACK QUERY (Tratamento de botões)
@@ -106,9 +142,37 @@ bot.on('callback_query', (query) => {
     let text = "Escolha uma opção:";
     let markup = {};
 
+    // --- Lógica do Menu Principal ---
+    if (data === "cmd_menu") {
+        text = helpText;
+        markup = menuMarkup;
+    } else if (data === "cmd_roll") {
+        text = "🎲 *Como rolar dados:*\n\nDigite `/roll` seguido da quantidade e tipo de dado.\nExemplo: `/roll 1d20` ou `/roll 2d6`";
+        markup = { inline_keyboard: [[{ text: "⬅️ Voltar ao Menu", callback_data: "cmd_menu" }]] };
+    } else if (data === "cmd_item") {
+        const item = itens.getRandomItem();
+        text = `🎒 Item encontrado:\n\n*${item.nome}*\n${item.descricao}`;
+        markup = { inline_keyboard: [[{ text: "⬅️ Voltar ao Menu", callback_data: "cmd_menu" }]] };
+    } else if (data === "cmd_npc") {
+        text = npc.generateNPC();
+        markup = { inline_keyboard: [[{ text: "⬅️ Voltar ao Menu", callback_data: "cmd_menu" }]] };
+    } else if (data === "cmd_weather") {
+        const clima = weather.getRandomWeather();
+        text = `☁️ *Clima Sorteado:*\n\n*${clima.nome}*\n${clima.descricao}`;
+        markup = { inline_keyboard: [[{ text: "⬅️ Voltar ao Menu", callback_data: "cmd_menu" }]] };
+    } else if (data === "cmd_loot") {
+        text = loot.generateLoot();
+        markup = { inline_keyboard: [[{ text: "⬅️ Voltar ao Menu", callback_data: "cmd_menu" }]] };
+    } else if (data === "cmd_monster") {
+        text = "👹 *Bestiário de Monstros*: Escolha um filtro ou digite o nome.";
+        markup = { inline_keyboard: [...monsters.getFilterButtons().inline_keyboard, [{ text: "🏠 Menu Principal", callback_data: "cmd_menu" }]] };
+    } else if (data === "cmd_beast") {
+        text = "📖 *Bestiário de Feras*: Escolha um filtro ou digite o nome.";
+        markup = { inline_keyboard: [...beasts.getFilterButtons().inline_keyboard, [{ text: "🏠 Menu Principal", callback_data: "cmd_menu" }]] };
+    }
     // --- Lógica de Monstros (Prefix m_) ---
-    if (data === "m_filter_main") {
-        markup = monsters.getFilterButtons();
+    else if (data === "m_filter_main") {
+        markup = { inline_keyboard: [...monsters.getFilterButtons().inline_keyboard, [{ text: "🏠 Menu Principal", callback_data: "cmd_menu" }]] };
     } else if (data === "m_filter_cr_menu") {
         text = "Selecione o ND (Challenge Rating):";
         markup = monsters.getCRMenu();
@@ -123,7 +187,7 @@ bot.on('callback_query', (query) => {
 
     // --- Lógica de Feras (Beasts) ---
     else if (data === "filter_main") {
-        markup = beasts.getFilterButtons();
+        markup = { inline_keyboard: [...beasts.getFilterButtons().inline_keyboard, [{ text: "🏠 Menu Principal", callback_data: "cmd_menu" }]] };
     } else if (data === "filter_nd_menu") {
         text = "Selecione o Nível de Desafio (ND):";
         markup = beasts.getNDMenu();
