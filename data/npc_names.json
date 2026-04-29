@@ -1,0 +1,26 @@
+{
+  "nomes": [
+    "Aelar", "Barendd", "Theren", "Olorin", "Fëanor", "Kaelen", "Lyra", "Sylas", "Elara", "Finnian",
+    "Gideon", "Kael", "Rowan", "Thalia", "Varis", "Zephyr", "Alaric", "Brom", "Corin", "Draven",
+    "Eamon", "Fenris", "Galen", "Haldor", "Ikaris", "Jorah", "Kaelar", "Lorian", "Mael", "Nyle",
+    "Orion", "Phaedor", "Quinlan", "Rael", "Soren", "Talon", "Urien", "Valerius", "Kaelthas", "Xander",
+    "Yael", "Zarek", "Aerin", "Blythe", "Caelia", "Dara", "Elenor", "Fiora", "Gwyneira", "Hestia",
+    "Ianthe", "Juno", "Kaelia", "Lirael", "Maeva", "Nyx", "Odelia", "Pyra", "Qira", "Rhaenys",
+    "Seraphina", "Tamsin", "Una", "Vespera", "Wynter", "Xylia", "Yara", "Zariel", "Throm", "Bruenor",
+    "Durnan", "Gimli", "Thorin", "Balin", "Dwalin", "Oin", "Gloin", "Fili", "Kili", "Dori",
+    "Nori", "Ori", "Bifur", "Bofur", "Bombur", "Moradin", "Tordek", "Eberk", "Taklinn", "Kildrak",
+    "Baern", "Vondal", "Rurik", "Adrik", "Brottor", "Darrak", "Traubon", "Ulfgar", "Kargath", "Grom"
+  ],
+  "sobrenomes": [
+    "Starweaver", "Ironfoot", "Swiftbrook", "Shadowwalker", "Fireforge", "Stormrider", "Oakenheart", "Silverleaf", "Nightbreeze", "Moonwhisper",
+    "Frostbeard", "Dawnstrider", "Thunderstone", "Ashenbane", "Bloodseeker", "Crowmantle", "Darkwater", "Emberfall", "Flintshaper", "Grimward",
+    "Hollowgrove", "Icebane", "Jadewing", "Kingsbane", "Lightbringer", "Mournwood", "Netherbane", "Oakenshield", "Proudmoore", "Quicksilver",
+    "Ravenhair", "Stoutmantle", "Truebow", "Umberhollow", "Voidwhisper", "Wildblood", "Winterbreeze", "Yawningportal", "Zephyrstrike", "Amakiir",
+    "Galanodel", "Holimion", "Ilphelkiir", "Liadon", "Meliamne", "Naïlo", "Siannodel", "Xiloscient", "Balderk", "Battlehammer",
+    "Brawnanvil", "Dankil", "Flamebeard", "Stonejaw", "Gorunn", "Holderhek", "Ironfist", "Loderr", "Lutgehr", "Rumnaheim",
+    "Strakeln", "Torunn", "Ungart", "Brightwood", "Coldwater", "Deepdelver", "Elfstone", "Fairbairn", "Goldfinder", "Hardheart",
+    "Irontoe", "Proudfoot", "Silversmith", "Strongbow", "Underhill", "Whitestar", "Blackwood", "Copperbeard", "Darkstone", "Evenwood",
+    "Fleetfoot", "Goodbarrel", "Highhill", "Keeneye", "Longstrider", "Merryweather", "Nighthawk", "Oldfur", "Swiftwater", "Tealeaf",
+    "Thorngage", "Trueblood", "Wiseacre", "Youngblood", "Arroway", "Braeburn", "Clearwater", "Dumbledon", "Greenbottle", "Hornblower"
+  ]
+}

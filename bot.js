@@ -8,6 +8,7 @@ const beasts = require('./beast');
 const npc = require('./npc');
 const weather = require('./weather');
 const loot = require('./loot');
+const races = require('./races');
 
 // DICA: Mantenha o TOKEN no .env por segurança, mas para teste deixamos aqui
 const TOKEN = "8689733515:AAG5REtRFUxysZHLcrCKntIxdslIZ9f7HQM";
@@ -84,6 +85,15 @@ bot.onText(/\/loot/, (msg) => {
     bot.sendMessage(chatId, loot.generateLoot(), { parse_mode: 'Markdown' });
 });
 
+// 🧬 RAÇAS
+bot.onText(/\/racas/, (msg) => {
+    const chatId = msg.chat.id;
+    bot.sendMessage(chatId, "🧬 *Guia de Raças:* Escolha uma raça para ver seus detalhes.", {
+        parse_mode: 'Markdown',
+        reply_markup: races.getRacesMenu()
+    });
+});
+
 // 📚 HELP
 bot.onText(/\/help/, (msg) => {
     sendMenu(msg.chat.id);
@@ -109,6 +119,7 @@ const helpText = `
 • \`/npc\` - Gera um NPC completo.
 • \`/clima\` - Gera um clima aleatório.
 • \`/loot\` - Gera opções de loot para o mestre.
+• \`/racas\` - Consulta os guias de raças (bônus e ônus).
 
 ━━━━━━━━━━━━━━━━━━━━
 _Dica: Comandos sem nome abrem filtros!_`;
@@ -118,7 +129,7 @@ const menuMarkup = {
         [{ text: "🎲 Rolar Dado", callback_data: "cmd_roll" }, { text: "🎒 Item Aleatório", callback_data: "cmd_item" }],
         [{ text: "👹 Monstros", callback_data: "cmd_monster" }, { text: "🐾 Feras", callback_data: "cmd_beast" }],
         [{ text: "🎭 Gerar NPC", callback_data: "cmd_npc" }, { text: "☁️ Clima", callback_data: "cmd_weather" }],
-        [{ text: "👑 Loot do Mestre", callback_data: "cmd_loot" }]
+        [{ text: "👑 Loot do Mestre", callback_data: "cmd_loot" }, { text: "🧬 Guia de Raças", callback_data: "cmd_races" }]
     ]
 };
 
@@ -147,8 +158,60 @@ bot.on('callback_query', (query) => {
         text = helpText;
         markup = menuMarkup;
     } else if (data === "cmd_roll") {
-        text = "🎲 *Como rolar dados:*\n\nDigite `/roll` seguido da quantidade e tipo de dado.\nExemplo: `/roll 1d20` ou `/roll 2d6`";
-        markup = { inline_keyboard: [[{ text: "⬅️ Voltar ao Menu", callback_data: "cmd_menu" }]] };
+        text = "🎲 *Rolar Dados Rápidos:*\n\nEscolha um dado abaixo ou use o comando `/roll` para rolagens customizadas (ex: `/roll 2d6+3`).";
+        markup = { 
+            inline_keyboard: [
+                [{ text: "🟢 d20 (Vantagem)", callback_data: "roll_2d20_adv" }, { text: "🔴 d20 (Desvantagem)", callback_data: "roll_2d20_dis" }],
+                [{ text: "🎲 d20", callback_data: "roll_1d20" }, { text: "🎲 d100", callback_data: "roll_1d100" }],
+                [{ text: "🎲 d12", callback_data: "roll_1d12" }, { text: "🎲 d10", callback_data: "roll_1d10" }],
+                [{ text: "🎲 d8", callback_data: "roll_1d8" }, { text: "🎲 d6", callback_data: "roll_1d6" }, { text: "🎲 d4", callback_data: "roll_1d4" }],
+                [{ text: "⬅️ Voltar ao Menu", callback_data: "cmd_menu" }]
+            ] 
+        };
+    } else if (data.startsWith("roll_")) {
+        const rollType = data.replace("roll_", "");
+        let input = rollType;
+        let mode = null;
+        
+        if (rollType === "2d20_adv") {
+            input = "2d20";
+            mode = "adv";
+        } else if (rollType === "2d20_dis") {
+            input = "2d20";
+            mode = "dis";
+        }
+
+        const result = dice.rollDice(input);
+        
+        let finalTotal = result.total;
+        let extraInfo = '';
+
+        if (mode === 'adv') {
+            const max = Math.max(...result.rolls);
+            finalTotal = max + result.modifier;
+            extraInfo = `\n🏆 *Vantagem:* pegou o maior (${max})`;
+        } else if (mode === 'dis') {
+            const min = Math.min(...result.rolls);
+            finalTotal = min + result.modifier;
+            extraInfo = `\n💀 *Desvantagem:* pegou o menor (${min})`;
+        }
+
+        let rollsText = '📊 *🎲 Resultados:*\n';
+        result.rolls.forEach((r, i) => {
+            rollsText += `Resultado ${i + 1}: ${r}\n`;
+        });
+
+        text = `🎲 *Rolagem:* ${result.diceCount}d${result.diceSides}\n\n${rollsText}\n🧮 *Total:* ${finalTotal}${extraInfo}\n\n_Escolha outro dado ou volte ao menu:_`;
+
+        markup = { 
+            inline_keyboard: [
+                [{ text: "🟢 d20 (Vantagem)", callback_data: "roll_2d20_adv" }, { text: "🔴 d20 (Desvantagem)", callback_data: "roll_2d20_dis" }],
+                [{ text: "🎲 d20", callback_data: "roll_1d20" }, { text: "🎲 d100", callback_data: "roll_1d100" }],
+                [{ text: "🎲 d12", callback_data: "roll_1d12" }, { text: "🎲 d10", callback_data: "roll_1d10" }],
+                [{ text: "🎲 d8", callback_data: "roll_1d8" }, { text: "🎲 d6", callback_data: "roll_1d6" }, { text: "🎲 d4", callback_data: "roll_1d4" }],
+                [{ text: "⬅️ Voltar ao Menu", callback_data: "cmd_menu" }]
+            ] 
+        };
     } else if (data === "cmd_item") {
         const item = itens.getRandomItem();
         text = `🎒 Item encontrado:\n\n*${item.nome}*\n${item.descricao}`;
@@ -163,6 +226,13 @@ bot.on('callback_query', (query) => {
     } else if (data === "cmd_loot") {
         text = loot.generateLoot();
         markup = { inline_keyboard: [[{ text: "⬅️ Voltar ao Menu", callback_data: "cmd_menu" }]] };
+    } else if (data === "cmd_races") {
+        text = "🧬 *Guia de Raças:* Escolha uma raça para ver seus detalhes.";
+        markup = races.getRacesMenu();
+    } else if (data.startsWith("race_")) {
+        const raceKey = data.replace("race_", "");
+        text = races.getRaceInfo(raceKey);
+        markup = { inline_keyboard: [[{ text: "⬅️ Voltar às Raças", callback_data: "cmd_races" }]] };
     } else if (data === "cmd_monster") {
         text = "👹 *Bestiário de Monstros*: Escolha um filtro ou digite o nome.";
         markup = { inline_keyboard: [...monsters.getFilterButtons().inline_keyboard, [{ text: "🏠 Menu Principal", callback_data: "cmd_menu" }]] };

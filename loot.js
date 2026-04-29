@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const lootData = JSON.parse(fs.readFileSync(path.join(__dirname, 'loot.json'), 'utf8'));
+const lootData = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'loot.json'), 'utf8'));
 
 function generateLoot() {
     const moneyType = lootData.money[Math.floor(Math.random() * lootData.money.length)];
