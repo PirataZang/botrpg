@@ -1,0 +1,810 @@
+[
+  {
+    "nome": "Babuíno (Baboon)",
+    "nd": "0",
+    "tipo_deslocamento": "Terrestre",
+    "defesa": 12,
+    "hp": 3,
+    "quantidade_ataques": 1,
+    "atributos": {
+      "FOR": "8 (-1)",
+      "DES": "14 (+2)",
+      "CON": "11 (+0)",
+      "INT": "4 (-3)",
+      "SAB": "12 (+1)",
+      "CAR": "6 (-2)"
+    },
+    "ataques": [
+      {
+        "nome": "Mordida (Bite)",
+        "bonus_acerto": "+1",
+        "dado_dano": "1d4 - 1",
+        "media_dano": 1,
+        "tipo_dano": "Perfuração"
+      }
+    ],
+    "link": "https://www.dndbeyond.com/monsters?filter-search=Baboon"
+  },
+  {
+    "nome": "Texugo (Badger)",
+    "nd": "0",
+    "tipo_deslocamento": "Escavação",
+    "defesa": 10,
+    "hp": 3,
+    "quantidade_ataques": 1,
+    "atributos": {
+      "FOR": "4 (-3)",
+      "DES": "11 (+0)",
+      "CON": "12 (+1)",
+      "INT": "2 (-4)",
+      "SAB": "12 (+1)",
+      "CAR": "5 (-3)"
+    },
+    "ataques": [
+      {
+        "nome": "Mordida (Bite)",
+        "bonus_acerto": "+2",
+        "dado_dano": "1",
+        "media_dano": 1,
+        "tipo_dano": "Perfuração"
+      }
+    ],
+    "link": "https://www.dndbeyond.com/monsters?filter-search=Badger"
+  },
+  {
+    "nome": "Morcego (Bat)",
+    "nd": "0",
+    "tipo_deslocamento": "Aéreo",
+    "defesa": 12,
+    "hp": 1,
+    "quantidade_ataques": 1,
+    "atributos": {
+      "FOR": "2 (-4)",
+      "DES": "15 (+2)",
+      "CON": "8 (-1)",
+      "INT": "2 (-4)",
+      "SAB": "12 (+1)",
+      "CAR": "4 (-3)"
+    },
+    "ataques": [
+      {
+        "nome": "Mordida (Bite)",
+        "bonus_acerto": "+4",
+        "dado_dano": "1",
+        "media_dano": 1,
+        "tipo_dano": "Perfuração"
+      }
+    ],
+    "link": "https://www.dndbeyond.com/monsters?filter-search=Bat"
+  },
+  {
+    "nome": "Gato (Cat)",
+    "nd": "0",
+    "tipo_deslocamento": "Terrestre",
+    "defesa": 12,
+    "hp": 2,
+    "quantidade_ataques": 1,
+    "atributos": {
+      "FOR": "3 (-4)",
+      "DES": "15 (+2)",
+      "CON": "10 (+0)",
+      "INT": "3 (-4)",
+      "SAB": "12 (+1)",
+      "CAR": "7 (-2)"
+    },
+    "ataques": [
+      {
+        "nome": "Garras (Claws)",
+        "bonus_acerto": "+0",
+        "dado_dano": "1",
+        "media_dano": 1,
+        "tipo_dano": "Corte"
+      }
+    ],
+    "link": "https://www.dndbeyond.com/monsters?filter-search=Cat"
+  },
+  {
+    "nome": "Lagarto Gigante (Giant Lizard)",
+    "nd": "1/4",
+    "tipo_deslocamento": "Terrestre",
+    "defesa": 12,
+    "hp": 19,
+    "quantidade_ataques": 1,
+    "atributos": {
+      "FOR": "15 (+2)",
+      "DES": "12 (+1)",
+      "CON": "13 (+1)",
+      "INT": "2 (-4)",
+      "SAB": "10 (+0)",
+      "CAR": "5 (-3)"
+    },
+    "ataques": [
+      {
+        "nome": "Mordida (Bite)",
+        "bonus_acerto": "+4",
+        "dado_dano": "1d8 + 2",
+        "media_dano": 6,
+        "tipo_dano": "Perfuração"
+      }
+    ],
+    "link": "https://www.dndbeyond.com/monsters?filter-search=Giant+Lizard"
+  },
+  {
+    "nome": "Lobo (Wolf)",
+    "nd": "1/4",
+    "tipo_deslocamento": "Terrestre",
+    "defesa": 13,
+    "hp": 11,
+    "quantidade_ataques": 1,
+    "atributos": {
+      "FOR": "12 (+1)",
+      "DES": "15 (+2)",
+      "CON": "12 (+1)",
+      "INT": "3 (-4)",
+      "SAB": "12 (+1)",
+      "CAR": "6 (-2)"
+    },
+    "ataques": [
+      {
+        "nome": "Mordida (Bite)",
+        "bonus_acerto": "+4",
+        "dado_dano": "2d4 + 1",
+        "media_dano": 6,
+        "tipo_dano": "Perfuração",
+        "efeito_adicional": "Teste de Força CD 11 ou cai derrubado"
+      }
+    ],
+    "link": "https://www.dndbeyond.com/monsters?filter-search=Wolf"
+  },
+  {
+    "nome": "Pantera (Panther)",
+    "nd": "1/4",
+    "tipo_deslocamento": "Terrestre",
+    "defesa": 12,
+    "hp": 13,
+    "quantidade_ataques": 1,
+    "atributos": {
+      "FOR": "14 (+2)",
+      "DES": "15 (+2)",
+      "CON": "10 (+0)",
+      "INT": "3 (-4)",
+      "SAB": "14 (+2)",
+      "CAR": "7 (-2)"
+    },
+    "ataques": [
+      {
+        "nome": "Mordida (Bite)",
+        "bonus_acerto": "+4",
+        "dado_dano": "1d6 + 2",
+        "media_dano": 5,
+        "tipo_dano": "Perfuração"
+      },
+      {
+        "nome": "Garras (Claws)",
+        "bonus_acerto": "+4",
+        "dado_dano": "1d4 + 2",
+        "media_dano": 4,
+        "tipo_dano": "Corte"
+      }
+    ],
+    "link": "https://www.dndbeyond.com/monsters?filter-search=Panther"
+  },
+  {
+    "nome": "Tubarão Cooper (Reef Shark)",
+    "nd": "1/2",
+    "tipo_deslocamento": "Aquático",
+    "defesa": 12,
+    "hp": 22,
+    "quantidade_ataques": 1,
+    "atributos": {
+      "FOR": "14 (+2)",
+      "DES": "13 (+1)",
+      "CON": "13 (+1)",
+      "INT": "1 (-5)",
+      "SAB": "10 (+0)",
+      "CAR": "4 (-3)"
+    },
+    "ataques": [
+      {
+        "nome": "Mordida (Bite)",
+        "bonus_acerto": "+4",
+        "dado_dano": "1d8 + 2",
+        "media_dano": 6,
+        "tipo_dano": "Perfuração"
+      }
+    ],
+    "link": "https://www.dndbeyond.com/monsters?filter-search=Reef+Shark"
+  },
+  {
+    "nome": "Crocodilo (Crocodile)",
+    "nd": "1/2",
+    "tipo_deslocamento": "Aquático",
+    "defesa": 12,
+    "hp": 19,
+    "quantidade_ataques": 1,
+    "atributos": {
+      "FOR": "15 (+2)",
+      "DES": "10 (+0)",
+      "CON": "13 (+1)",
+      "INT": "2 (-4)",
+      "SAB": "10 (+0)",
+      "CAR": "5 (-3)"
+    },
+    "ataques": [
+      {
+        "nome": "Mordida (Bite)",
+        "bonus_acerto": "+4",
+        "dado_dano": "1d10 + 2",
+        "media_dano": 7,
+        "tipo_dano": "Perfuração",
+        "efeito_adicional": "Alvo fica Agarrado automaticamente (CD 12)"
+      }
+    ],
+    "link": "https://www.dndbeyond.com/monsters?filter-search=Crocodile"
+  },
+  {
+    "nome": "Urso Negro (Black Bear)",
+    "nd": "1/2",
+    "tipo_deslocamento": "Terrestre",
+    "defesa": 11,
+    "hp": 19,
+    "quantidade_ataques": 2,
+    "atributos": {
+      "FOR": "15 (+2)",
+      "DES": "10 (+0)",
+      "CON": "14 (+2)",
+      "INT": "2 (-4)",
+      "SAB": "12 (+1)",
+      "CAR": "7 (-2)"
+    },
+    "ataques": [
+      {
+        "nome": "Mordida (Bite)",
+        "bonus_acerto": "+3",
+        "dado_dano": "1d6 + 2",
+        "media_dano": 5,
+        "tipo_dano": "Perfuração"
+      },
+      {
+        "nome": "Garras (Claws)",
+        "bonus_acerto": "+3",
+        "dado_dano": "2d4 + 2",
+        "media_dano": 7,
+        "tipo_dano": "Corte"
+      }
+    ],
+    "link": "https://www.dndbeyond.com/monsters?filter-search=Black+Bear"
+  },
+  {
+    "nome": "Urso Marrom (Brown Bear)",
+    "nd": "1",
+    "tipo_deslocamento": "Terrestre",
+    "defesa": 11,
+    "hp": 34,
+    "quantidade_ataques": 2,
+    "atributos": {
+      "FOR": "19 (+4)",
+      "DES": "10 (+0)",
+      "CON": "16 (+3)",
+      "INT": "2 (-4)",
+      "SAB": "13 (+1)",
+      "CAR": "7 (-2)"
+    },
+    "ataques": [
+      {
+        "nome": "Mordida (Bite)",
+        "bonus_acerto": "+5",
+        "dado_dano": "1d8 + 4",
+        "media_dano": 8,
+        "tipo_dano": "Perfuração"
+      },
+      {
+        "nome": "Garras (Claws)",
+        "bonus_acerto": "+5",
+        "dado_dano": "2d6 + 4",
+        "media_dano": 11,
+        "tipo_dano": "Corte"
+      }
+    ],
+    "link": "https://www.dndbeyond.com/monsters?filter-search=Brown+Bear"
+  },
+  {
+    "nome": "Lobo Atroz (Dire Wolf)",
+    "nd": "1",
+    "tipo_deslocamento": "Terrestre",
+    "defesa": 14,
+    "hp": 37,
+    "quantidade_ataques": 1,
+    "atributos": {
+      "FOR": "17 (+3)",
+      "DES": "15 (+2)",
+      "CON": "15 (+2)",
+      "INT": "3 (-4)",
+      "SAB": "12 (+1)",
+      "CAR": "7 (-2)"
+    },
+    "ataques": [
+      {
+        "nome": "Mordida (Bite)",
+        "bonus_acerto": "+5",
+        "dado_dano": "2d6 + 3",
+        "media_dano": 10,
+        "tipo_dano": "Perfuração",
+        "efeito_adicional": "Teste de Força CD 13 ou cai derrubado"
+      }
+    ],
+    "link": "https://www.dndbeyond.com/monsters?filter-search=Dire+Wolf"
+  },
+  {
+    "nome": "Aranha Gigante (Giant Spider)",
+    "nd": "1",
+    "tipo_deslocamento": "Terrestre",
+    "defesa": 14,
+    "hp": 26,
+    "quantidade_ataques": 1,
+    "atributos": {
+      "FOR": "14 (+2)",
+      "DES": "16 (+3)",
+      "CON": "12 (+1)",
+      "INT": "2 (-4)",
+      "SAB": "11 (+0)",
+      "CAR": "4 (-3)"
+    },
+    "ataques": [
+      {
+        "nome": "Mordida (Bite)",
+        "bonus_acerto": "+5",
+        "dado_dano": "1d8 + 3",
+        "media_dano": 7,
+        "tipo_dano": "Perfuração",
+        "efeito_adicional": "Mais 2d8 (9) de dano de veneno (CD 11 Con metade)"
+      },
+      {
+        "nome": "Teia (Web - Recarga 5-6)",
+        "bonus_acerto": "+5",
+        "dado_dano": "Nenhum",
+        "media_dano": 0,
+        "tipo_dano": "Controle",
+        "efeito_adicional": "Alvo fica Impedido (CD 12 de Força para escapar)"
+      }
+    ],
+    "link": "https://www.dndbeyond.com/monsters?filter-search=Giant+Spider"
+  },
+  {
+    "nome": "Sapo Gigante (Giant Toad)",
+    "nd": "1",
+    "tipo_deslocamento": "Terrestre",
+    "defesa": 11,
+    "hp": 39,
+    "quantidade_ataques": 1,
+    "atributos": {
+      "FOR": "15 (+2)",
+      "DES": "13 (+1)",
+      "CON": "13 (+1)",
+      "INT": "2 (-4)",
+      "SAB": "10 (+0)",
+      "CAR": "3 (-4)"
+    },
+    "ataques": [
+      {
+        "nome": "Mordida (Bite)",
+        "bonus_acerto": "+4",
+        "dado_dano": "1d10 + 2",
+        "media_dano": 7,
+        "tipo_dano": "Perfuração",
+        "efeito_adicional": "Mais 1d6 (3) de veneno. Alvo médio ou menor fica Agarrado automaticamente (CD 13)"
+      }
+    ],
+    "link": "https://www.dndbeyond.com/monsters?filter-search=Giant+Toad"
+  },
+  {
+    "nome": "Águia Gigante (Giant Eagle)",
+    "nd": "1",
+    "tipo_deslocamento": "Aéreo",
+    "defesa": 13,
+    "hp": 26,
+    "quantidade_ataques": 2,
+    "atributos": {
+      "FOR": "16 (+3)",
+      "DES": "17 (+3)",
+      "CON": "13 (+1)",
+      "INT": "8 (-1)",
+      "SAB": "14 (+2)",
+      "CAR": "10 (+0)"
+    },
+    "ataques": [
+      {
+        "nome": "Bico (Beak)",
+        "bonus_acerto": "+5",
+        "dado_dano": "1d6 + 3",
+        "media_dano": 6,
+        "tipo_dano": "Perfuração"
+      },
+      {
+        "nome": "Garras (Talons)",
+        "bonus_acerto": "+5",
+        "dado_dano": "2d6 + 3",
+        "media_dano": 10,
+        "tipo_dano": "Corte"
+      }
+    ],
+    "link": "https://www.dndbeyond.com/monsters?filter-search=Giant+Eagle"
+  },
+  {
+    "nome": "Abutre Gigante (Giant Vulture)",
+    "nd": "1",
+    "tipo_deslocamento": "Aéreo",
+    "defesa": 10,
+    "hp": 22,
+    "quantidade_ataques": 2,
+    "atributos": {
+      "FOR": "15 (+2)",
+      "DES": "10 (+0)",
+      "CON": "15 (+2)",
+      "INT": "6 (-2)",
+      "SAB": "12 (+1)",
+      "CAR": "7 (-2)"
+    },
+    "ataques": [
+      {
+        "nome": "Bico (Beak)",
+        "bonus_acerto": "+4",
+        "dado_dano": "2d4 + 2",
+        "media_dano": 7,
+        "tipo_dano": "Perfuração"
+      },
+      {
+        "nome": "Garras (Talons)",
+        "bonus_acerto": "+4",
+        "dado_dano": "2d6 + 2",
+        "media_dano": 9,
+        "tipo_dano": "Corte"
+      }
+    ],
+    "link": "https://www.dndbeyond.com/monsters?filter-search=Giant+Vulture"
+  },
+  {
+    "nome": "Leão (Lion)",
+    "nd": "1",
+    "tipo_deslocamento": "Terrestre",
+    "defesa": 12,
+    "hp": 26,
+    "quantidade_ataques": 1,
+    "atributos": {
+      "FOR": "17 (+3)",
+      "DES": "15 (+2)",
+      "CON": "13 (+1)",
+      "INT": "3 (-4)",
+      "SAB": "12 (+1)",
+      "CAR": "8 (-1)"
+    },
+    "ataques": [
+      {
+        "nome": "Mordida (Bite)",
+        "bonus_acerto": "+5",
+        "dado_dano": "1d8 + 3",
+        "media_dano": 7,
+        "tipo_dano": "Perfuração"
+      },
+      {
+        "nome": "Garras (Claws)",
+        "bonus_acerto": "+5",
+        "dado_dano": "1d6 + 3",
+        "media_dano": 6,
+        "tipo_dano": "Corte"
+      }
+    ],
+    "link": "https://www.dndbeyond.com/monsters?filter-search=Lion"
+  },
+  {
+    "nome": "Tigre (Tiger)",
+    "nd": "1",
+    "tipo_deslocamento": "Terrestre",
+    "defesa": 12,
+    "hp": 37,
+    "quantidade_ataques": 1,
+    "atributos": {
+      "FOR": "17 (+3)",
+      "DES": "15 (+2)",
+      "CON": "14 (+2)",
+      "INT": "3 (-4)",
+      "SAB": "12 (+1)",
+      "CAR": "8 (-1)"
+    },
+    "ataques": [
+      {
+        "nome": "Mordida (Bite)",
+        "bonus_acerto": "+5",
+        "dado_dano": "1d10 + 3",
+        "media_dano": 8,
+        "tipo_dano": "Perfuração"
+      },
+      {
+        "nome": "Garras (Claws)",
+        "bonus_acerto": "+5",
+        "dado_dano": "1d8 + 3",
+        "media_dano": 7,
+        "tipo_dano": "Corte"
+      }
+    ],
+    "link": "https://www.dndbeyond.com/monsters?filter-search=Tiger"
+  },
+  {
+    "nome": "Constritora Gigante (Giant Constrictor Snake)",
+    "nd": "2",
+    "tipo_deslocamento": "Terrestre",
+    "defesa": 12,
+    "hp": 60,
+    "quantidade_ataques": 2,
+    "atributos": {
+      "FOR": "19 (+4)",
+      "DES": "14 (+2)",
+      "CON": "12 (+1)",
+      "INT": "1 (-5)",
+      "SAB": "10 (+0)",
+      "CAR": "3 (-4)"
+    },
+    "ataques": [
+      {
+        "nome": "Mordida (Bite)",
+        "bonus_acerto": "+6",
+        "dado_dano": "1d6 + 4",
+        "media_dano": 7,
+        "tipo_dano": "Perfuração"
+      },
+      {
+        "nome": "Constrição (Constrict)",
+        "bonus_acerto": "+6",
+        "dado_dano": "2d8 + 4",
+        "media_dano": 13,
+        "tipo_dano": "Contusão",
+        "efeito_adicional": "Alvo fica Agarrado e Impedido automaticamente (CD 14)"
+      }
+    ],
+    "link": "https://www.dndbeyond.com/monsters?filter-search=Giant+Constrictor+Snake"
+  },
+  {
+    "nome": "Alce Gigante (Giant Elk)",
+    "nd": "2",
+    "tipo_deslocamento": "Terrestre",
+    "defesa": 14,
+    "hp": 42,
+    "quantidade_ataques": 1,
+    "atributos": {
+      "FOR": "19 (+4)",
+      "DES": "16 (+3)",
+      "CON": "14 (+2)",
+      "INT": "7 (-2)",
+      "SAB": "14 (+2)",
+      "CAR": "10 (+0)"
+    },
+    "ataques": [
+      {
+        "nome": "Chifres (Ram)",
+        "bonus_acerto": "+6",
+        "dado_dano": "2d6 + 4",
+        "media_dano": 11,
+        "tipo_dano": "Contusão"
+      },
+      {
+        "nome": "Cascos (Hooves)",
+        "bonus_acerto": "+6",
+        "dado_dano": "4d5 + 4",
+        "media_dano": 22,
+        "tipo_dano": "Contusão",
+        "efeito_adicional": "Apenas contra alvos derrubados"
+      }
+    ],
+    "link": "https://www.dndbeyond.com/monsters?filter-search=Giant+Elk"
+  },
+  {
+    "nome": "Rinoceronte (Rhinoceros)",
+    "nd": "2",
+    "tipo_deslocamento": "Terrestre",
+    "defesa": 11,
+    "hp": 45,
+    "quantidade_ataques": 1,
+    "atributos": {
+      "FOR": "21 (+5)",
+      "DES": "8 (-1)",
+      "CON": "15 (+2)",
+      "INT": "2 (-4)",
+      "SAB": "12 (+1)",
+      "CAR": "6 (-2)"
+    },
+    "ataques": [
+      {
+        "nome": "Chifrada (Gore)",
+        "bonus_acerto": "+7",
+        "dado_dano": "2d8 + 5",
+        "media_dano": 14,
+        "tipo_dano": "Perfuração",
+        "efeito_adicional": "Se mover 6m em linha reta, causa +2d8 dano extra e CD 15 Força ou cai derrubado"
+      }
+    ],
+    "link": "https://www.dndbeyond.com/monsters?filter-search=Rhinoceros"
+  },
+  {
+    "nome": "Urso Polar (Polar Bear)",
+    "nd": "2",
+    "tipo_deslocamento": "Aquático / Terrestre",
+    "defesa": 12,
+    "hp": 42,
+    "quantidade_ataques": 2,
+    "atributos": {
+      "FOR": "20 (+5)",
+      "DES": "10 (+0)",
+      "CON": "16 (+3)",
+      "INT": "2 (-4)",
+      "SAB": "13 (+1)",
+      "CAR": "7 (-2)"
+    },
+    "ataques": [
+      {
+        "nome": "Mordida (Bite)",
+        "bonus_acerto": "+7",
+        "dado_dano": "1d8 + 5",
+        "media_dano": 9,
+        "tipo_dano": "Perfuração"
+      },
+      {
+        "nome": "Garras (Claws)",
+        "bonus_acerto": "+7",
+        "dado_dano": "2d6 + 5",
+        "media_dano": 12,
+        "tipo_dano": "Corte"
+      }
+    ],
+    "link": "https://www.dndbeyond.com/monsters?filter-search=Polar+Bear"
+  },
+  {
+    "nome": "Tubarão-Cachalote (Hunter Shark)",
+    "nd": "2",
+    "tipo_deslocamento": "Aquático",
+    "defesa": 12,
+    "hp": 45,
+    "quantidade_ataques": 1,
+    "atributos": {
+      "FOR": "18 (+4)",
+      "DES": "13 (+1)",
+      "CON": "15 (+2)",
+      "INT": "1 (-5)",
+      "SAB": "10 (+0)",
+      "CAR": "4 (-3)"
+    },
+    "ataques": [
+      {
+        "nome": "Mordida (Bite)",
+        "bonus_acerto": "+6",
+        "dado_dano": "2d10 + 4",
+        "media_dano": 15,
+        "tipo_dano": "Perfuração",
+        "efeito_adicional": "Vantagem no ataque se o alvo não estiver com HP cheio"
+      }
+    ],
+    "link": "https://www.dndbeyond.com/monsters?filter-search=Hunter+Shark"
+  },
+  {
+    "nome": "Tigre dente-de-sabre (Saber-Toothed Tiger)",
+    "nd": "2",
+    "tipo_deslocamento": "Terrestre",
+    "defesa": 12,
+    "hp": 52,
+    "quantidade_ataques": 1,
+    "atributos": {
+      "FOR": "18 (+4)",
+      "DES": "14 (+2)",
+      "CON": "15 (+2)",
+      "INT": "3 (-4)",
+      "SAB": "12 (+1)",
+      "CAR": "8 (-1)"
+    },
+    "ataques": [
+      {
+        "nome": "Mordida (Bite)",
+        "bonus_acerto": "+6",
+        "dado_dano": "1d10 + 4",
+        "media_dano": 9,
+        "tipo_dano": "Perfuração"
+      },
+      {
+        "nome": "Garras (Claws)",
+        "bonus_acerto": "+6",
+        "dado_dano": "1d8 + 4",
+        "media_dano": 8,
+        "tipo_dano": "Corte",
+        "efeito_adicional": "Pounce: Se derrubar o alvo com garras após andar 6m, pode morder como ação bônus"
+      }
+    ],
+    "link": "https://www.dndbeyond.com/monsters?filter-search=Saber-Toothed+Tiger"
+  },
+  {
+    "nome": "Escorpião Gigante (Giant Scorpion)",
+    "nd": "3",
+    "tipo_deslocamento": "Terrestre",
+    "defesa": 15,
+    "hp": 52,
+    "quantidade_ataques": 3,
+    "atributos": {
+      "FOR": "15 (+2)",
+      "DES": "13 (+1)",
+      "CON": "15 (+2)",
+      "INT": "1 (-5)",
+      "SAB": "9 (-1)",
+      "CAR": "3 (-4)"
+    },
+    "ataques": [
+      {
+        "nome": "Garras (Claws)",
+        "bonus_acerto": "+4",
+        "dado_dano": "1d8 + 2",
+        "media_dano": 6,
+        "tipo_dano": "Corte",
+        "efeito_adicional": "Alvo fica agarrado automaticamente (CD 12). Possui duas garras."
+      },
+      {
+        "nome": "Aguilhão (Sting)",
+        "bonus_acerto": "+4",
+        "dado_dano": "1d10 + 2",
+        "media_dano": 7,
+        "tipo_dano": "Perfuração",
+        "efeito_adicional": "Mais 4d10 (22) de dano de veneno (CD 12 Con metade)"
+      }
+    ],
+    "link": "https://www.dndbeyond.com/monsters?filter-search=Giant+Scorpion"
+  },
+  {
+    "nome": "Baleia Assassina (Killer Whale)",
+    "nd": "3",
+    "tipo_deslocamento": "Aquático",
+    "defesa": 12,
+    "hp": 90,
+    "quantidade_ataques": 1,
+    "atributos": {
+      "FOR": "19 (+4)",
+      "DES": "10 (+0)",
+      "CON": "13 (+1)",
+      "INT": "3 (-4)",
+      "SAB": "12 (+1)",
+      "CAR": "7 (-2)"
+    },
+    "ataques": [
+      {
+        "nome": "Mordida (Bite)",
+        "bonus_acerto": "+6",
+        "dado_dano": "5d6 + 4",
+        "media_dano": 21,
+        "tipo_dano": "Perfuração"
+      }
+    ],
+    "link": "https://www.dndbeyond.com/monsters?filter-search=Killer+Whale"
+  },
+  {
+    "nome": "Tubarão Gigante (Giant Shark)",
+    "nd": "5",
+    "tipo_deslocamento": "Aquático",
+    "nota": "Bônus opcional: Excede ND 3, mas fecha a trindade dos tubarões para campanhas aquáticas avançadas.",
+    "defesa": 13,
+    "hp": 126,
+    "quantidade_ataques": 1,
+    "atributos": {
+      "FOR": "23 (+6)",
+      "DES": "11 (+0)",
+      "CON": "21 (+5)",
+      "INT": "1 (-5)",
+      "SAB": "10 (+0)",
+      "CAR": "5 (-3)"
+    },
+    "ataques": [
+      {
+        "nome": "Mordida (Bite)",
+        "bonus_acerto": "+9",
+        "dado_dano": "3d10 + 6",
+        "media_dano": 22,
+        "tipo_dano": "Perfuração",
+        "efeito_adicional": "Ganha vantagem se o alvo estiver machucado"
+      }
+    ],
+    "link": "https://www.dndbeyond.com/monsters?filter-search=Giant+Shark"
+  }
+]

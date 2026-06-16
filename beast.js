@@ -1,48 +1,90 @@
-const beasts = require('./data/beast.json');
+const beasts = require('./data/Beasts.json');
+
+/**
+ * Normaliza strings para busca sem acentos e minúscula.
+ */
+function normalizeStr(str) {
+    if (!str) return '';
+    return str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+/**
+ * Avalia o valor numérico de um ND (incluindo frações).
+ */
+function evalND(nd) {
+    if (!nd) return 0;
+    if (typeof nd === 'number') return nd;
+    if (nd.includes('/')) {
+        const [num, den] = nd.split('/').map(Number);
+        return num / den;
+    }
+    return Number(nd);
+}
 
 /**
  * Busca uma criatura pelo nome. 
  * Aceita buscas parciais para facilitar o uso no teclado do celular.
  */
 function getBeast(name) {
-    const search = name.toLowerCase();
+    const search = normalizeStr(name);
     return beasts.find(b =>
-        b.name.toLowerCase().includes(search)
+        normalizeStr(b.nome).includes(search)
     );
 }
 
-/**
- * Calcula o modificador de atributo e formata com sinal de + ou -
- */
-function getMod(val) {
-    const mod = Math.floor((val - 10) / 2);
-    return mod >= 0 ? `+${mod}` : `${mod}`; // O sinal de - já vem nativo em números negativos
-}
-
 function formatBeast(beast) {
-    const tiposEmoji = { "terrestre": "⛰️", "voador": "🦅", "aquatico": "🌊" };
-    const tiposFormatados = beast.tipo
-        .map(t => `${tiposEmoji[t] || '🐾'} ${t.charAt(0).toUpperCase() + t.slice(1)}`)
-        .join(' | ');
+    const emojis = {
+        "terrestre": "⛰️",
+        "aereo": "🦅",
+        "aquatico": "🌊",
+        "escavacao": "⛏️"
+    };
+    
+    // Formata os tipos individuais de deslocamento
+    const tiposFormatados = beast.tipo_deslocamento
+        ? beast.tipo_deslocamento.split('/')
+            .map(t => t.trim())
+            .map(t => {
+                const clean = normalizeStr(t);
+                return `${emojis[clean] || '🐾'} ${t}`;
+            })
+            .join(' | ')
+        : '🐾 Desconhecido';
+
+    const attacksFormatted = beast.ataques && beast.ataques.length > 0
+        ? beast.ataques.map(atk => {
+            let res = `• *${atk.nome}*: Acerto ${atk.bonus_acerto} | Dano: ${atk.dado_dano} (${atk.media_dano}) de ${atk.tipo_dano}`;
+            if (atk.efeito_adicional) {
+                res += `\n  _${atk.efeito_adicional}_`;
+            }
+            return res;
+        }).join('\n')
+        : 'Nenhum ataque listado';
 
     return `
 📖 *FICHA DE CRIATURA*
 ━━━━━━━━━━━━━━━━━━━━
-👹 *${beast.name.toUpperCase()}*
+👹 *${beast.nome.toUpperCase()}*
 ⭐ *ND:* ${beast.nd} | ${tiposFormatados}
+⚔️ *Qtd. Ataques:* ${beast.quantidade_ataques}
 
 🛡️ *DEFESA*
-• *CA:* ${beast.ac}
+• *CA:* ${beast.defesa}
 • *HP:* ${beast.hp}
 
 📊 *ATRIBUTOS (MOD)*
-\`STR: ${beast.str.toString().padEnd(2)} (${getMod(beast.str)})\`
-\`DEX: ${beast.dex.toString().padEnd(2)} (${getMod(beast.dex)})\`
-\`CON: ${beast.con.toString().padEnd(2)} (${getMod(beast.con)})\`
-\`INT: ${beast.int.toString().padEnd(2)} (${getMod(beast.int)})\`
-\`SAB: ${beast.sab.toString().padEnd(2)} (${getMod(beast.sab)})\`
-\`CHA: ${beast.cha.toString().padEnd(2)} (${getMod(beast.cha)})\`
+💪 \`FOR: ${beast.atributos.FOR}\`
+🎯 \`DES: ${beast.atributos.DES}\`
+🛡️ \`CON: ${beast.atributos.CON}\`
+🧠 \`INT: ${beast.atributos.INT}\`
+👁️ \`SAB: ${beast.atributos.SAB}\`
+🗣️ \`CAR: ${beast.atributos.CAR}\`
 
+⚔️ *ATAQUES*
+${attacksFormatted}
+
+━━━━━━━━━━━━━━━━━━━━
+🔗 [Acesse a ficha no D&D Beyond](${beast.link})
 ━━━━━━━━━━━━━━━━━━━━
 _Dica: Use /beast <nome> para buscar detalhes._`;
 }
@@ -67,7 +109,7 @@ function getFilterButtons() {
  */
 function getNDMenu() {
     // Pega todos os NDs únicos e ordena
-    const nds = [...new Set(beasts.map(b => b.nd))].sort((a, b) => a - b);
+    const nds = [...new Set(beasts.map(b => b.nd))].sort((a, b) => evalND(a) - evalND(b));
 
     // Cria os botões (3 por linha)
     const buttons = [];
@@ -83,17 +125,34 @@ function getNDMenu() {
 }
 
 /**
- * Menu fixo de tipos
+ * Menu dinâmico de tipos a partir de tipo_deslocamento
  */
 function getTipoMenu() {
-    return {
-        inline_keyboard: [
-            [{ text: "⛰️ Terrestre", callback_data: "list_tipo_terrestre" }],
-            [{ text: "🦅 Voador", callback_data: "list_tipo_voador" }],
-            [{ text: "🌊 Aquático", callback_data: "list_tipo_aquatico" }],
-            [{ text: "⬅️ Voltar", callback_data: "filter_main" }]
-        ]
+    const typesSet = new Set();
+    beasts.forEach(b => {
+        if (b.tipo_deslocamento) {
+            b.tipo_deslocamento.split('/').forEach(t => typesSet.add(t.trim()));
+        }
+    });
+    const types = [...typesSet].sort();
+    
+    const emojis = {
+        "Terrestre": "⛰️",
+        "Aéreo": "🦅",
+        "Aquático": "🌊",
+        "Escavação": "⛏️"
     };
+
+    const buttons = [];
+    for (let i = 0; i < types.length; i += 2) {
+        const row = types.slice(i, i + 2).map(t => ({
+            text: `${emojis[t] || '🐾'} ${t}`,
+            callback_data: `list_tipo_${normalizeStr(t)}`
+        }));
+        buttons.push(row);
+    }
+    buttons.push([{ text: "⬅️ Voltar", callback_data: "filter_main" }]);
+    return { inline_keyboard: buttons };
 }
 
 /**
@@ -102,13 +161,15 @@ function getTipoMenu() {
 function listByFilter(criteria, value) {
     const filtered = beasts.filter(b => {
         if (criteria === 'nd') return b.nd.toString() === value.toString();
-        if (criteria === 'tipo') return b.tipo.includes(value);
+        if (criteria === 'tipo') {
+            return normalizeStr(b.tipo_deslocamento).includes(normalizeStr(value));
+        }
         return false;
     });
 
-    if (filtered.length === 0) return "Nenhum bicho encontrado.";
+    if (filtered.length === 0) return "Nenhuma criatura encontrada.";
 
-    const lista = filtered.map(b => `• /beast ${b.name}`).join('\n');
+    const lista = filtered.map(b => `• /beast ${b.nome}`).join('\n');
     return `🔎 *Resultados (${value}):*\n\n${lista}`;
 }
 

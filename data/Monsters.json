@@ -1,0 +1,2050 @@
+[
+    {
+        "nome": "Kobold",
+        "nd": "1/8",
+        "tipo": "Humanoide",
+        "defesa": 12,
+        "hp": 5,
+        "ataques": 1,
+        "atributos": {
+            "for": "7 (-2)",
+            "des": "15 (+2)",
+            "con": "9 (-1)",
+            "int": "8 (-1)",
+            "sab": "7 (-2)",
+            "car": "8 (-1)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Adaga",
+                "dano": "1d4+2",
+                "media": 4
+            },
+            {
+                "nome": "Fisga (Fronde)",
+                "dano": "1d4+2",
+                "media": 4
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Kobold"
+    },
+    {
+        "nome": "Cultista (Cultist)",
+        "nd": "1/8",
+        "tipo": "Humanoide",
+        "defesa": 12,
+        "hp": 9,
+        "ataques": 1,
+        "atributos": {
+            "for": "11 (+0)",
+            "des": "12 (+1)",
+            "con": "10 (+0)",
+            "int": "10 (+0)",
+            "sab": "11 (+0)",
+            "car": "10 (+0)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Cimitarra",
+                "dano": "1d6+1",
+                "media": 4
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Cultist"
+    },
+    {
+        "nome": "Goblin",
+        "nd": "1/4",
+        "tipo": "Humanoide",
+        "defesa": 15,
+        "hp": 7,
+        "ataques": 1,
+        "atributos": {
+            "for": "8 (-1)",
+            "des": "14 (+2)",
+            "con": "10 (+0)",
+            "int": "10 (+0)",
+            "sab": "8 (-1)",
+            "car": "8 (-1)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Cimitarra",
+                "dano": "1d6+2",
+                "media": 5
+            },
+            {
+                "nome": "Arco Curto",
+                "dano": "1d6+2",
+                "media": 5
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Goblin"
+    },
+    {
+        "nome": "Esqueleto (Skeleton)",
+        "nd": "1/4",
+        "tipo": "Morto-Vivo",
+        "defesa": 13,
+        "hp": 13,
+        "ataques": 1,
+        "atributos": {
+            "for": "10 (+0)",
+            "des": "14 (+2)",
+            "con": "15 (+2)",
+            "int": "6 (-2)",
+            "sab": "8 (-1)",
+            "car": "5 (-3)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Espada Curta",
+                "dano": "1d6+2",
+                "media": 5
+            },
+            {
+                "nome": "Arco Curto",
+                "dano": "1d6+2",
+                "media": 5
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Skeleton"
+    },
+    {
+        "nome": "Zumbi (Zombie)",
+        "nd": "1/4",
+        "tipo": "Morto-Vivo",
+        "defesa": 8,
+        "hp": 22,
+        "ataques": 1,
+        "atributos": {
+            "for": "13 (+1)",
+            "des": "6 (-2)",
+            "con": "16 (+3)",
+            "int": "3 (-4)",
+            "sab": "6 (-2)",
+            "car": "5 (-3)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Pancada",
+                "dano": "1d6+1",
+                "media": 4
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Zombie"
+    },
+    {
+        "nome": "Gnoll",
+        "nd": "1/2",
+        "tipo": "Humanoide",
+        "defesa": 12,
+        "hp": 22,
+        "ataques": 1,
+        "atributos": {
+            "for": "14 (+2)",
+            "des": "12 (+1)",
+            "con": "12 (+1)",
+            "int": "6 (-2)",
+            "sab": "10 (+0)",
+            "car": "7 (-2)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Lança",
+                "dano": "1d6+2",
+                "media": 5
+            },
+            {
+                "nome": "Arco Longo",
+                "dano": "1d8+1",
+                "media": 5
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Gnoll"
+    },
+    {
+        "nome": "Orc",
+        "nd": "1/2",
+        "tipo": "Humanoide",
+        "defesa": 13,
+        "hp": 15,
+        "ataques": 1,
+        "atributos": {
+            "for": "16 (+3)",
+            "des": "12 (+1)",
+            "con": "16 (+3)",
+            "int": "7 (-2)",
+            "sab": "11 (+0)",
+            "car": "10 (+0)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Machado Grande",
+                "dano": "1d12+3",
+                "media": 9
+            },
+            {
+                "nome": "Javelina",
+                "dano": "1d6+3",
+                "media": 6
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Orc"
+    },
+    {
+        "nome": "Hobgoblin",
+        "nd": "1/2",
+        "tipo": "Humanoide",
+        "defesa": 18,
+        "hp": 11,
+        "ataques": 1,
+        "atributos": {
+            "for": "13 (+1)",
+            "des": "12 (+1)",
+            "con": "12 (+1)",
+            "int": "10 (+0)",
+            "sab": "10 (+0)",
+            "car": "9 (-1)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Espada Longa",
+                "dano": "1d8+1",
+                "media": 5
+            },
+            {
+                "nome": "Arco Longo",
+                "dano": "1d8+1",
+                "media": 5
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Hobgoblin"
+    },
+    {
+        "nome": "Sombra (Shadow)",
+        "nd": "1/2",
+        "tipo": "Morto-Vivo",
+        "defesa": 12,
+        "hp": 16,
+        "ataques": 1,
+        "atributos": {
+            "for": "6 (-2)",
+            "des": "14 (+2)",
+            "con": "13 (+1)",
+            "int": "6 (-2)",
+            "sab": "10 (+0)",
+            "car": "8 (-1)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Dreno de Força",
+                "dano": "1d6+2",
+                "media": 5
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Shadow"
+    },
+    {
+        "nome": "Carniçal (Ghoul)",
+        "nd": "1",
+        "tipo": "Morto-Vivo",
+        "defesa": 12,
+        "hp": 22,
+        "ataques": 1,
+        "atributos": {
+            "for": "13 (+1)",
+            "des": "15 (+2)",
+            "con": "10 (+0)",
+            "int": "7 (-2)",
+            "sab": "10 (+0)",
+            "car": "6 (-2)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Mordida",
+                "dano": "2d6+1",
+                "media": 8
+            },
+            {
+                "nome": "Garras",
+                "dano": "2d4+1",
+                "media": 6
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Ghoul"
+    },
+    {
+        "nome": "Bugbear",
+        "nd": "1",
+        "tipo": "Humanoide",
+        "defesa": 16,
+        "hp": 27,
+        "ataques": 1,
+        "atributos": {
+            "for": "15 (+2)",
+            "des": "14 (+2)",
+            "con": "13 (+1)",
+            "int": "8 (-1)",
+            "sab": "11 (+0)",
+            "car": "9 (-1)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Maça Estrela",
+                "dano": "2d8+2",
+                "media": 11
+            },
+            {
+                "nome": "Javelina",
+                "dano": "1d6+2",
+                "media": 5
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Bugbear"
+    },
+    {
+        "nome": "Espantalho (Scarecrow)",
+        "nd": "1",
+        "tipo": "Construto",
+        "defesa": 11,
+        "hp": 36,
+        "ataques": 2,
+        "atributos": {
+            "for": "11 (+0)",
+            "des": "13 (+1)",
+            "con": "11 (+0)",
+            "int": "10 (+0)",
+            "sab": "10 (+0)",
+            "car": "13 (+1)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Garras",
+                "dano": "2d4+1",
+                "media": 6
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Scarecrow"
+    },
+    {
+        "nome": "Harpia (Harpy)",
+        "nd": "1",
+        "tipo": "Monstruosidade",
+        "defesa": 11,
+        "hp": 38,
+        "ataques": 2,
+        "atributos": {
+            "for": "12 (+1)",
+            "des": "13 (+1)",
+            "con": "12 (+1)",
+            "int": "7 (-2)",
+            "sab": "10 (+0)",
+            "car": "13 (+1)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Garras",
+                "dano": "2d4+1",
+                "media": 6
+            },
+            {
+                "nome": "Porrete",
+                "dano": "1d4+1",
+                "media": 3
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Harpy"
+    },
+    {
+        "nome": "Grimlock",
+        "nd": "1/4",
+        "tipo": "Humanoide",
+        "defesa": 11,
+        "hp": 11,
+        "ataques": 1,
+        "atributos": {
+            "for": "16 (+3)",
+            "des": "12 (+1)",
+            "con": "12 (+1)",
+            "int": "9 (-1)",
+            "sab": "8 (-1)",
+            "car": "6 (-2)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Porrete de Pedra",
+                "dano": "1d4+3",
+                "media": 5
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Grimlock"
+    },
+    {
+        "nome": "Troglodita (Troglodyte)",
+        "nd": "1/4",
+        "tipo": "Humanoide",
+        "defesa": 11,
+        "hp": 13,
+        "ataques": 3,
+        "atributos": {
+            "for": "14 (+2)",
+            "des": "10 (+0)",
+            "con": "14 (+2)",
+            "int": "6 (-2)",
+            "sab": "10 (+0)",
+            "car": "6 (-2)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Mordida",
+                "dano": "1d4+2",
+                "media": 4
+            },
+            {
+                "nome": "Garras",
+                "dano": "1d4+2",
+                "media": 4
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Troglodyte"
+    },
+    {
+        "nome": "Dretch",
+        "nd": "1/4",
+        "tipo": "Fiend (Demônio)",
+        "defesa": 11,
+        "hp": 18,
+        "ataques": 2,
+        "atributos": {
+            "for": "11 (+0)",
+            "des": "11 (+0)",
+            "con": "14 (+2)",
+            "int": "5 (-3)",
+            "sab": "8 (-1)",
+            "car": "3 (-4)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Mordida",
+                "dano": "1d6",
+                "media": 3
+            },
+            {
+                "nome": "Garras",
+                "dano": "1d4",
+                "media": 2
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Dretch"
+    },
+    {
+        "nome": "Diabrete (Imp)",
+        "nd": "1",
+        "tipo": "Fiend (Diabo / Metamorfo)",
+        "defesa": 13,
+        "hp": 10,
+        "ataques": 1,
+        "atributos": {
+            "for": "6 (-2)",
+            "des": "17 (+3)",
+            "con": "13 (+1)",
+            "int": "11 (+0)",
+            "sab": "12 (+1)",
+            "car": "14 (+2)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Aguilhão",
+                "dano": "1d4+3 de Perfuração + 3d6 de Veneno",
+                "media": 15
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Imp"
+    },
+    {
+        "nome": "Quasit",
+        "nd": "1",
+        "tipo": "Fiend (Demônio / Metamorfo)",
+        "defesa": 13,
+        "hp": 7,
+        "ataques": 1,
+        "atributos": {
+            "for": "5 (-3)",
+            "des": "17 (+3)",
+            "con": "10 (+0)",
+            "int": "7 (-2)",
+            "sab": "10 (+0)",
+            "car": "10 (+0)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Garras",
+                "dano": "1d4+3 de Cortante + 2d4 de Veneno",
+                "media": 10
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Quasit"
+    },
+    {
+        "nome": "Mephit do Fogo (Magma Mephit)",
+        "nd": "1/2",
+        "tipo": "Elemental",
+        "defesa": 11,
+        "hp": 22,
+        "ataques": 1,
+        "atributos": {
+            "for": "8 (-1)",
+            "des": "12 (+1)",
+            "con": "12 (+1)",
+            "int": "7 (-2)",
+            "sab": "10 (+0)",
+            "car": "10 (+0)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Garras",
+                "dano": "1d4+1 de Cortante + 1d4 de Fogo",
+                "media": 5
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Magma+Mephit"
+    },
+    {
+        "nome": "Mephit da Fumaça (Smoke Mephit)",
+        "nd": "1/4",
+        "tipo": "Elemental",
+        "defesa": 12,
+        "hp": 22,
+        "ataques": 1,
+        "atributos": {
+            "for": "6 (-2)",
+            "des": "14 (+2)",
+            "con": "12 (+1)",
+            "int": "6 (-2)",
+            "sab": "10 (+0)",
+            "car": "11 (+0)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Garras",
+                "dano": "1d4+2",
+                "media": 4
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Smoke+Mephit"
+    },
+    {
+        "nome": "Kuo-toa",
+        "nd": "1/4",
+        "tipo": "Humanoide",
+        "defesa": 13,
+        "hp": 18,
+        "ataques": 1,
+        "atributos": {
+            "for": "13 (+1)",
+            "des": "10 (+0)",
+            "con": "14 (+2)",
+            "int": "11 (+0)",
+            "sab": "10 (+0)",
+            "car": "8 (-1)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Zagaia (Spear)",
+                "dano": "1d6+1",
+                "media": 4
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Kuo-toa"
+    },
+    {
+        "nome": "Sahuagin",
+        "nd": "1/2",
+        "tipo": "Humanoide",
+        "defesa": 12,
+        "hp": 22,
+        "ataques": 2,
+        "atributos": {
+            "for": "15 (+2)",
+            "des": "11 (+0)",
+            "con": "12 (+1)",
+            "int": "12 (+1)",
+            "sab": "13 (+1)",
+            "car": "9 (-1)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Mordida",
+                "dano": "1d4+2",
+                "media": 4
+            },
+            {
+                "nome": "Tridente",
+                "dano": "1d6+2",
+                "media": 5
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Sahuagin"
+    },
+    {
+        "nome": "Fungóide (Violet Fungus)",
+        "nd": "1/4",
+        "tipo": "Planta",
+        "defesa": 5,
+        "hp": 18,
+        "ataques": 4,
+        "atributos": {
+            "for": "3 (-4)",
+            "des": "1 (-5)",
+            "con": "10 (+0)",
+            "int": "1 (-5)",
+            "sab": "3 (-4)",
+            "car": "1 (-5)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Tentáculo Podre",
+                "dano": "1d8 de Necrótico",
+                "media": 4
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Violet+Fungus"
+    },
+    {
+        "nome": "Esporo de Gás (Gas Spore)",
+        "nd": "1/2",
+        "tipo": "Planta",
+        "defesa": 5,
+        "hp": 1,
+        "ataques": 1,
+        "atributos": {
+            "for": "5 (-3)",
+            "des": "1 (-5)",
+            "con": "10 (+0)",
+            "int": "1 (-5)",
+            "sab": "3 (-4)",
+            "car": "1 (-5)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Toque (Infecção)",
+                "dano": "1 de Concussão",
+                "media": 1
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Gas+Spore"
+    },
+    {
+        "nome": "Armadura Animada (Animated Armor)",
+        "nd": "1",
+        "tipo": "Construto",
+        "defesa": 18,
+        "hp": 33,
+        "ataques": 2,
+        "atributos": {
+            "for": "14 (+2)",
+            "des": "11 (+0)",
+            "con": "13 (+1)",
+            "int": "1 (-5)",
+            "sab": "3 (-4)",
+            "car": "1 (-5)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Pancada",
+                "dano": "1d6+2",
+                "media": 5
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Animated+Armor"
+    },
+    {
+        "nome": "Espada Voadora (Flying Sword)",
+        "nd": "1/4",
+        "tipo": "Construto",
+        "defesa": 17,
+        "hp": 17,
+        "ataques": 1,
+        "atributos": {
+            "for": "12 (+1)",
+            "des": "15 (+2)",
+            "con": "11 (+0)",
+            "int": "1 (-5)",
+            "sab": "5 (-3)",
+            "car": "1 (-5)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Cimitarra",
+                "dano": "1d8+1",
+                "media": 5
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Flying+Sword"
+    },
+    {
+        "nome": "Homúnculo (Homunculus)",
+        "nd": "0",
+        "tipo": "Construto",
+        "defesa": 13,
+        "hp": 5,
+        "ataques": 1,
+        "atributos": {
+            "for": "4 (-3)",
+            "des": "15 (+2)",
+            "con": "11 (+0)",
+            "int": "10 (+0)",
+            "sab": "10 (+0)",
+            "car": "7 (-2)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Mordida",
+                "dano": "1 de Perfuração",
+                "media": 1
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Homunculus"
+    },
+    {
+        "nome": "Fervoroso (Firenewt Warrior)",
+        "nd": "1/2",
+        "tipo": "Humanoide",
+        "defesa": 16,
+        "hp": 22,
+        "ataques": 1,
+        "atributos": {
+            "for": "10 (+0)",
+            "des": "13 (+1)",
+            "con": "12 (+1)",
+            "int": "7 (-2)",
+            "sab": "11 (+0)",
+            "car": "8 (-1)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Cimitarra",
+                "dano": "1d6+1 de Cortante + 1d4 de Fogo",
+                "media": 6
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Firenewt+Warrior"
+    },
+    {
+        "nome": "Grim Magma (Magmin)",
+        "nd": "1/2",
+        "tipo": "Elemental",
+        "defesa": 14,
+        "hp": 9,
+        "ataques": 1,
+        "atributos": {
+            "for": "7 (-2)",
+            "des": "15 (+2)",
+            "con": "12 (+1)",
+            "int": "8 (-1)",
+            "sab": "10 (+0)",
+            "car": "10 (+0)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Toque Flamejante",
+                "dano": "2d6 de Fogo",
+                "media": 7
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Magmin"
+    },
+    {
+        "nome": "Geleia Cinzenta (Gray Ooze)",
+        "nd": "1/2",
+        "tipo": "Limo (Ooze)",
+        "defesa": 8,
+        "hp": 22,
+        "ataques": 1,
+        "atributos": {
+            "for": "12 (+1)",
+            "des": "6 (-2)",
+            "con": "16 (+3)",
+            "int": "1 (-5)",
+            "sab": "6 (-2)",
+            "car": "1 (-5)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Pseudópode",
+                "dano": "1d6+1 de Concussão + 2d6 de Ácido",
+                "media": 11
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Gray+Ooze"
+    },
+    {
+        "nome": "Geleia Transparente (Psychic Gray Ooze)",
+        "nd": "1/2",
+        "tipo": "Limo (Ooze)",
+        "defesa": 8,
+        "hp": 22,
+        "ataques": 1,
+        "atributos": {
+            "for": "12 (+1)",
+            "des": "6 (-2)",
+            "con": "16 (+3)",
+            "int": "1 (-5)",
+            "sab": "6 (-2)",
+            "car": "1 (-5)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Pancada Psíquica",
+                "dano": "1d6+1 de Concussão + 1d6 de Psíquico",
+                "media": 8
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Psychic+Gray+Ooze"
+    },
+    {
+        "nome": "Meio-Scion (Choker)",
+        "nd": "1",
+        "tipo": "Aberração",
+        "defesa": 16,
+        "hp": 13,
+        "ataques": 2,
+        "atributos": {
+            "for": "16 (+3)",
+            "des": "14 (+2)",
+            "con": "13 (+1)",
+            "int": "4 (-3)",
+            "sab": "12 (+1)",
+            "car": "7 (-2)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Tentáculo Tentacular",
+                "dano": "1d6+3",
+                "media": 6
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Choker"
+    },
+    {
+        "nome": "Espreitador das Sombras (Shadow Mastiff)",
+        "nd": "1",
+        "tipo": "Monstruosidade",
+        "defesa": 12,
+        "hp": 33,
+        "ataques": 1,
+        "atributos": {
+            "for": "16 (+3)",
+            "des": "14 (+2)",
+            "con": "13 (+1)",
+            "int": "4 (-3)",
+            "sab": "12 (+1)",
+            "car": "8 (-1)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Mordida",
+                "dano": "2d6+3",
+                "media": 10
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Shadow+Mastiff"
+    },
+    {
+        "nome": "Mimico (Mimic)",
+        "nd": "2",
+        "tipo": "Monstruosidade",
+        "defesa": 12,
+        "hp": 58,
+        "ataques": 1,
+        "atributos": {
+            "for": "17 (+3)",
+            "des": "12 (+1)",
+            "con": "15 (+2)",
+            "int": "5 (-3)",
+            "sab": "13 (+1)",
+            "car": "8 (-1)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Pseudópode",
+                "dano": "1d8+3",
+                "media": 7
+            },
+            {
+                "nome": "Mordida",
+                "dano": "1d8+3",
+                "media": 7
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Mimic"
+    },
+    {
+        "nome": "Ogre",
+        "nd": "2",
+        "tipo": "Gigante",
+        "defesa": 11,
+        "hp": 59,
+        "ataques": 1,
+        "atributos": {
+            "for": "19 (+4)",
+            "des": "8 (-1)",
+            "con": "16 (+3)",
+            "int": "5 (-3)",
+            "sab": "7 (-2)",
+            "car": "7 (-2)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Grande Porrete",
+                "dano": "2d8+4",
+                "media": 13
+            },
+            {
+                "nome": "Javelina",
+                "dano": "2d6+4",
+                "media": 11
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Ogre"
+    },
+    {
+        "nome": "Gárgula (Gargoyle)",
+        "nd": "2",
+        "tipo": "Elemental",
+        "defesa": 15,
+        "hp": 52,
+        "ataques": 2,
+        "atributos": {
+            "for": "15 (+2)",
+            "des": "11 (+0)",
+            "con": "16 (+3)",
+            "int": "6 (-2)",
+            "sab": "11 (+0)",
+            "car": "7 (-2)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Mordida",
+                "dano": "1d6+2",
+                "media": 5
+            },
+            {
+                "nome": "Garras",
+                "dano": "1d6+2",
+                "media": 5
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Gargoyle"
+    },
+    {
+        "nome": "Nótico (Nothic)",
+        "nd": "2",
+        "tipo": "Aberração",
+        "defesa": 13,
+        "hp": 45,
+        "ataques": 2,
+        "atributos": {
+            "for": "14 (+2)",
+            "des": "16 (+3)",
+            "con": "16 (+3)",
+            "int": "13 (+1)",
+            "sab": "10 (+0)",
+            "car": "8 (-1)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Garras",
+                "dano": "1d6+2",
+                "media": 5
+            },
+            {
+                "nome": "Olhar Apodrecedor (Rotting Gaze)",
+                "dano": "3d6",
+                "media": 10
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Nothic"
+    },
+    {
+        "nome": "Ghast (Carniçal Líder)",
+        "nd": "2",
+        "tipo": "Morto-Vivo",
+        "defesa": 13,
+        "hp": 36,
+        "ataques": 1,
+        "atributos": {
+            "for": "16 (+3)",
+            "des": "17 (+3)",
+            "con": "10 (+0)",
+            "int": "11 (+0)",
+            "sab": "10 (+0)",
+            "car": "8 (-1)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Mordida",
+                "dano": "2d8+3",
+                "media": 12
+            },
+            {
+                "nome": "Garras",
+                "dano": "2d6+3",
+                "media": 10
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Ghast"
+    },
+    {
+        "nome": "Geleia de Gelatina (Gelatinous Cube)",
+        "nd": "2",
+        "tipo": "Limo (Ooze)",
+        "defesa": 6,
+        "hp": 84,
+        "ataques": 1,
+        "atributos": {
+            "for": "14 (+2)",
+            "des": "3 (-4)",
+            "con": "20 (+5)",
+            "int": "1 (-5)",
+            "sab": "6 (-2)",
+            "car": "1 (-5)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Pseudópode",
+                "dano": "3d6 de Ácido",
+                "media": 10
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Gelatinous+Cube"
+    },
+    {
+        "nome": "Espantalho de Ferro (Rug of Smothering)",
+        "nd": "2",
+        "tipo": "Construto",
+        "defesa": 12,
+        "hp": 33,
+        "ataques": 1,
+        "atributos": {
+            "for": "17 (+3)",
+            "des": "14 (+2)",
+            "con": "10 (+0)",
+            "int": "1 (-5)",
+            "sab": "3 (-4)",
+            "car": "1 (-5)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Sufocar (Smother)",
+                "dano": "2d6+3",
+                "media": 10
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Rug+of+Smothering"
+    },
+    {
+        "nome": "Aniquilador de Armaduras (Rust Monster)",
+        "nd": "2",
+        "tipo": "Monstruosidade",
+        "defesa": 14,
+        "hp": 27,
+        "ataques": 1,
+        "atributos": {
+            "for": "13 (+1)",
+            "des": "12 (+1)",
+            "con": "13 (+1)",
+            "int": "2 (-4)",
+            "sab": "13 (+1)",
+            "car": "6 (-2)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Mordida",
+                "dano": "1d8+1",
+                "media": 5
+            },
+            {
+                "nome": "Antenas (Corrosão)",
+                "dano": "0",
+                "media": 0
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Rust+Monster"
+    },
+    {
+        "nome": "Foguete de Pegaso (Peryton)",
+        "nd": "2",
+        "tipo": "Monstruosidade",
+        "defesa": 13,
+        "hp": 33,
+        "ataques": 2,
+        "atributos": {
+            "for": "16 (+3)",
+            "des": "12 (+1)",
+            "con": "13 (+1)",
+            "int": "9 (-1)",
+            "sab": "12 (+1)",
+            "car": "10 (+0)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Chifres",
+                "dano": "1d8+3",
+                "media": 7
+            },
+            {
+                "nome": "Garras",
+                "dano": "2d4+3",
+                "media": 8
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Peryton"
+    },
+    {
+        "nome": "Fogo Fátuo (Will-o'-Wisp)",
+        "nd": "2",
+        "tipo": "Morto-Vivo",
+        "defesa": 19,
+        "hp": 22,
+        "ataques": 1,
+        "atributos": {
+            "for": "1 (-5)",
+            "des": "28 (+9)",
+            "con": "10 (+0)",
+            "int": "13 (+1)",
+            "sab": "14 (+2)",
+            "car": "11 (+0)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Choque Elétrico",
+                "dano": "2d8 de Raio",
+                "media": 9
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Will-o%27-Wisp"
+    },
+    {
+        "nome": "Anão de Gelo (Azer)",
+        "nd": "2",
+        "tipo": "Elemental",
+        "defesa": 17,
+        "hp": 39,
+        "ataques": 1,
+        "atributos": {
+            "for": "17 (+3)",
+            "des": "12 (+1)",
+            "con": "15 (+2)",
+            "int": "12 (+1)",
+            "sab": "13 (+1)",
+            "car": "10 (+0)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Martelo de Guerra",
+                "dano": "1d8+3 de Concussão + 1d6 de Fogo",
+                "media": 11
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Azer"
+    },
+    {
+        "nome": "Anis (Sea Hag)",
+        "nd": "2",
+        "tipo": "Fey (Feérica)",
+        "defesa": 14,
+        "hp": 52,
+        "ataques": 1,
+        "atributos": {
+            "for": "16 (+3)",
+            "des": "13 (+1)",
+            "con": "16 (+3)",
+            "int": "12 (+1)",
+            "sab": "12 (+1)",
+            "car": "13 (+1)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Garras",
+                "dano": "2d6+3",
+                "media": 10
+            },
+            {
+                "nome": "Olhar da Morte (Death Glare)",
+                "dano": "0 (Alvo cai para 0 HP)",
+                "media": 0
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Sea+Hag"
+    },
+    {
+        "nome": "Espírito da Tumba (Poltergeist)",
+        "nd": "2",
+        "tipo": "Morto-Vivo",
+        "defesa": 12,
+        "hp": 22,
+        "ataques": 1,
+        "atributos": {
+            "for": "1 (-5)",
+            "des": "14 (+2)",
+            "con": "11 (+0)",
+            "int": "10 (+0)",
+            "sab": "10 (+0)",
+            "car": "11 (+0)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Empurrão Telecinético",
+                "dano": "0 (Força o alvo a mover-se)",
+                "media": 0
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Poltergeist"
+    },
+    {
+        "nome": "Meio-Ogre (Ogrillon)",
+        "nd": "2",
+        "tipo": "Gigante",
+        "defesa": 12,
+        "hp": 44,
+        "ataques": 1,
+        "atributos": {
+            "for": "17 (+3)",
+            "des": "10 (+0)",
+            "con": "14 (+2)",
+            "int": "7 (-2)",
+            "sab": "9 (-1)",
+            "car": "7 (-2)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Grande Machado",
+                "dano": "1d12+3",
+                "media": 9
+            },
+            {
+                "nome": "Pancada",
+                "dano": "1d6+3",
+                "media": 6
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Half-Ogre"
+    },
+    {
+        "nome": "Lobisomem (Werewolf)",
+        "nd": "3",
+        "tipo": "Humanoide (Metamorfo)",
+        "defesa": 11,
+        "hp": 58,
+        "ataques": 2,
+        "atributos": {
+            "for": "15 (+2)",
+            "des": "13 (+1)",
+            "con": "14 (+2)",
+            "int": "10 (+0)",
+            "sab": "11 (+0)",
+            "car": "10 (+0)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Mordida",
+                "dano": "1d8+2",
+                "media": 6
+            },
+            {
+                "nome": "Garras",
+                "dano": "2d4+2",
+                "media": 7
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Werewolf"
+    },
+    {
+        "nome": "Múmia (Mummy)",
+        "nd": "3",
+        "tipo": "Morto-Vivo",
+        "defesa": 11,
+        "hp": 58,
+        "ataques": 1,
+        "atributos": {
+            "for": "16 (+3)",
+            "des": "8 (-1)",
+            "con": "15 (+2)",
+            "int": "6 (-2)",
+            "sab": "12 (+1)",
+            "car": "12 (+1)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Pancada Podre (Rotting Fist)",
+                "dano": "2d6+3 de Concussão + 3d6 de Necrótico",
+                "media": 20
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Mummy"
+    },
+    {
+        "nome": "Mantípora (Manticore)",
+        "nd": "3",
+        "tipo": "Monstruosidade",
+        "defesa": 14,
+        "hp": 68,
+        "ataques": 3,
+        "atributos": {
+            "for": "17 (+3)",
+            "des": "16 (+3)",
+            "con": "17 (+3)",
+            "int": "7 (-2)",
+            "sab": "12 (+1)",
+            "car": "8 (-1)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Mordida",
+                "dano": "1d8+3",
+                "media": 7
+            },
+            {
+                "nome": "Garras",
+                "dano": "1d6+3",
+                "media": 6
+            },
+            {
+                "nome": "Espinho da Cauda",
+                "dano": "1d8+3",
+                "media": 7
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Manticore"
+    },
+    {
+        "nome": "Minotauro (Minotaur)",
+        "nd": "3",
+        "tipo": "Monstruosidade",
+        "defesa": 14,
+        "hp": 76,
+        "ataques": 1,
+        "atributos": {
+            "for": "18 (+4)",
+            "des": "11 (+0)",
+            "con": "16 (+3)",
+            "int": "6 (-2)",
+            "sab": "16 (+3)",
+            "car": "9 (-1)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Machado Grande",
+                "dano": "2d12+4",
+                "media": 17
+            },
+            {
+                "nome": "Chifres",
+                "dano": "2d8+4",
+                "media": 13
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Minotaur"
+    },
+    {
+        "nome": "Doppelganger",
+        "nd": "3",
+        "tipo": "Monstruosidade (Metamorfo)",
+        "defesa": 14,
+        "hp": 52,
+        "ataques": 2,
+        "atributos": {
+            "for": "11 (+0)",
+            "des": "18 (+4)",
+            "con": "14 (+2)",
+            "int": "11 (+0)",
+            "sab": "12 (+1)",
+            "car": "14 (+2)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Pancada",
+                "dano": "1d6+4",
+                "media": 7
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Doppelganger"
+    },
+    {
+        "nome": "Anconídeo (Hook Horror)",
+        "nd": "3",
+        "tipo": "Monstruosidade",
+        "defesa": 15,
+        "hp": 75,
+        "ataques": 2,
+        "atributos": {
+            "for": "18 (+4)",
+            "des": "10 (+0)",
+            "con": "15 (+2)",
+            "int": "6 (-2)",
+            "sab": "12 (+1)",
+            "car": "7 (-2)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Gancho",
+                "dano": "2d6+4",
+                "media": 11
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Hook+Horror"
+    },
+    {
+        "nome": "Cavaleiro (Knight - NPC)",
+        "nd": "3",
+        "tipo": "Humanoide",
+        "defesa": 18,
+        "hp": 52,
+        "ataques": 2,
+        "atributos": {
+            "for": "16 (+3)",
+            "des": "11 (+0)",
+            "con": "14 (+2)",
+            "int": "11 (+0)",
+            "sab": "11 (+0)",
+            "car": "15 (+2)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Espada Grande",
+                "dano": "2d6+3",
+                "media": 10
+            },
+            {
+                "nome": "Besta Pesada",
+                "dano": "1d10+1",
+                "media": 6
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Knight"
+    },
+    {
+        "nome": "Veterano (Veteran - NPC)",
+        "nd": "3",
+        "tipo": "Humanoide",
+        "defesa": 17,
+        "hp": 58,
+        "ataques": 3,
+        "atributos": {
+            "for": "16 (+3)",
+            "des": "13 (+1)",
+            "con": "14 (+2)",
+            "int": "10 (+0)",
+            "sab": "11 (+0)",
+            "car": "10 (+0)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Espada Longa",
+                "dano": "1d8+3",
+                "media": 7
+            },
+            {
+                "nome": "Espada Curta",
+                "dano": "1d6+3",
+                "media": 6
+            },
+            {
+                "nome": "Besta Pesada",
+                "dano": "1d10+1",
+                "media": 6
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Veteran"
+    },
+    {
+        "nome": "Espectro (Specter)",
+        "nd": "3",
+        "tipo": "Morto-Vivo",
+        "defesa": 12,
+        "hp": 22,
+        "ataques": 1,
+        "atributos": {
+            "for": "1 (-5)",
+            "des": "14 (+2)",
+            "con": "11 (+0)",
+            "int": "10 (+0)",
+            "sab": "10 (+0)",
+            "car": "11 (+0)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Dreno de Vida",
+                "dano": "3d6 de Necrótico",
+                "media": 10
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Specter"
+    },
+    {
+        "nome": "Cão Infernal (Hell Hound)",
+        "nd": "3",
+        "tipo": "Fiend (Infeccioso)",
+        "defesa": 15,
+        "hp": 45,
+        "ataques": 1,
+        "atributos": {
+            "for": "17 (+3)",
+            "des": "12 (+1)",
+            "con": "14 (+2)",
+            "int": "6 (-2)",
+            "sab": "13 (+1)",
+            "car": "6 (-2)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Mordida",
+                "dano": "1d8+3 de Perfuração + 2d6 de Fogo",
+                "media": 14
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Hell+Hound"
+    },
+    {
+        "nome": "Fantasma (Ghost)",
+        "nd": "4",
+        "tipo": "Morto-Vivo",
+        "defesa": 11,
+        "hp": 45,
+        "ataques": 1,
+        "atributos": {
+            "for": "7 (-2)",
+            "des": "13 (+1)",
+            "con": "10 (+0)",
+            "int": "10 (+0)",
+            "sab": "12 (+1)",
+            "car": "17 (+3)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Toque Envelhecedor (Withering Touch)",
+                "dano": "4d6+3 de Necrótico",
+                "media": 17
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Ghost"
+    },
+    {
+        "nome": "Banshee",
+        "nd": "4",
+        "tipo": "Morto-Vivo",
+        "defesa": 12,
+        "hp": 58,
+        "ataques": 1,
+        "atributos": {
+            "for": "1 (-5)",
+            "des": "14 (+2)",
+            "con": "10 (+0)",
+            "int": "12 (+1)",
+            "sab": "11 (+0)",
+            "car": "17 (+3)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Toque Corruptor",
+                "dano": "3d6+3 de Necrótico",
+                "media": 13
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Banshee"
+    },
+    {
+        "nome": "Ettin",
+        "nd": "4",
+        "tipo": "Gigante",
+        "defesa": 12,
+        "hp": 85,
+        "ataques": 2,
+        "atributos": {
+            "for": "21 (+5)",
+            "des": "8 (-1)",
+            "con": "17 (+3)",
+            "int": "6 (-2)",
+            "sab": "10 (+0)",
+            "car": "7 (-2)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Machado de Batalha",
+                "dano": "2d8+5",
+                "media": 14
+            },
+            {
+                "nome": "Porrete Espinhoso",
+                "dano": "2d6+5",
+                "media": 12
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Ettin"
+    },
+    {
+        "nome": "Labareda (Flameskull)",
+        "nd": "4",
+        "tipo": "Morto-Vivo",
+        "defesa": 13,
+        "hp": 40,
+        "ataques": 2,
+        "atributos": {
+            "for": "1 (-5)",
+            "des": "17 (+3)",
+            "con": "14 (+2)",
+            "int": "16 (+3)",
+            "sab": "10 (+0)",
+            "car": "11 (+0)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Raio de Fogo",
+                "dano": "1d6 de Fogo",
+                "media": 3
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Flameskull"
+    },
+    {
+        "nome": "Súcubo / Íncubo (Succubus/Incubus)",
+        "nd": "4",
+        "tipo": "Fiend (Metamorfo)",
+        "defesa": 15,
+        "hp": 66,
+        "ataques": 1,
+        "atributos": {
+            "for": "8 (-1)",
+            "des": "17 (+3)",
+            "con": "13 (+1)",
+            "int": "15 (+2)",
+            "sab": "12 (+1)",
+            "car": "20 (+5)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Garras",
+                "dano": "1d6+3",
+                "media": 6
+            },
+            {
+                "nome": "Beijo Drenante (Draining Kiss)",
+                "dano": "5d10+5 de Psíquico",
+                "media": 32
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Succubus"
+    },
+    {
+        "nome": "Terror de Elmo (Helmed Horror)",
+        "nd": "4",
+        "tipo": "Construto",
+        "defesa": 20,
+        "hp": 60,
+        "ataques": 2,
+        "atributos": {
+            "for": "18 (+4)",
+            "des": "13 (+1)",
+            "con": "16 (+3)",
+            "int": "10 (+0)",
+            "sab": "10 (+0)",
+            "car": "10 (+0)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Espada Longa",
+                "dano": "1d8+4",
+                "media": 8
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Helmed+Horror"
+    },
+    {
+        "nome": "Yuan-ti Puro-Sangue (Yuan-ti Pureblood)",
+        "nd": "4",
+        "tipo": "Humanoide",
+        "defesa": 11,
+        "hp": 40,
+        "ataques": 2,
+        "atributos": {
+            "for": "11 (+0)",
+            "des": "12 (+1)",
+            "con": "11 (+0)",
+            "int": "13 (+1)",
+            "sab": "12 (+1)",
+            "car": "14 (+2)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Cimitarra",
+                "dano": "1d6+1 de Perfuração + 2d6 de Veneno",
+                "media": 11
+            },
+            {
+                "nome": "Arco Curto",
+                "dano": "1d6+1 de Perfuração + 2d6 de Veneno",
+                "media": 11
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Yuan-ti+Pureblood"
+    },
+    {
+        "nome": "Lamia",
+        "nd": "4",
+        "tipo": "Monstruosidade",
+        "defesa": 13,
+        "hp": 97,
+        "ataques": 3,
+        "atributos": {
+            "for": "16 (+3)",
+            "des": "13 (+1)",
+            "con": "15 (+2)",
+            "int": "14 (+2)",
+            "sab": "13 (+1)",
+            "car": "16 (+3)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Garras",
+                "dano": "2d10+3",
+                "media": 14
+            },
+            {
+                "nome": "Adaga",
+                "dano": "1d4+3",
+                "media": 5
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Lamia"
+    },
+    {
+        "nome": "Gorgone (Chuul)",
+        "nd": "4",
+        "tipo": "Aberração",
+        "defesa": 16,
+        "hp": 93,
+        "ataques": 2,
+        "atributos": {
+            "for": "19 (+4)",
+            "des": "10 (+0)",
+            "con": "16 (+3)",
+            "int": "5 (-3)",
+            "sab": "11 (+0)",
+            "car": "5 (-3)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Garra (Pincer)",
+                "dano": "2d6+4",
+                "media": 11
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Chuul"
+    },
+    {
+        "nome": "Barghest",
+        "nd": "4",
+        "tipo": "Fiend (Metamorfo)",
+        "defesa": 16,
+        "hp": 90,
+        "ataques": 2,
+        "atributos": {
+            "for": "19 (+4)",
+            "des": "15 (+2)",
+            "con": "18 (+4)",
+            "int": "13 (+1)",
+            "sab": "12 (+1)",
+            "car": "14 (+2)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Mordida",
+                "dano": "2d8+4",
+                "media": 13
+            },
+            {
+                "nome": "Garras",
+                "dano": "1d8+4",
+                "media": 8
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Barghest"
+    },
+    {
+        "nome": "Gladiador (Gladiator - NPC)",
+        "nd": "5",
+        "tipo": "Humanoide",
+        "defesa": 16,
+        "hp": 112,
+        "ataques": 3,
+        "atributos": {
+            "for": "18 (+4)",
+            "des": "15 (+2)",
+            "con": "16 (+3)",
+            "int": "10 (+0)",
+            "sab": "12 (+1)",
+            "car": "11 (+0)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Lança",
+                "dano": "2d6+4",
+                "media": 11
+            },
+            {
+                "nome": "Escudo (Shield Bash)",
+                "dano": "1d4+4",
+                "media": 6
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Gladiator"
+    },
+    {
+        "nome": "Espectro da Noite (Wraith)",
+        "nd": "5",
+        "tipo": "Morto-Vivo",
+        "defesa": 13,
+        "hp": 67,
+        "ataques": 1,
+        "atributos": {
+            "for": "6 (-2)",
+            "des": "16 (+3)",
+            "con": "16 (+3)",
+            "int": "12 (+1)",
+            "sab": "14 (+2)",
+            "car": "15 (+2)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Dreno de Vida",
+                "dano": "4d8+3 de Necrótico",
+                "media": 21
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Wraith"
+    },
+    {
+        "nome": "Shambling Mound (Montículo Errante)",
+        "nd": "5",
+        "tipo": "Planta",
+        "defesa": 15,
+        "hp": 136,
+        "ataques": 2,
+        "atributos": {
+            "for": "18 (+4)",
+            "des": "8 (-1)",
+            "con": "16 (+3)",
+            "int": "5 (-3)",
+            "sab": "10 (+0)",
+            "car": "5 (-3)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Pancada",
+                "dano": "2d8+4",
+                "media": 13
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Shambling+Mound"
+    },
+    {
+        "nome": "Onyx Golem (Scarecrow King / Flesh Golem)",
+        "nd": "5",
+        "tipo": "Construto",
+        "defesa": 9,
+        "hp": 93,
+        "ataques": 2,
+        "atributos": {
+            "for": "19 (+4)",
+            "des": "9 (-1)",
+            "con": "18 (+4)",
+            "int": "6 (-2)",
+            "sab": "10 (+0)",
+            "car": "5 (-3)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Pancada",
+                "dano": "2d8+4",
+                "media": 13
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Flesh+Golem"
+    },
+    {
+        "nome": "Vrock",
+        "nd": "5",
+        "tipo": "Fiend (Demônio)",
+        "defesa": 15,
+        "hp": 104,
+        "ataques": 2,
+        "atributos": {
+            "for": "17 (+3)",
+            "des": "15 (+2)",
+            "con": "18 (+4)",
+            "int": "8 (-1)",
+            "sab": "13 (+1)",
+            "car": "8 (-1)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Bico",
+                "dano": "2d6+3",
+                "media": 10
+            },
+            {
+                "nome": "Garras",
+                "dano": "2d10+3",
+                "media": 14
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Vrock"
+    },
+    {
+        "nome": "Barbezu (Bearded Devil)",
+        "nd": "5",
+        "tipo": "Fiend (Diabo)",
+        "defesa": 13,
+        "hp": 52,
+        "ataques": 2,
+        "atributos": {
+            "for": "16 (+3)",
+            "des": "15 (+2)",
+            "con": "15 (+2)",
+            "int": "9 (-1)",
+            "sab": "11 (+0)",
+            "car": "11 (+0)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Glaive",
+                "dano": "1d10+3 de Cortante + 1d6 de Veneno",
+                "media": 12
+            },
+            {
+                "nome": "Mordida de Barba",
+                "dano": "1d8+3",
+                "media": 7
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Bearded+Devil"
+    },
+    {
+        "nome": "Slaad Vermelho (Red Slaad)",
+        "nd": "5",
+        "tipo": "Aberração",
+        "defesa": 14,
+        "hp": 93,
+        "ataques": 3,
+        "atributos": {
+            "for": "16 (+3)",
+            "des": "12 (+1)",
+            "con": "16 (+3)",
+            "int": "7 (-2)",
+            "sab": "12 (+1)",
+            "car": "7 (-2)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Mordida",
+                "dano": "1d12+3",
+                "media": 9
+            },
+            {
+                "nome": "Garras",
+                "dano": "1d8+3",
+                "media": 7
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Red+Slaad"
+    },
+    {
+        "nome": "Troll",
+        "nd": "5",
+        "tipo": "Gigante",
+        "defesa": 15,
+        "hp": 84,
+        "ataques": 3,
+        "atributos": {
+            "for": "18 (+4)",
+            "des": "13 (+1)",
+            "con": "20 (+5)",
+            "int": "7 (-2)",
+            "sab": "9 (-1)",
+            "car": "7 (-2)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Mordida",
+                "dano": "1d6+4",
+                "media": 7
+            },
+            {
+                "nome": "Garras",
+                "dano": "2d6+4",
+                "media": 11
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Troll"
+    },
+    {
+        "nome": "Unicórnio (Unicorn)",
+        "nd": "5",
+        "tipo": "Celestial",
+        "defesa": 12,
+        "hp": 67,
+        "ataques": 2,
+        "atributos": {
+            "for": "18 (+4)",
+            "des": "14 (+2)",
+            "con": "15 (+2)",
+            "int": "11 (+0)",
+            "sab": "17 (+3)",
+            "car": "16 (+3)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Cascos",
+                "dano": "2d6+4",
+                "media": 11
+            },
+            {
+                "nome": "Chifre",
+                "dano": "1d8+4",
+                "media": 8
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Unicorn"
+    },
+    {
+        "nome": "Rebento Vampírico (Vampire Spawn)",
+        "nd": "5",
+        "tipo": "Morto-Vivo",
+        "defesa": 15,
+        "hp": 82,
+        "ataques": 2,
+        "atributos": {
+            "for": "16 (+3)",
+            "des": "16 (+3)",
+            "con": "16 (+3)",
+            "int": "11 (+0)",
+            "sab": "10 (+0)",
+            "car": "12 (+1)"
+        },
+        "lista_ataques": [
+            {
+                "nome": "Mordida",
+                "dano": "1d6+3 de Perfuração + 2d6 de Necrótico",
+                "media": 13
+            },
+            {
+                "nome": "Garras",
+                "dano": "2d4+3",
+                "media": 8
+            }
+        ],
+        "link": "https://www.dndbeyond.com/monsters?filter-search=Vampire+Spawn"
+    }
+]
