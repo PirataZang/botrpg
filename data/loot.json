@@ -5,67 +5,647 @@
     "Cobre"
   ],
   "comuns": [
-    { "nome": "Adaga Enferrujada", "descricao": "Lâmina mal cuidada e cega, mal serve para cortar cordas." },
-    { "nome": "Pedaço de Pano Rasgado", "descricao": "Tecido sujo que já foi parte da roupa de alguém. Serve como bandagem improvisada." },
-    { "nome": "Cantil de Couro (Vazio)", "descricao": "Um cantil básico de couro duro. Retém a água razoavelmente bem." },
-    { "nome": "Corda de Cânhamo (15m)", "descricao": "Corda rústica e áspera, útil para amarrações básicas e escaladas." },
-    { "nome": "Tocha Úmida", "descricao": "Pode ser acesa, mas fará muita fumaça e iluminará pouco." },
-    { "nome": "Anel de Latão", "descricao": "Sem valor comercial, talvez sirva para enganar alguém desatento." },
-    { "nome": "Ração de Viagem (1 dia)", "descricao": "Carne seca dura e biscoitos salgados de gosto duvidoso." },
-    { "nome": "Odre de Vinho Azedo", "descricao": "O vinho virou vinagre há semanas. Bom para cozinhar ou limpar feridas." },
-    { "nome": "Espelho de Mão Trincado", "descricao": "Reflete a imagem distorcida. Traz 7 anos de azar? Quem sabe." },
-    { "nome": "Saco de Dormir Poeirento", "descricao": "Cheira a mofo, mas é melhor do que dormir no chão de pedra." },
-    { "nome": "Mochila Esburacada", "descricao": "Os itens menores podem cair pelo fundo se não for consertada." },
-    { "nome": "Pé de Cabra Ferrugento", "descricao": "Ainda é pesado e alavanca baús, mas suja as mãos do usuário." },
-    { "nome": "Pedra de Amolar Gasta", "descricao": "Fina pelo uso constante, quase no fim de sua vida útil." },
-    { "nome": "Algibeira de Cintura", "descricao": "Feita de lona simples, com um cordão quase arrebentando." },
-    { "nome": "Pederneira e Isca", "descricao": "Pedras de faísca e um pedaço de pano carbonizado para fazer fogo." },
-    { "nome": "Pote de Tinta (Metade)", "descricao": "Tinta preta simples de lula, já meio ressecada." },
-    { "nome": "Pena de Escrita Desgastada", "descricao": "Uma pena de corvo, a ponta precisa ser cortada de novo." },
-    { "nome": "Pergaminho em Branco", "descricao": "Bordas queimadas e papel amassado, mas dá pra escrever uma carta." },
-    { "nome": "Caneca de Madeira", "descricao": "Gasta por milhares de canecas batidas em tavernas." },
-    { "nome": "Colher de Pau", "descricao": "Talhada a mão de forma muito rústica. Tem gosto de ensopado." },
-    { "nome": "Prego de Ferro Longo", "descricao": "Um prego grande e torto de 15 cm. Pode servir de estaca." },
-    { "nome": "Pedaço de Giz Branco", "descricao": "Meio giz de lousa, ótimo para marcar paredes de masmorras." },
-    { "nome": "Sabão Rústico", "descricao": "Um bloco de gordura e cinzas. Limpa, mas o cheiro não é dos melhores." },
-    { "nome": "Sino Pequeno de Bronze", "descricao": "Faz um som agudo, sem o badalo original (substituído por uma pedra)." },
-    { "nome": "Agulha de Osso e Fio", "descricao": "Kit rústico de costura de sobrevivência." },
-    { "nome": "Fivela de Cinto", "descricao": "De ferro escuro, sem cinto." },
-    { "nome": "Bota Esquerda de Couro", "descricao": "Apenas o pé esquerdo, tem um furo pequeno no dedão." },
-    { "nome": "Osso Estranho", "descricao": "Não se sabe de qual animal veio, mas parece ter sido roído." },
-    { "nome": "Dente de Goblin", "descricao": "Um troféu fedorento arrancado de um monstro abatido." },
-    { "nome": "Moeda de Madeira Antiga", "descricao": "Dinheiro falso ou token de algum jogo de azar que não existe mais." }
+    {
+      "nome": "Adaga Enferrujada",
+      "descricao": "Lâmina mal cuidada e cega, mal serve para cortar cordas."
+    },
+    {
+      "nome": "Pedaço de Pano Rasgado",
+      "descricao": "Tecido sujo que já foi parte da roupa de alguém. Serve como bandagem improvisada."
+    },
+    {
+      "nome": "Cantil de Couro (Vazio)",
+      "descricao": "Um cantil básico de couro duro. Retém a água razoavelmente bem."
+    },
+    {
+      "nome": "Corda de Cânhamo (15m)",
+      "descricao": "Corda rústica e áspera, útil para amarrações básicas e escaladas."
+    },
+    {
+      "nome": "Tocha Úmida",
+      "descricao": "Pode ser acesa, mas fará muita fumaça e iluminará pouco."
+    },
+    {
+      "nome": "Anel de Latão",
+      "descricao": "Sem valor comercial, talvez sirva para enganar alguém desatento."
+    },
+    {
+      "nome": "Ração de Viagem (1 dia)",
+      "descricao": "Carne seca dura e biscoitos salgados de gosto duvidoso."
+    },
+    {
+      "nome": "Odre de Vinho Azedo",
+      "descricao": "O vinho virou vinagre há semanas. Bom para cozinhar ou limpar feridas."
+    },
+    {
+      "nome": "Espelho de Mão Trincado",
+      "descricao": "Reflete a imagem distorcida. Traz 7 anos de azar? Quem sabe."
+    },
+    {
+      "nome": "Saco de Dormir Poeirento",
+      "descricao": "Cheira a mofo, mas é melhor do que dormir no chão de pedra."
+    },
+    {
+      "nome": "Mochila Esburacada",
+      "descricao": "Os itens menores podem cair pelo fundo se não for consertada."
+    },
+    {
+      "nome": "Pé de Cabra Ferrugento",
+      "descricao": "Ainda é pesado e alavanca baús, mas suja as mãos do usuário."
+    },
+    {
+      "nome": "Pedra de Amolar Gasta",
+      "descricao": "Fina pelo uso constante, quase no fim de sua vida útil."
+    },
+    {
+      "nome": "Algibeira de Cintura",
+      "descricao": "Feita de lona simples, com um cordão quase arrebentando."
+    },
+    {
+      "nome": "Pederneira e Isca",
+      "descricao": "Pedras de faísca e um pedaço de pano carbonizado para fazer fogo."
+    },
+    {
+      "nome": "Pote de Tinta (Metade)",
+      "descricao": "Tinta preta simples de lula, já meio ressecada."
+    },
+    {
+      "nome": "Pena de Escrita Desgastada",
+      "descricao": "Uma pena de corvo, a ponta precisa ser cortada de novo."
+    },
+    {
+      "nome": "Pergaminho em Branco",
+      "descricao": "Bordas queimadas e papel amassado, mas dá pra escrever uma carta."
+    },
+    {
+      "nome": "Caneca de Madeira",
+      "descricao": "Gasta por milhares de canecas batidas em tavernas."
+    },
+    {
+      "nome": "Colher de Pau",
+      "descricao": "Talhada a mão de forma muito rústica. Tem gosto de ensopado."
+    },
+    {
+      "nome": "Prego de Ferro Longo",
+      "descricao": "Um prego grande e torto de 15 cm. Pode servir de estaca."
+    },
+    {
+      "nome": "Pedaço de Giz Branco",
+      "descricao": "Meio giz de lousa, ótimo para marcar paredes de masmorras."
+    },
+    {
+      "nome": "Sabão Rústico",
+      "descricao": "Um bloco de gordura e cinzas. Limpa, mas o cheiro não é dos melhores."
+    },
+    {
+      "nome": "Sino Pequeno de Bronze",
+      "descricao": "Faz um som agudo, sem o badalo original (substituído por uma pedra)."
+    },
+    {
+      "nome": "Agulha de Osso e Fio",
+      "descricao": "Kit rústico de costura de sobrevivência."
+    },
+    {
+      "nome": "Fivela de Cinto",
+      "descricao": "De ferro escuro, sem cinto."
+    },
+    {
+      "nome": "Bota Esquerda de Couro",
+      "descricao": "Apenas o pé esquerdo, tem um furo pequeno no dedão."
+    },
+    {
+      "nome": "Osso Estranho",
+      "descricao": "Não se sabe de qual animal veio, mas parece ter sido roído."
+    },
+    {
+      "nome": "Dente de Goblin",
+      "descricao": "Um troféu fedorento arrancado de um monstro abatido."
+    },
+    {
+      "nome": "Moeda de Madeira Antiga",
+      "descricao": "Dinheiro falso ou token de algum jogo de azar que não existe mais."
+    },
+    {
+      "nome": "Chave de Ferro Curvada",
+      "descricao": "Não abre nenhuma porta por perto e está torta demais para entrar em qualquer fechadura comum."
+    },
+    {
+      "nome": "Frasco de Óleo de Lâmpada (Quase Vazio)",
+      "descricao": "Resta apenas um dedo de óleo viscoso no fundo, mal dá para manter uma lanterna acessa por 10 minutos."
+    },
+    {
+      "nome": "Pedaço de Couro Ressecado",
+      "descricao": "Duro como pedra por causa do sol. Precisaria ser tratado novamente para servir para algum remendo."
+    },
+    {
+      "nome": "Isqueiro de Pavio de Corda",
+      "descricao": "Mecanismo de faísca simples com um pavio de corda queimado na ponta. Requer paciência para acender."
+    },
+    {
+      "nome": "Ferradura Amassada",
+      "descricao": "Dizem que dá sorte, mas esta aqui parece ter sido atropelada por uma carroça pesada."
+    },
+    {
+      "nome": "Pote de Barro com Banha",
+      "descricao": "Banha de porco rançosa. Serve para lubrificar engrenagens barulhentas ou fritar algo em último caso."
+    },
+    {
+      "nome": "Pano de Prato Encardido",
+      "descricao": "Tão manchado de graxa e fuligem que é difícil dizer qual era a cor original."
+    },
+    {
+      "nome": "Anzol de Pesca Torto",
+      "descricao": "Feito de arame comum, precisa ser endireitado antes que possa segurar qualquer peixe."
+    },
+    {
+      "nome": "Rolo de Barbante de Linho",
+      "descricao": "Cerca de 5 metros de linha fina. Fraca para escaladas, ótima para armadilhas simples com sinos."
+    },
+    {
+      "nome": "Casca de Árvore Aromática",
+      "descricao": "Um pedaço de casca de pinheiro que solta um cheiro forte quando jogada na fogueira, disfarçando outros odores."
+    },
+    {
+      "nome": "Remendo de Cota de Malha",
+      "descricao": "Apenas um punhado de 10 anéis de ferro interligados, rompidos de uma armadura destruída."
+    },
+    {
+      "nome": "Pente de Chifre Quebrado",
+      "descricao": "Faltam metade dos dentes, mas ainda serve para tirar carrapatos ou pentear cabelos rebeldes."
+    },
+    {
+      "nome": "Rolha de Cortiça Mastigada",
+      "descricao": "Parece que um rato tentou roê-la para chegar ao conteúdo da garrafa. Ainda tapa buracos pequenos."
+    },
+    {
+      "nome": "Pedaço de Carvão Vegetal",
+      "descricao": "Retirado de uma fogueira antiga. Ótimo para desenhar mapas rudimentares em paredes ou peles."
+    },
+    {
+      "nome": "Garrafa de Vidro Verde (Vazia)",
+      "descricao": "Vidro grosso e cheio de bolhas de ar. Se quebrada, vira uma arma improvisada perigosa."
+    },
+    {
+      "nome": "Chocalho de Sementes Secas",
+      "descricao": "Uma cabaça seca cheia de sementes que faz barulho ao ser sacudida. Usado por tribos ou como distração."
+    },
+    {
+      "nome": "Faca de Cozinha Sem Cabo",
+      "descricao": "A lâmina de ferro continua inteira, mas a espiga de metal machuca a mão se usada sem um pano enrolado."
+    },
+    {
+      "nome": "Tiras de Tecido de Linho",
+      "descricao": "Duas ou três tiras longas. Boas para amarrar o cabelo, prender calças largas ou estancar sangramentos."
+    },
+    {
+      "nome": "Presas de Javali",
+      "descricao": "Duas presas curvas e sujas de terra. Valem alguns trocados para um artesão de amuletos."
+    },
+    {
+      "nome": "Pedra de Rio Perfeitamente Redonda",
+      "descricao": "Lisa e pesada. O tamanho exato para ser usada como munição de funda."
+    },
+    {
+      "nome": "Caneca de Estanho Amassada",
+      "descricao": "Tem um furo perto da borda, então você não pode enchê-la até a boca sem se molhar."
+    },
+    {
+      "nome": "Dedal de Costura Oco",
+      "descricao": "Feito de metal barato, protege o dedo contra agulhadas grossas em couro."
+    },
+    {
+      "nome": "Fivela de Latão Esverdeada",
+      "descricao": "O metal começou a oxidar, deixando manchas verdes. Pertenceu a uma capa ou mochila."
+    },
+    {
+      "nome": "Punhado de Penas de Galinha",
+      "descricao": "Penas brancas e fuleiras, guardadas em um saquinho. Talvez sirvam para rechear um travesseiro de viagem."
+    },
+    {
+      "nome": "Pote de Sal Grosso (Quase Vazio)",
+      "descricao": "Resta apenas uma colher de sopa de sal sujo de terra. Ajuda a dar um gosto menos pior à ração velha."
+    },
+    {
+      "nome": "Vela de Sebo Derretida",
+      "descricao": "Feita de gordura animal, cheira mal quando acesa e derrete muito mais rápido que cera de abelha."
+    },
+    {
+      "nome": "Pedaço de Cera de Abelha",
+      "descricao": "Um bloco firme e pegajoso. Útil para impermeabilizar costuras de botas ou amaciar cordas."
+    },
+    {
+      "nome": "Broche de Madeira Entalhada",
+      "descricao": "Formato rudimentar de um urso. Trabalho de um camponês entediado."
+    },
+    {
+      "nome": "Saco de Estopa Rasgado",
+      "descricao": "Acomoda itens grandes como lenha, mas não segura grãos ou moedas devido aos furos."
+    },
+    {
+      "nome": "Fragmento de Telha de Barro",
+      "descricao": "Um pedaço curvo e afiado de cerâmica vermelha. Dá para usar como raspador de peles."
+    },
+    {
+      "nome": "Tampa de Panela de Ferro",
+      "descricao": "Pesada e gordurosa. Sem a panela, serve apenas como um escudo improvisado patético contra pedradas."
+    },
+    {
+      "nome": "Cachecol de Lã Roído",
+      "descricao": "Cheio de furos feitos por traças, mas ainda protege o pescoço contra o vento da noite."
+    },
+    {
+      "nome": "Dado de Osso Rachado",
+      "descricao": "O número 4 está meio apagado devido a uma rachadura que cruza a face do osso."
+    },
+    {
+      "nome": "Chave de Afinar Alaúde",
+      "descricao": "Uma pequena peça de madeira usada por músicos. Inútil para quem não tem o instrumento."
+    },
+    {
+      "nome": "Pedaço de Vidro Fumê",
+      "descricao": "Permite olhar diretamente para o sol por alguns segundos sem queimar os olhos."
+    },
+    {
+      "nome": "Esporidódio Seco (Cogumelo)",
+      "descricao": "Um cogumelo completamente desidratado e duro. Não é comestível, mas pega faísca de pederneira muito fácil."
+    },
+    {
+      "nome": "Sineta de Ovelha",
+      "descricao": "Feita de ferro batido, emite um som opaco e chato. Usada para rastrear gado no nevoeiro."
+    },
+    {
+      "nome": "Medalhão de Chumbo Apagado",
+      "descricao": "O símbolo religioso ou brasão que havia nele foi raspado de propósito com uma faca."
+    },
+    {
+      "nome": "Arame de Ferro Maleável (1m)",
+      "descricao": "Um pedaço de arame resistente que pode ser dobrado várias vezes para improvisar trincos."
+    },
+    {
+      "nome": "Concha de Sopa Rachada",
+      "descricao": "O caldo vaza devagar pela rachadura no fundo se você não for rápido ao servir."
+    },
+    {
+      "nome": "Pedaço de Lona Impermeável",
+      "descricao": "Um quadrado pequeno (50x50cm) de lona coberta de alcatrão. Bom para cobrir a mochila na chuva."
+    },
+    {
+      "nome": "Luva Direita de Trabalho",
+      "descricao": "Feita de couro grosso de vaca, muito gasta na palma da mão. A esquerda sumiu."
+    },
+    {
+      "nome": "Casca de Noz Vazia",
+      "descricao": "Duas metades perfeitas de uma noz grande, limpas por dentro."
+    },
+    {
+      "nome": "Cinzas de Ervas Secas",
+      "descricao": "Restos de um ritual ou remédio caseiro no fundo de um saquinho. Tem cheiro de sálvia queimada."
+    },
+    {
+      "nome": "Frasco de Vinagre de Maçã",
+      "descricao": "Cheiro forte e ácido. Bom para disfarçar o odor de feridas infeccionadas ou limpar metais."
+    },
+    {
+      "nome": "Fita de Cabelo Desbotada",
+      "descricao": "Já foi vermelha e bonita, agora é um trapo rosa pálido manchado de suor."
+    },
+    {
+      "nome": "Pá de Lixo de Zinco",
+      "descricao": "Pequena e barulhenta, serve para cavar terra fofa se você não tiver uma pá de verdade."
+    },
+    {
+      "nome": "Dente de Alho Ressecado",
+      "descricao": "Velho e murcho, perdeu quase todo o sabor, mas ainda afasta alguns insetos pelo cheiro."
+    },
+    {
+      "nome": "Chaveiro com Anel Quebrado",
+      "descricao": "Um aro de metal que não fecha direito, fazendo as chaves caírem se balançar muito."
+    },
+    {
+      "nome": "Ferrão de Escorpião Gigante Seco",
+      "descricao": "O veneno já evaporou há meses, restando apenas a carcaça de quitina afiada e oca."
+    }
   ],
   "magicos": [
-    { "nome": "Colar do Destino Menor", "descricao": "Permite rerolar qualquer resultado 1 ou 2 em um dado de ataque ou teste (1 uso/dia)." },
-    { "nome": "Anel de Brilho Fraco", "descricao": "Emite luz equivalente a uma vela em um raio de 1,5m quando friccionado, ótimo para leitura noturna sem alertar monstros." },
-    { "nome": "Botas do Passo Silencioso", "descricao": "Concede +2 em testes de Furtividade apenas ao caminhar em terrenos rochosos ou de pedra." },
-    { "nome": "Capa da Brisa Fresca", "descricao": "O usuário se sente sempre a 20 graus celsius, nunca sofrendo os efeitos adversos do calor extremo." },
-    { "nome": "Luvas do Escapista", "descricao": "Uma vez por dia, garante vantagem em um teste de Acrobacia ou Atletismo para escapar de um agarramento." },
-    { "nome": "Cinto do Vigor Inicial", "descricao": "Restaura 1d4 de HP automaticamente na primeira vez que o usuário cai abaixo de 50% de seus Pontos de Vida (recarrega ao amanhecer)." },
-    { "nome": "Óculos da Penumbra", "descricao": "Permite enxergar perfeitamente no escuro total (em tons de verde) a até 4,5m de distância." },
-    { "nome": "Anel da Faísca", "descricao": "Permite acender fogueiras, tochas ou velas a até 3m de distância com um estalar de dedos (não pode dar dano a criaturas)." },
-    { "nome": "Manto das Sombras Vagas", "descricao": "Quando em luz fraca, a silhueta do usuário parece distorcida ou fora de foco, concedendo +1 na Classe de Armadura (CA)." },
-    { "nome": "Amuleto da Voz Falsa", "descricao": "Permite alterar o tom de voz perfeitamente para soar como outra pessoa que já ouviu, dura 10 minutos (1 vez/dia)." },
-    { "nome": "Escudo Batedor Leve", "descricao": "Um escudo que vibra levemente e emite um zumbido inaudível quando orcs ou goblins estão a menos de 30 metros." },
-    { "nome": "Espada Curta da Gota d'Água", "descricao": "A lâmina está sempre levemente úmida e fria. Causa 1 de dano de frio extra além do dano da arma." },
-    { "nome": "Poção da Pele de Casca Menor", "descricao": "Líquido marrom grosso. Aumenta a CA em +1 por 1 hora. O gosto é de terra molhada e mato." },
-    { "nome": "Pedra de Enviar Mensagem", "descricao": "Vem em par. Permite enviar uma mensagem telepática de até 5 palavras para quem segurar a pedra gêmea (alcance de 10km)." },
-    { "nome": "Pingente do Fôlego Longo", "descricao": "Dobra o tempo máximo que o usuário pode prender a respiração embaixo d'água." },
-    { "nome": "Mochila do Viajante Cansado", "descricao": "Uma bolsa que faz todos os itens não-vivos dentro dela pesarem 25% a menos." },
-    { "nome": "Dados Viciados do Vigarista", "descricao": "Uma vez por dia, como uma reação rápida, você pode alterar o resultado de uma rolagem sua de 1d6 para um 6 perfeito." },
-    { "nome": "Bracelete Magnético", "descricao": "O usuário pode usar uma ação bônus para puxar para sua mão pequenos objetos de metal de até 1 kg a até 3 metros de distância." },
-    { "nome": "Bastão de Pesca Farto", "descricao": "Se deixado na água, garante pescar pelo menos 1 peixe comestível após 1 hora de espera, ignorando se há peixes na região." },
-    { "nome": "Brinco da Prontidão", "descricao": "Dá um pequeno 'beliscão' mágico quente na orelha do usuário 1 segundo antes dele sofrer um ataque furtivo." },
-    { "nome": "Adaga Bumerangue", "descricao": "Se arremessada, a adaga flutua magicamente de volta para a mão do usuário no início do próximo turno dele." },
-    { "nome": "Cantil Inesgotável", "descricao": "Produz até 1 litro de água potável fresca por dia ao dizer a palavra de ativação 'Oasis'." },
-    { "nome": "Bandana da Mente Focada", "descricao": "Concede Vantagem no primeiro teste de Constituição para manter a Concentração em uma magia de cada dia." },
-    { "nome": "Lenço da Limpeza Mágica", "descricao": "Nunca fica sujo. Se passado sobre uma arma coberta de sangue ou armadura cheia de lama, a limpa instantaneamente." },
-    { "nome": "Caneta do Escriba Veloz", "descricao": "Permite escrever magicamente o que o usuário ditar em voz alta em qualquer pedaço de papel. O limite de tinta dura 1 página/dia." },
-    { "nome": "Botão do Alfaiate Fantasma", "descricao": "Se pressionado sobre um rasgo em roupas não mágicas, o botão costura o tecido perfeitamente em 1 minuto." },
-    { "nome": "Cajado Bússola", "descricao": "Feito de madeira clara, quando colocado de pé no chão e solto, sempre cai tombando com a ponta apontada para o Norte geográfico." },
-    { "nome": "Broche de Ferro de Defesa", "descricao": "Absorve e reduz a zero o dano do PRIMEIRO ataque corpo a corpo recebido no dia (seja dano de 1 ou de 20)." },
-    { "nome": "Frasco de Vento Engarrafado", "descricao": "Ao abrir a rolha, solta uma forte rajada de vento (empurrando criaturas pequenas 3m para trás) por 1 turno. Quebra e some após uso." },
-    { "nome": "Moeda da Aposta Ganha", "descricao": "Uma moeda de cobre estranha. Quando jogada para o alto para 'cara ou coroa', você pode decidir telepaticamente qual lado vai cair (1 vez/dia)." }
+    {
+      "nome": "Colar do Destino Menor",
+      "descricao": "Permite rerolar qualquer resultado 1 ou 2 em um dado de ataque ou teste (1 uso/dia)."
+    },
+    {
+      "nome": "Anel de Brilho Fraco",
+      "descricao": "Emite luz equivalente a uma vela em um raio de 1,5m quando friccionado, ótimo para leitura noturna sem alertar monstros."
+    },
+    {
+      "nome": "Botas do Passo Silencioso",
+      "descricao": "Concede +2 em testes de Furtividade apenas ao caminhar em terrenos rochosos ou de pedra."
+    },
+    {
+      "nome": "Capa da Brisa Fresca",
+      "descricao": "O usuário se sente sempre a 20 graus celsius, nunca sofrendo os efeitos adversos do calor extremo."
+    },
+    {
+      "nome": "Luvas do Escapista",
+      "descricao": "Uma vez por dia, garante vantagem em um teste de Acrobacia ou Atletismo para escapar de um agarramento."
+    },
+    {
+      "nome": "Cinto do Vigor Inicial",
+      "descricao": "Restaura 1d4 de HP automaticamente na primeira vez que o usuário cai abaixo de 50% de seus Pontos de Vida (recarrega ao amanhecer)."
+    },
+    {
+      "nome": "Óculos da Penumbra",
+      "descricao": "Permite enxergar perfeitamente no escuro total (em tons de verde) a até 4,5m de distância."
+    },
+    {
+      "nome": "Anel da Faísca",
+      "descricao": "Permite acender fogueiras, tochas ou velas a até 3m de distância com um estalar de dedos (não pode dar dano a criaturas)."
+    },
+    {
+      "nome": "Manto das Sombras Vagas",
+      "descricao": "Quando em luz fraca, a silhueta do usuário parece distorcida ou fora de foco, concedendo +1 na Classe de Armadura (CA)."
+    },
+    {
+      "nome": "Amuleto da Voz Falsa",
+      "descricao": "Permite alterar o tom de voz perfeitamente para soar como outra pessoa que já ouviu, dura 10 minutos (1 vez/dia)."
+    },
+    {
+      "nome": "Escudo Batedor Leve",
+      "descricao": "Um escudo que vibra levemente e emite um zumbido inaudível quando orcs ou goblins estão a menos de 30 metros."
+    },
+    {
+      "nome": "Espada Curta da Gota d'Água",
+      "descricao": "A lâmina está sempre levemente úmida e fria. Causa 1 de dano de frio extra além do dano da arma."
+    },
+    {
+      "nome": "Poção da Pele de Casca Menor",
+      "descricao": "Líquido marrom grosso. Aumenta a CA em +1 por 1 hora. O gosto é de terra molhada e mato."
+    },
+    {
+      "nome": "Pedra de Enviar Mensagem",
+      "descricao": "Vem em par. Permite enviar uma mensagem telepática de até 5 palavras para quem segurar a pedra gêmea (alcance de 10km)."
+    },
+    {
+      "nome": "Pingente do Fôlego Longo",
+      "descricao": "Dobra o tempo máximo que o usuário pode prender a respiração embaixo d'água."
+    },
+    {
+      "nome": "Mochila do Viajante Cansado",
+      "descricao": "Uma bolsa que faz todos os itens não-vivos dentro dela pesarem 25% a menos."
+    },
+    {
+      "nome": "Dados Viciados do Vigarista",
+      "descricao": "Uma vez por dia, como uma reação rápida, você pode alterar o resultado de uma rolagem sua de 1d6 para um 6 perfeito."
+    },
+    {
+      "nome": "Bracelete Magnético",
+      "descricao": "O usuário pode usar uma ação bônus para puxar para sua mão pequenos objetos de metal de até 1 kg a até 3 metros de distância."
+    },
+    {
+      "nome": "Bastão de Pesca Farto",
+      "descricao": "Se deixado na água, garante pescar pelo menos 1 peixe comestível após 1 hora de espera, ignorando se há peixes na região."
+    },
+    {
+      "nome": "Brinco da Prontidão",
+      "descricao": "Dá um pequeno 'beliscão' mágico quente na orelha do usuário 1 segundo antes dele sofrer um ataque furtivo."
+    },
+    {
+      "nome": "Adaga Bumerangue",
+      "descricao": "Se arremessada, a adaga flutua magicamente de volta para a mão do usuário no início do próximo turno dele."
+    },
+    {
+      "nome": "Cantil Inesgotável",
+      "descricao": "Produz até 1 litro de água potável fresca por dia ao dizer a palavra de ativação 'Oasis'."
+    },
+    {
+      "nome": "Bandana da Mente Focada",
+      "descricao": "Concede Vantagem no primeiro teste de Constituição para manter a Concentração em uma magia de cada dia."
+    },
+    {
+      "nome": "Lenço da Limpeza Mágica",
+      "descricao": "Nunca fica sujo. Se passado sobre uma arma coberta de sangue ou armadura cheia de lama, a limpa instantaneamente."
+    },
+    {
+      "nome": "Caneta do Escriba Veloz",
+      "descricao": "Permite escrever magicamente o que o usuário ditar em voz alta em qualquer pedaço de papel. O limite de tinta dura 1 página/dia."
+    },
+    {
+      "nome": "Botão do Alfaiate Fantasma",
+      "descricao": "Se pressionado sobre um rasgo em roupas não mágicas, o botão costura o tecido perfeitamente em 1 minuto."
+    },
+    {
+      "nome": "Cajado Bússola",
+      "descricao": "Feito de madeira clara, quando colocado de pé no chão e solto, sempre cai tombando com a ponta apontada para o Norte geográfico."
+    },
+    {
+      "nome": "Broche de Ferro de Defesa",
+      "descricao": "Absorve e reduz a zero o dano do PRIMEIRO ataque corpo a corpo recebido no dia (seja dano de 1 ou de 20)."
+    },
+    {
+      "nome": "Frasco de Vento Engarrafado",
+      "descricao": "Ao abrir a rolha, solta uma forte rajada de vento (empurrando criaturas pequenas 3m para trás) por 1 turno. Quebra e some após uso."
+    },
+    {
+      "nome": "Moeda da Aposta Ganha",
+      "descricao": "Uma moeda de cobre estranha. Quando jogada para o alto para 'cara ou coroa', você pode decidir telepaticamente qual lado vai cair (1 vez/dia)."
+    },
+    {
+      "nome": "Monóculo do Avaliador Cético",
+      "descricao": "Ao olhar para um objeto de valor através dele, revela instantaneamente se o item é uma falsificação ou se há um fundo falso (1 uso/dia)."
+    },
+    {
+      "nome": "Flauta do Rato Dançarino",
+      "descricao": "Ao ser tocada, faz com que até 3 roedores normais em um raio de 10m fiquem hipnotizados e dancem por 1 minuto, ignorando outros comandos."
+    },
+    {
+      "nome": "Tônico do Sono Sem Ronco",
+      "descricao": "Um xarope azul que garante que o usuário durma profundamente por 6 horas sem emitir nenhum som, facilitando o descanso em acampamentos perigosos."
+    },
+    {
+      "nome": "Anel da Pegada Invertida",
+      "descricao": "Enquanto usado, as pegadas do usuário no chão (lama, neve, areia) aparecem viradas na direção oposta à que ele está realmente caminhando."
+    },
+    {
+      "nome": "Giz da Passagem Secreta",
+      "descricao": "Permite desenhar uma maçaneta em uma parede sólida não mágica. Abre um compartimento de 30x30cm que dura 10 minutos antes do giz sumir."
+    },
+    {
+      "nome": "Bolsa de Moedas do Eco",
+      "descricao": "Faz o barulho de conter centenas de moedas de ouro quando chacoalhada, mesmo que esteja completamente vazia. Ótimo para blefes."
+    },
+    {
+      "nome": "Óleo do Deslize Perfeito",
+      "descricao": "Um frasco pequeno. Passado nas botas, ignora penalidades de movimento por terreno difícil causado por gelo, lama ou graxa por 10 minutos."
+    },
+    {
+      "nome": "Sino do Alarme Silencioso",
+      "descricao": "Pode ser amarrado em uma corda. Se um intruso tocar na corda, o sino vibra fortemente na mão do dono (até 30m), mas não emite som algum."
+    },
+    {
+      "nome": "Amuleto do Digestor de Ferro",
+      "descricao": "Permite ao usuário comer e digerir qualquer matéria orgânica crua, estragada ou venenosa sem sofrer infecção intestinal ou dano."
+    },
+    {
+      "nome": "Corda da Serpente Rígida",
+      "descricao": "Uma corda de 6 metros que, ao ser pronunciada a palavra de comando, fica perfeitamente rígida como um poste de ferro por 1 hora."
+    },
+    {
+      "nome": "Cinzeiro da Mensagem Queimada",
+      "descricao": "Qualquer papel queimado neste cinzeiro de pedra se transforma em fumaça que viaja até o destinatário mentalizado, reformando a carta diante dele."
+    },
+    {
+      "nome": "Prego do Tranqueiro",
+      "descricao": "Se cravado com a mão na fresta de uma porta comum, a tranca magicamente como se fosse uma fechadura de alta qualidade (requer teste difícil para arrombar)."
+    },
+    {
+      "nome": "Anel do Cumprimento Chocante",
+      "descricao": "Uma vez por dia, ao apertar a mão de alguém, causa 1d4 de dano elétrico não letal. Dá vantagem em testes de Intimidação logo em seguida."
+    },
+    {
+      "nome": "Pena do Tradutor Preguiçoso",
+      "descricao": "Traduz instantaneamente uma única palavra escrita em qualquer idioma desconhecido ao ser passada por cima dela (3 cargas/dia)."
+    },
+    {
+      "nome": "Espelho do Reflexo Atrasado",
+      "descricao": "Um pequeno espelho de bolso que mostra o que aconteceu naquele exato local 10 segundos atrás, em vez do reflexo do presente."
+    },
+    {
+      "nome": "Caneca do Brinde Alcoólico",
+      "descricao": "Purifica qualquer bebida alcoólica colocada nela, neutralizando venenos, mas mantendo o teor alcoólico intacto."
+    },
+    {
+      "nome": "Dado do Destino Cego",
+      "descricao": "Um dado de 20 lados que não tem números, apenas as palavras 'SIM' e 'NÃO' gravadas. Uma vez por dia, responde a uma pergunta de decisão simples."
+    },
+    {
+      "nome": "Perfume do Predador Apex",
+      "descricao": "Frasco com 3 borrifadas. Borrifado na roupa, faz cães de guarda e lobos evitarem atacar o usuário por 5 minutos, temendo o cheiro."
+    },
+    {
+      "nome": "Luvas do Toque Térmico",
+      "descricao": "Permite segurar metais em brasa ou gelo seco com as mãos nuas por até 1 minuto sem sofrer queimaduras ou dano."
+    },
+    {
+      "nome": "Agulha do Remendo Veloz",
+      "descricao": "Costura ferimentos abertos instantaneamente. Cura 2 de HP, mas causa uma dor terrível, deixando o alvo atordoado até o final do turno."
+    },
+    {
+      "nome": "Apito do Chamado Canino",
+      "descricao": "Emite um som audível apenas por caninos (cães, lobos, hienas) em um raio de 100 metros. Eles olham na direção do som, distraídos."
+    },
+    {
+      "nome": "Manto do Camaleão Estático",
+      "descricao": "Concede +5 em Furtividade, mas APENAS se o usuário estiver completamente imóvel, sem respirar e sem segurar armas."
+    },
+    {
+      "nome": "Pedaço de Giz Termométrico",
+      "descricao": "Muda de cor conforme a temperatura do ambiente ou do objeto tocado (Azul: Congelante, Verde: Ambiente, Vermelho: Febre/Quente)."
+    },
+    {
+      "nome": "Grimório da Auto-Leitura",
+      "descricao": "Um livro em branco que escreve sozinho a biografia resumida e os últimos acontecimentos da vida de qualquer pessoa comum que o toque."
+    },
+    {
+      "nome": "Calcanhar do Salto Alto",
+      "descricao": "Pequenas molas mágicas atadas às botas. Permite triplicar a distância de um único salto vertical ou horizontal (1 uso/dia)."
+    },
+    {
+      "nome": "Pedra do Calor de Bolso",
+      "descricao": "Uma pedra de rio que permanece constantemente a 40 graus celsius. Ótima para aquecer as mãos ou evitar congelamento em nevascas."
+    },
+    {
+      "nome": "Chave Mestra Enferrujada",
+      "descricao": "Uma chave que se molda a qualquer fechadura comum de metal. Tem 50% de chance de abrir e 50% de chance de quebrar dentro da fechadura."
+    },
+    {
+      "nome": "Baralho das Cartas Marcadas",
+      "descricao": "As estampas das cartas mudam sutilmente de cor no verso de acordo com o naipe e valor, visível apenas para quem está sintonizado com o baralho."
+    },
+    {
+      "nome": "Colírio da Visão Fluida",
+      "descricao": "Permite enxergar claramente através de fumaça densa ou névoa natural por 10 minutos após pingado nos olhos."
+    },
+    {
+      "nome": "Bracelete do Peso Pena",
+      "descricao": "Permite erguer um único objeto inanimado extremamente pesado (até 150 kg) por 3 segundos, tempo exato para segurar uma pilastra caindo."
+    },
+    {
+      "nome": "Incensório da Calma Espiritual",
+      "descricao": "Quando aceso, impede que qualquer criatura em um raio de 3 metros caia em estado de Fúria ou pânico por 5 minutos."
+    },
+    {
+      "nome": "Sapato do Dançarino Ágil",
+      "descricao": "Garante sucesso automático em testes para manter o equilíbrio em superfícies estreitas (como cordas bambas ou parapeitos)."
+    },
+    {
+      "nome": "Amuleto do Peso Morto",
+      "descricao": "Quando ativado, faz o corpo do usuário pesar exatamente 500 kg por 1 turno. Útil para evitar ser empurrado ou para quebrar chãos frágeis."
+    },
+    {
+      "nome": "Tônico da Voz de Trovão",
+      "descricao": "Ao beber, a voz do usuário se torna amplificada magneticamente por 1 minuto, podendo ser ouvida claramente a até 500 metros de distância."
+    },
+    {
+      "nome": "Lente do Rastreamento Brilhante",
+      "descricao": "Revela pegadas de sangue ou fluidos corporais deixados nas últimas 24 horas, fazendo-os brilhar em neon roxo."
+    },
+    {
+      "nome": "Bolsa de Pipocas de Distração",
+      "descricao": "Ao jogar um punhado dessas sementes no fogo, elas estouram fazendo o barulho exato de fogos de artifício ou tiros de besta, distraindo guardas."
+    },
+    {
+      "nome": "Broche da Flor de Lótus",
+      "descricao": "A flor murcha e morre instantaneamente se o usuário for exposto a um gás venenoso, servindo como um sistema de aviso prévio."
+    },
+    {
+      "nome": "Adaga da Sombra Cortada",
+      "descricao": "Se você cravar esta adaga na sombra de uma criatura pequena ou média, ela não consegue se mover do lugar no próximo turno dela."
+    },
+    {
+      "nome": "Frasco de Tinta Invisível",
+      "descricao": "O que for escrito com esta tinta fica invisível. As letras só aparecem quando o papel é exposto diretamente ao calor de uma chama."
+    },
+    {
+      "nome": "Alvo Magnético de Flechas",
+      "descricao": "Um pequeno disco de metal. Se colado nas costas de um inimigo, atrai levemente flechas disparadas, garantindo +1 no próximo teste de ataque à distância contra ele."
+    },
+    {
+      "nome": "Óculos do Raio-X de Pano",
+      "descricao": "Permite enxergar através de tecidos e roupas (mas não couro, metal ou madeira) a até 3 metros de distância. Ótimo para revistar guardas ocultando chaves."
+    },
+    {
+      "nome": "Moeda do Retorno Certo",
+      "descricao": "Uma moeda de ouro que, não importa onde seja gasta ou perdida, reaparece no bolso do dono original exatamente à meia-noite (funciona apenas com 1 moeda específica)."
+    },
+    {
+      "nome": "Cinto da Flutuação Hidrofóbica",
+      "descricao": "Impede o usuário de afundar na água. Ele flutua como uma boia de cortiça, mesmo vestindo armadura pesada (mas não ajuda a nadar mais rápido)."
+    },
+    {
+      "nome": "Anel da Mentira Inocente",
+      "descricao": "Pisca uma luz vermelha morna no dedo do usuário se a última frase dita por alguém olhando nos seus olhos foi uma mentira direta."
+    },
+    {
+      "nome": "Morfador de Chaves de Cera",
+      "descricao": "Um bloco de cera mágica que, ao ser pressionado contra uma fechadura por 1 minuto, solidifica-se no formato exato da chave (quebra após abrir a fechadura uma vez)."
+    },
+    {
+      "nome": "Semente do Crescimento Instantâneo",
+      "descricao": "Ao ser jogada na terra e regada com uma gota de água, cresce uma videira grossa de 5 metros de altura em 3 segundos, permitindo escaladas rápidas."
+    },
+    {
+      "nome": "Bracelete do Arqueiro Estável",
+      "descricao": "Elimina qualquer penalidade de ataque à distância causada por vento forte ou chuva leve."
+    },
+    {
+      "nome": "Pó do Sumiço de Cheiro",
+      "descricao": "Um punhado de pó cinza. Espalhado sobre o corpo, apaga completamente o odor da criatura por 1 hora, impossibilitando rastreamento por faro."
+    },
+    {
+      "nome": "Estátua do Corvo Vigia",
+      "descricao": "Uma miniatura de ferro de um corvo. Se deixada no topo de uma estrutura, ela emite um grasnado alto se qualquer criatura invisível passar perto."
+    },
+    {
+      "nome": "Garras do Alpinista Urbano",
+      "descricao": "Anéis com pequenas garras retráteis que concedem vantagem em testes de Atletismo para escalar superfícies de tijolo, madeira ou alvenaria."
+    }
   ]
 }

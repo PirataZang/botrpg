@@ -5,7 +5,7 @@ const lootData = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'loot.j
 
 function generateLoot() {
     const moneyType = lootData.money[Math.floor(Math.random() * lootData.money.length)];
-    const moneyAmount = Math.floor(Math.random() * 20) + 1; // 1 a 20
+    const moneyAmount = Math.floor(Math.random() * 10) + 1; // 1 a 10
     const moneyText = `${moneyAmount} Moeda(s) de ${moneyType}`;
 
     const commonItem = lootData.comuns[Math.floor(Math.random() * lootData.comuns.length)];

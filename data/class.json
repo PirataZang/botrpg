@@ -1,0 +1,1714 @@
+[
+    {
+        "classe": "Bardo",
+        "link": "https://www.dndbeyond.com/classes/bard",
+        "descricao": "Um mestre da música e da magia que inspira seus aliados e manipula seus inimigos.",
+        "atributos_principais": {
+            "primario": "Carisma",
+            "secundario": "Destreza"
+        },
+        "dados_de_vida": {
+            "dado_por_nivel": "1d8",
+            "hp_no_nivel_1": "8 + modificador de Constituição"
+        },
+        "proficiencias_iniciais": {
+            "armaduras": [
+                "Armaduras leves"
+            ],
+            "armas": [
+                "Armas simples",
+                "Besta de mão",
+                "Espada longa",
+                "Espada curta",
+                "Raquete"
+            ],
+            "testes_de_resistencia": [
+                "Destreza",
+                "Carisma"
+            ]
+        },
+        "progressao_niveis": [
+            {
+                "level": 1,
+                "beneficios": [
+                    "Conjuração",
+                    "Inspiração Bárdica (d6)"
+                ]
+            },
+            {
+                "level": 2,
+                "beneficios": [
+                    "Pau pra Toda Obra",
+                    "Canção de Descanso (d6)"
+                ]
+            },
+            {
+                "level": 3,
+                "beneficios": [
+                    "Colégio Bárdico (Subclasse)",
+                    "Especialização (2 perícias)"
+                ]
+            },
+            {
+                "level": 4,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 5,
+                "beneficios": [
+                    "Inspiração Bárdica (d8)",
+                    "Fonte de Inspiração"
+                ]
+            },
+            {
+                "level": 6,
+                "beneficios": [
+                    "Recurso do Colégio Bárdico",
+                    "Contra-encanto"
+                ]
+            },
+            {
+                "level": 7,
+                "beneficios": [
+                    "Magias de 4º Círculo"
+                ]
+            },
+            {
+                "level": 8,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 9,
+                "beneficios": [
+                    "Canção de Descanso (d8)"
+                ]
+            },
+            {
+                "level": 10,
+                "beneficios": [
+                    "Inspiração Bárdica (d10)",
+                    "Especialização",
+                    "Segredos Mágicos (2 magias)"
+                ]
+            },
+            {
+                "level": 11,
+                "beneficios": [
+                    "Magias de 6º Círculo"
+                ]
+            },
+            {
+                "level": 12,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 13,
+                "beneficios": [
+                    "Canção de Descanso (d10)"
+                ]
+            },
+            {
+                "level": 14,
+                "beneficios": [
+                    "Recurso do Colégio Bárdico",
+                    "Segredos Mágicos (2 magias)"
+                ]
+            },
+            {
+                "level": 15,
+                "beneficios": [
+                    "Inspiração Bárdica (d12)"
+                ]
+            },
+            {
+                "level": 16,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 17,
+                "beneficios": [
+                    "Canção de Descanso (d12)",
+                    "Magias de 9º Círculo"
+                ]
+            },
+            {
+                "level": 18,
+                "beneficios": [
+                    "Segredos Mágicos (2 magias)"
+                ]
+            },
+            {
+                "level": 19,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 20,
+                "beneficios": [
+                    "Inspiração Superior"
+                ]
+            }
+        ]
+    },
+    {
+        "classe": "Clérigo",
+        "link": "https://www.dndbeyond.com/classes/cleric",
+        "descricao": "Um intermediário divino que conjura magia celestial e usa armadura para defender a fé.",
+        "atributos_principais": {
+            "primario": "Sabedoria",
+            "secundario": "Força ou Constituição"
+        },
+        "dados_de_vida": {
+            "dado_por_nivel": "1d8",
+            "hp_no_nivel_1": "8 + modificador de Constituição"
+        },
+        "proficiencias_iniciais": {
+            "armaduras": [
+                "Armaduras leves",
+                "Armaduras médias",
+                "Escudos"
+            ],
+            "armas": [
+                "Armas simples"
+            ],
+            "testes_de_resistencia": [
+                "Sabedoria",
+                "Carisma"
+            ]
+        },
+        "progressao_niveis": [
+            {
+                "level": 1,
+                "beneficios": [
+                    "Conjuração",
+                    "Domínio Divino (Subclasse)"
+                ]
+            },
+            {
+                "level": 2,
+                "beneficios": [
+                    "Canalizar Divindade (1 uso)",
+                    "Recurso do Domínio Divino"
+                ]
+            },
+            {
+                "level": 3,
+                "beneficios": [
+                    "Magias de 2º Círculo"
+                ]
+            },
+            {
+                "level": 4,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 5,
+                "beneficios": [
+                    "Destruir Mortos-Vivos (ND 1/2)"
+                ]
+            },
+            {
+                "level": 6,
+                "beneficios": [
+                    "Canalizar Divindade (2 usos)",
+                    "Recurso do Domínio Divino"
+                ]
+            },
+            {
+                "level": 7,
+                "beneficios": [
+                    "Magias de 4º Círculo"
+                ]
+            },
+            {
+                "level": 8,
+                "beneficios": [
+                    "ASI ou Talento",
+                    "Destruir Mortos-Vivos (ND 1)",
+                    "Recurso do Domínio Divino"
+                ]
+            },
+            {
+                "level": 9,
+                "beneficios": [
+                    "Magias de 5º Círculo"
+                ]
+            },
+            {
+                "level": 10,
+                "beneficios": [
+                    "Intervenção Divina"
+                ]
+            },
+            {
+                "level": 11,
+                "beneficios": [
+                    "Destruir Mortos-Vivos (ND 2)"
+                ]
+            },
+            {
+                "level": 12,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 13,
+                "beneficios": [
+                    "Magias de 7º Círculo"
+                ]
+            },
+            {
+                "level": 14,
+                "beneficios": [
+                    "Destruir Mortos-Vivos (ND 3)"
+                ]
+            },
+            {
+                "level": 15,
+                "beneficios": [
+                    "Magias de 8º Círculo"
+                ]
+            },
+            {
+                "level": 16,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 17,
+                "beneficios": [
+                    "Destruir Mortos-Vivos (ND 4)",
+                    "Recurso do Domínio Divino"
+                ]
+            },
+            {
+                "level": 18,
+                "beneficios": [
+                    "Canalizar Divindade (3 usos)"
+                ]
+            },
+            {
+                "level": 19,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 20,
+                "beneficios": [
+                    "Intervenção Divina Automática"
+                ]
+            }
+        ]
+    },
+    {
+        "classe": "Druida",
+        "link": "https://www.dndbeyond.com/classes/druid",
+        "descricao": "Um devoto da antiga fé que assume formas animais e conjura os poderes da natureza.",
+        "atributos_principais": {
+            "primario": "Sabedoria",
+            "secundario": "Constituição"
+        },
+        "dados_de_vida": {
+            "dado_por_nivel": "1d8",
+            "hp_no_nivel_1": "8 + modificador de Constituição"
+        },
+        "proficiencias_iniciais": {
+            "armaduras": [
+                "Armaduras leves (não de metal)",
+                "Armaduras médias (não de metal)",
+                "Escudos (não de metal)"
+            ],
+            "armas": [
+                "Adagas",
+                "Dardos",
+                "Bordões",
+                "Cimitarras",
+                "Foices",
+                "Fundas",
+                "Lanças"
+            ],
+            "testes_de_resistencia": [
+                "Inteligência",
+                "Sabedoria"
+            ]
+        },
+        "progressao_niveis": [
+            {
+                "level": 1,
+                "beneficios": [
+                    "Druidismo",
+                    "Conjuração"
+                ]
+            },
+            {
+                "level": 2,
+                "beneficios": [
+                    "Forma Selvagem",
+                    "Círculo Druídico (Subclasse)"
+                ]
+            },
+            {
+                "level": 3,
+                "beneficios": [
+                    "Magias de 2º Círculo"
+                ]
+            },
+            {
+                "level": 4,
+                "beneficios": [
+                    "ASI ou Talento",
+                    "Forma Selvagem Melhorada (Natação)"
+                ]
+            },
+            {
+                "level": 5,
+                "beneficios": [
+                    "Magias de 3º Círculo"
+                ]
+            },
+            {
+                "level": 6,
+                "beneficios": [
+                    "Recurso do Círculo Druídico"
+                ]
+            },
+            {
+                "level": 7,
+                "beneficios": [
+                    "Magias de 4º Círculo"
+                ]
+            },
+            {
+                "level": 8,
+                "beneficios": [
+                    "ASI ou Talento",
+                    "Forma Selvagem Melhorada (Voo)"
+                ]
+            },
+            {
+                "level": 9,
+                "beneficios": [
+                    "Magias de 5º Círculo"
+                ]
+            },
+            {
+                "level": 10,
+                "beneficios": [
+                    "Recurso do Círculo Druídico"
+                ]
+            },
+            {
+                "level": 11,
+                "beneficios": [
+                    "Magias de 6º Círculo"
+                ]
+            },
+            {
+                "level": 12,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 13,
+                "beneficios": [
+                    "Magias de 7º Círculo"
+                ]
+            },
+            {
+                "level": 14,
+                "beneficios": [
+                    "Recurso do Círculo Druídico"
+                ]
+            },
+            {
+                "level": 15,
+                "beneficios": [
+                    "Magias de 8º Círculo"
+                ]
+            },
+            {
+                "level": 16,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 17,
+                "beneficios": [
+                    "Magias de 9º Círculo"
+                ]
+            },
+            {
+                "level": 18,
+                "beneficios": [
+                    "Conjuração Bestial",
+                    "Corpo Atemporal"
+                ]
+            },
+            {
+                "level": 19,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 20,
+                "beneficios": [
+                    "Arqui-druida (Forma Selvagem Infinita)"
+                ]
+            }
+        ]
+    },
+    {
+        "classe": "Guerreiro",
+        "link": "https://www.dndbeyond.com/classes/fighter",
+        "descricao": "Um mestre do combate armado, perito em uma vasta variedade de armas e armaduras.",
+        "atributos_principais": {
+            "primario": "Força ou Destreza",
+            "secundario": "Constituição"
+        },
+        "dados_de_vida": {
+            "dado_por_nivel": "1d10",
+            "hp_no_nivel_1": "10 + modificador de Constituição"
+        },
+        "proficiencias_iniciais": {
+            "armaduras": [
+                "Todas as armaduras",
+                "Escudos"
+            ],
+            "armas": [
+                "Armas simples",
+                "Armas marciais"
+            ],
+            "testes_de_resistencia": [
+                "Força",
+                "Constituição"
+            ]
+        },
+        "progressao_niveis": [
+            {
+                "level": 1,
+                "beneficios": [
+                    "Estilo de Luta",
+                    "Retomar o Fôlego"
+                ]
+            },
+            {
+                "level": 2,
+                "beneficios": [
+                    "Surto de Ação (1 uso)"
+                ]
+            },
+            {
+                "level": 3,
+                "beneficios": [
+                    "Arquétipo Marcial (Subclasse)"
+                ]
+            },
+            {
+                "level": 4,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 5,
+                "beneficios": [
+                    "Ataque Extra (1)"
+                ]
+            },
+            {
+                "level": 6,
+                "beneficios": [
+                    "ASI ou Talento Adicional"
+                ]
+            },
+            {
+                "level": 7,
+                "beneficios": [
+                    "Recurso do Arquétipo Marcial"
+                ]
+            },
+            {
+                "level": 8,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 9,
+                "beneficios": [
+                    "Indomável (1 uso)"
+                ]
+            },
+            {
+                "level": 10,
+                "beneficios": [
+                    "Recurso do Arquétipo Marcial"
+                ]
+            },
+            {
+                "level": 11,
+                "beneficios": [
+                    "Ataque Extra (2)"
+                ]
+            },
+            {
+                "level": 12,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 13,
+                "beneficios": [
+                    "Indomável (2 usos)"
+                ]
+            },
+            {
+                "level": 14,
+                "beneficios": [
+                    "ASI ou Talento Adicional"
+                ]
+            },
+            {
+                "level": 15,
+                "beneficios": [
+                    "Recurso do Arquétipo Marcial"
+                ]
+            },
+            {
+                "level": 16,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 17,
+                "beneficios": [
+                    "Surto de Ação (2 usos)",
+                    "Indomável (3 usos)"
+                ]
+            },
+            {
+                "level": 18,
+                "beneficios": [
+                    "Recurso do Arquétipo Marcial"
+                ]
+            },
+            {
+                "level": 19,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 20,
+                "beneficios": [
+                    "Ataque Extra (3)"
+                ]
+            }
+        ]
+    },
+    {
+        "classe": "Monge",
+        "link": "https://www.dndbeyond.com/classes/monk",
+        "descricao": "Um mestre das artes marciais que canaliza a energia Ki do seu próprio corpo.",
+        "atributos_principais": {
+            "primario": "Destreza",
+            "secundario": "Sabedoria"
+        },
+        "dados_de_vida": {
+            "dado_por_nivel": "1d8",
+            "hp_no_nivel_1": "8 + modificador de Constituição"
+        },
+        "proficiencias_iniciais": {
+            "armaduras": [
+                "Nenhuma"
+            ],
+            "armas": [
+                "Armas simples",
+                "Espadas curtas"
+            ],
+            "testes_de_resistencia": [
+                "Força",
+                "Destreza"
+            ]
+        },
+        "progressao_niveis": [
+            {
+                "level": 1,
+                "beneficios": [
+                    "Defesa Sem Armadura",
+                    "Artes Marciais (d4)"
+                ]
+            },
+            {
+                "level": 2,
+                "beneficios": [
+                    "Ki (Pontos de Ki)",
+                    "Movimento Sem Armadura (+3m)"
+                ]
+            },
+            {
+                "level": 3,
+                "beneficios": [
+                    "Tradição Monástica (Subclasse)",
+                    "Defletir Projéteis"
+                ]
+            },
+            {
+                "level": 4,
+                "beneficios": [
+                    "ASI ou Talento",
+                    "Queda Lenta"
+                ]
+            },
+            {
+                "level": 5,
+                "beneficios": [
+                    "Ataque Extra",
+                    "Golpe Atordoante",
+                    "Artes Marciais (d6)"
+                ]
+            },
+            {
+                "level": 6,
+                "beneficios": [
+                    "Golpes Elementares (Ki)",
+                    "Recurso da Tradição Monástica"
+                ]
+            },
+            {
+                "level": 7,
+                "beneficios": [
+                    "Evasão",
+                    "Mente Tranquila"
+                ]
+            },
+            {
+                "level": 8,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 9,
+                "beneficios": [
+                    "Movimento Sem Armadura Melhorado (Andar pelas paredes/água)"
+                ]
+            },
+            {
+                "level": 10,
+                "beneficios": [
+                    "Pureza Corporal (Imunidade a veneno/doença)"
+                ]
+            },
+            {
+                "level": 11,
+                "beneficios": [
+                    "Recurso da Tradição Monástica",
+                    "Artes Marciais (d8)"
+                ]
+            },
+            {
+                "level": 12,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 13,
+                "beneficios": [
+                    "Idioma do Sol e da Lua (Entende todos os idiomas)"
+                ]
+            },
+            {
+                "level": 14,
+                "beneficios": [
+                    "Alma de Diamante (Proficiência em TODOS os testes de resistência)"
+                ]
+            },
+            {
+                "level": 15,
+                "beneficios": [
+                    "Corpo Atemporal"
+                ]
+            },
+            {
+                "level": 16,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 17,
+                "beneficios": [
+                    "Recurso da Tradição Monástica",
+                    "Artes Marciais (d10)"
+                ]
+            },
+            {
+                "level": 18,
+                "beneficios": [
+                    "Corpo Vazio"
+                ]
+            },
+            {
+                "level": 19,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 20,
+                "beneficios": [
+                    "Auto-Perfeição"
+                ]
+            }
+        ]
+    },
+    {
+        "classe": "Paladino",
+        "link": "https://www.dndbeyond.com/classes/paladin",
+        "descricao": "Aquele que fez um juramento sagrado, combinando proeza marcial com magia divina.",
+        "atributos_principais": {
+            "primario": "Força",
+            "secundario": "Carisma"
+        },
+        "dados_de_vida": {
+            "dado_por_nivel": "1d10",
+            "hp_no_nivel_1": "10 + modificador de Constituição"
+        },
+        "proficiencias_iniciais": {
+            "armaduras": [
+                "Todas as armaduras",
+                "Escudos"
+            ],
+            "armas": [
+                "Armas simples",
+                "Armas marciais"
+            ],
+            "testes_de_resistencia": [
+                "Sabedoria",
+                "Carisma"
+            ]
+        },
+        "progressao_niveis": [
+            {
+                "level": 1,
+                "beneficios": [
+                    "Sentido Divino",
+                    "Mãos Trêmulas (Cura)"
+                ]
+            },
+            {
+                "level": 2,
+                "beneficios": [
+                    "Estilo de Luta",
+                    "Conjuração",
+                    "Destruição Divina (Smite)"
+                ]
+            },
+            {
+                "level": 3,
+                "beneficios": [
+                    "Saúde Divina",
+                    "Juramento Sagrado (Subclasse)"
+                ]
+            },
+            {
+                "level": 4,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 5,
+                "beneficios": [
+                    "Ataque Extra"
+                ]
+            },
+            {
+                "level": 6,
+                "beneficios": [
+                    "Aura de Proteção (+bônus em resistências)"
+                ]
+            },
+            {
+                "level": 7,
+                "beneficios": [
+                    "Recurso do Juramento Sagrado (Geralmente uma Aura)"
+                ]
+            },
+            {
+                "level": 8,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 9,
+                "beneficios": [
+                    "Magias de 3º Círculo"
+                ]
+            },
+            {
+                "level": 10,
+                "beneficios": [
+                    "Aura de Coragem (Imunidade a Medo)"
+                ]
+            },
+            {
+                "level": 11,
+                "beneficios": [
+                    "Destruição Divina Aprimorada (Smite passivo)"
+                ]
+            },
+            {
+                "level": 12,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 13,
+                "beneficios": [
+                    "Magias de 4º Círculo"
+                ]
+            },
+            {
+                "level": 14,
+                "beneficios": [
+                    "Toque Purificador"
+                ]
+            },
+            {
+                "level": 15,
+                "beneficios": [
+                    "Recurso do Juramento Sagrado"
+                ]
+            },
+            {
+                "level": 16,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 17,
+                "beneficios": [
+                    "Magias de 5º Círculo"
+                ]
+            },
+            {
+                "level": 18,
+                "beneficios": [
+                    "Aumenta o alcance das Auras para 9 metros"
+                ]
+            },
+            {
+                "level": 19,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 20,
+                "beneficios": [
+                    "Recurso Final do Juramento (Forma Avatar)"
+                ]
+            }
+        ]
+    },
+    {
+        "classe": "Patrulheiro (Ranger)",
+        "link": "https://www.dndbeyond.com/classes/ranger",
+        "descricao": "Um rastreador e caçador que usa magias da natureza para abater ameaças nas fronteiras.",
+        "atributos_principais": {
+            "primario": "Destreza",
+            "secundario": "Sabedoria"
+        },
+        "dados_de_vida": {
+            "dado_por_nivel": "1d10",
+            "hp_no_nivel_1": "10 + modificador de Constituição"
+        },
+        "proficiencias_iniciais": {
+            "armaduras": [
+                "Armaduras leves",
+                "Armaduras médias",
+                "Escudos"
+            ],
+            "armas": [
+                "Armas simples",
+                "Armas marciais"
+            ],
+            "testes_de_resistencia": [
+                "Força",
+                "Destreza"
+            ]
+        },
+        "progressao_niveis": [
+            {
+                "level": 1,
+                "beneficios": [
+                    "Inimigo Favorito",
+                    "Explorador Natural"
+                ]
+            },
+            {
+                "level": 2,
+                "beneficios": [
+                    "Estilo de Luta",
+                    "Conjuração"
+                ]
+            },
+            {
+                "level": 3,
+                "beneficios": [
+                    "Arquétipo de Patrulheiro (Subclasse)",
+                    "Prontidão Primitiva"
+                ]
+            },
+            {
+                "level": 4,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 5,
+                "beneficios": [
+                    "Ataque Extra"
+                ]
+            },
+            {
+                "level": 6,
+                "beneficios": [
+                    "Melhorias no Inimigo Favorito e Explorador Natural"
+                ]
+            },
+            {
+                "level": 7,
+                "beneficios": [
+                    "Recurso do Arquétipo de Patrulheiro"
+                ]
+            },
+            {
+                "level": 8,
+                "beneficios": [
+                    "ASI ou Talento",
+                    "Caminhar na Terra"
+                ]
+            },
+            {
+                "level": 9,
+                "beneficios": [
+                    "Magias de 3º Círculo"
+                ]
+            },
+            {
+                "level": 10,
+                "beneficios": [
+                    "Esconder-se em Plena Vista",
+                    "Melhoria no Explorador Natural"
+                ]
+            },
+            {
+                "level": 11,
+                "beneficios": [
+                    "Recurso do Arquétipo de Patrulheiro"
+                ]
+            },
+            {
+                "level": 12,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 13,
+                "beneficios": [
+                    "Magias de 4º Círculo"
+                ]
+            },
+            {
+                "level": 14,
+                "beneficios": [
+                    "Desaparecer (Ação bônus para esconder)",
+                    "Melhoria no Inimigo Favorito"
+                ]
+            },
+            {
+                "level": 15,
+                "beneficios": [
+                    "Recurso do Arquétipo de Patrulheiro"
+                ]
+            },
+            {
+                "level": 16,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 17,
+                "beneficios": [
+                    "Magias de 5º Círculo"
+                ]
+            },
+            {
+                "level": 18,
+                "beneficios": [
+                    "Sentidos do Caçador"
+                ]
+            },
+            {
+                "level": 19,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 20,
+                "beneficios": [
+                    "Matador de Inimigos"
+                ]
+            }
+        ]
+    },
+    {
+        "classe": "Ladino (Rogue)",
+        "link": "https://www.dndbeyond.com/classes/rogue",
+        "descricao": "Um mestre da furtividade e perícia que se aproveita das fraquezas dos inimigos.",
+        "atributos_principais": {
+            "primario": "Destreza",
+            "secundario": "Inteligência ou Carisma"
+        },
+        "dados_de_vida": {
+            "dado_por_nivel": "1d8",
+            "hp_no_nivel_1": "8 + modificador de Constituição"
+        },
+        "proficiencias_iniciais": {
+            "armaduras": [
+                "Armaduras leves"
+            ],
+            "armas": [
+                "Armas simples",
+                "Besta de mão",
+                "Espada longa",
+                "Espada curta",
+                "Raquete"
+            ],
+            "testes_de_resistencia": [
+                "Destreza",
+                "Inteligência"
+            ]
+        },
+        "progressao_niveis": [
+            {
+                "level": 1,
+                "beneficios": [
+                    "Especialização (2 perícias)",
+                    "Ataque Furtivo (1d6)",
+                    "Gíria de Ladrão"
+                ]
+            },
+            {
+                "level": 2,
+                "beneficios": [
+                    "Ação Astuta (Correr/Desengajar/Esconder com bônus)"
+                ]
+            },
+            {
+                "level": 3,
+                "beneficios": [
+                    "Arquétipo Ladino (Subclasse)",
+                    "Ataque Furtivo (2d6)"
+                ]
+            },
+            {
+                "level": 4,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 5,
+                "beneficios": [
+                    "Esquiva Sobrenatural (Reduz dano pela metade)",
+                    "Ataque Furtivo (3d6)"
+                ]
+            },
+            {
+                "level": 6,
+                "beneficios": [
+                    "Especialização (Mais 2 perícias)"
+                ]
+            },
+            {
+                "level": 7,
+                "beneficios": [
+                    "Evasão (Dano zero em salvaguardas de Dex)",
+                    "Ataque Furtivo (4d6)"
+                ]
+            },
+            {
+                "level": 8,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 9,
+                "beneficios": [
+                    "Recurso do Arquétipo Ladino",
+                    "Ataque Furtivo (5d6)"
+                ]
+            },
+            {
+                "level": 10,
+                "beneficios": [
+                    "ASI ou Talento Adicional"
+                ]
+            },
+            {
+                "level": 11,
+                "beneficios": [
+                    "Talento Confiável (Rolar menos que 10 vira 10)",
+                    "Ataque Furtivo (6d6)"
+                ]
+            },
+            {
+                "level": 12,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 13,
+                "beneficios": [
+                    "Recurso do Arquétipo Ladino",
+                    "Ataque Furtivo (7d6)"
+                ]
+            },
+            {
+                "level": 14,
+                "beneficios": [
+                    "Sentido Oculto"
+                ]
+            },
+            {
+                "level": 15,
+                "beneficios": [
+                    "Mente Escorregadia (Resistência de Sabedoria)",
+                    "Ataque Furtivo (8d6)"
+                ]
+            },
+            {
+                "level": 16,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 17,
+                "beneficios": [
+                    "Recurso do Arquétipo Ladino",
+                    "Ataque Furtivo (9d6)"
+                ]
+            },
+            {
+                "level": 18,
+                "beneficios": [
+                    "Elusivo (Ninguém ganha vantagem contra você)"
+                ]
+            },
+            {
+                "level": 19,
+                "beneficios": [
+                    "ASI ou Talento",
+                    "Ataque Furtivo (10d6)"
+                ]
+            },
+            {
+                "level": 20,
+                "beneficios": [
+                    "Golpe de Sorte"
+                ]
+            }
+        ]
+    },
+    {
+        "classe": "Feiticeiro (Sorcerer)",
+        "link": "https://www.dndbeyond.com/classes/sorcerer",
+        "descricao": "Um conjurador nato que possui magia latente em seu sangue ou linhagem.",
+        "atributos_principais": {
+            "primario": "Carisma",
+            "secundario": "Constituição"
+        },
+        "dados_de_vida": {
+            "dado_por_nivel": "1d6",
+            "hp_no_nivel_1": "6 + modificador de Constituição"
+        },
+        "proficiencias_iniciais": {
+            "armaduras": [
+                "Nenhuma"
+            ],
+            "armas": [
+                "Adagas",
+                "Dardos",
+                "Fundas",
+                "Bordões",
+                "Bestas leves"
+            ],
+            "testes_de_resistencia": [
+                "Constituição",
+                "Carisma"
+            ]
+        },
+        "progressao_niveis": [
+            {
+                "level": 1,
+                "beneficios": [
+                    "Conjuração",
+                    "Origem Feiticeira (Subclasse)"
+                ]
+            },
+            {
+                "level": 2,
+                "beneficios": [
+                    "Fonte de Magia (Pontos de Feitiçaria)"
+                ]
+            },
+            {
+                "level": 3,
+                "beneficios": [
+                    "Metamagia (2 opções)"
+                ]
+            },
+            {
+                "level": 4,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 5,
+                "beneficios": [
+                    "Magias de 3º Círculo"
+                ]
+            },
+            {
+                "level": 6,
+                "beneficios": [
+                    "Recurso da Origem Feiticeira"
+                ]
+            },
+            {
+                "level": 7,
+                "beneficios": [
+                    "Magias de 4º Círculo"
+                ]
+            },
+            {
+                "level": 8,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 9,
+                "beneficios": [
+                    "Magias de 5º Círculo"
+                ]
+            },
+            {
+                "level": 10,
+                "beneficios": [
+                    "Metamagia (3 opções)"
+                ]
+            },
+            {
+                "level": 11,
+                "beneficios": [
+                    "Magias de 6º Círculo"
+                ]
+            },
+            {
+                "level": 12,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 13,
+                "beneficios": [
+                    "Magias de 7º Círculo"
+                ]
+            },
+            {
+                "level": 14,
+                "beneficios": [
+                    "Recurso da Origem Feiticeira"
+                ]
+            },
+            {
+                "level": 15,
+                "beneficios": [
+                    "Magias de 8º Círculo"
+                ]
+            },
+            {
+                "level": 16,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 17,
+                "beneficios": [
+                    "Metamagia (4 opções)",
+                    "Magias de 9º Círculo"
+                ]
+            },
+            {
+                "level": 18,
+                "beneficios": [
+                    "Recurso da Origem Feiticeira"
+                ]
+            },
+            {
+                "level": 19,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 20,
+                "beneficios": [
+                    "Restauração de Feitiçaria"
+                ]
+            }
+        ]
+    },
+    {
+        "classe": "Bruxo (Warlock)",
+        "link": "https://www.dndbeyond.com/classes/warlock",
+        "descricao": "Um portador de magia derivada de um pacto secreto com uma entidade poderosa.",
+        "atributos_principais": {
+            "primario": "Carisma",
+            "secundario": "Constituição"
+        },
+        "dados_de_vida": {
+            "dado_por_nivel": "1d8",
+            "hp_no_nivel_1": "8 + modificador de Constituição"
+        },
+        "proficiencias_iniciais": {
+            "armaduras": [
+                "Armaduras leves"
+            ],
+            "armas": [
+                "Armas simples"
+            ],
+            "testes_de_resistencia": [
+                "Sabedoria",
+                "Carisma"
+            ]
+        },
+        "progressao_niveis": [
+            {
+                "level": 1,
+                "beneficios": [
+                    "Patrono Transcendente (Subclasse)",
+                    "Magia de Pacto"
+                ]
+            },
+            {
+                "level": 2,
+                "beneficios": [
+                    "Invocações Místicas (2 invocações)"
+                ]
+            },
+            {
+                "level": 3,
+                "beneficios": [
+                    "Dádiva do Pacto (Corrente, Lâmina ou Tomo)"
+                ]
+            },
+            {
+                "level": 4,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 5,
+                "beneficios": [
+                    "Invocações Místicas (3 invocações)"
+                ]
+            },
+            {
+                "level": 6,
+                "beneficios": [
+                    "Recurso do Patrono Transcendente"
+                ]
+            },
+            {
+                "level": 7,
+                "beneficios": [
+                    "Invocações Místicas (4 invocações)"
+                ]
+            },
+            {
+                "level": 8,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 9,
+                "beneficios": [
+                    "Invocações Místicas (5 invocações)"
+                ]
+            },
+            {
+                "level": 10,
+                "beneficios": [
+                    "Recurso do Patrono Transcendente"
+                ]
+            },
+            {
+                "level": 11,
+                "beneficios": [
+                    "Ardil Místico (Magia de 6º nível)",
+                    "3 Espaços de Magia"
+                ]
+            },
+            {
+                "level": 12,
+                "beneficios": [
+                    "ASI ou Talento",
+                    "Invocações Místicas (6 invocações)"
+                ]
+            },
+            {
+                "level": 13,
+                "beneficios": [
+                    "Ardil Místico (Magia de 7º nível)"
+                ]
+            },
+            {
+                "level": 14,
+                "beneficios": [
+                    "Recurso do Patrono Transcendente"
+                ]
+            },
+            {
+                "level": 15,
+                "beneficios": [
+                    "Ardil Místico (Magia de 8º nível)",
+                    "Invocações Místicas (7 invocações)"
+                ]
+            },
+            {
+                "level": 16,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 17,
+                "beneficios": [
+                    "Ardil Místico (Magia de 9º nível)",
+                    "4 Espaços de Magia"
+                ]
+            },
+            {
+                "level": 18,
+                "beneficios": [
+                    "Invocações Místicas (8 invocações)"
+                ]
+            },
+            {
+                "level": 19,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 20,
+                "beneficios": [
+                    "Mestre de Pacto"
+                ]
+            }
+        ]
+    },
+    {
+        "classe": "Mago (Wizard)",
+        "link": "https://www.dndbeyond.com/classes/wizard",
+        "descricao": "Um acadêmico que estuda as leis do multiverso para moldar a própria realidade através de feitiços.",
+        "atributos_principais": {
+            "primario": "Inteligência",
+            "secundario": "Constituição ou Destreza"
+        },
+        "dados_de_vida": {
+            "dado_por_nivel": "1d6",
+            "hp_no_nivel_1": "6 + modificador de Constituição"
+        },
+        "proficiencias_iniciais": {
+            "armaduras": [
+                "Nenhuma"
+            ],
+            "armas": [
+                "Adagas",
+                "Dardos",
+                "Fundas",
+                "Bordões",
+                "Bestas leves"
+            ],
+            "testes_de_resistencia": [
+                "Inteligência",
+                "Sabedoria"
+            ]
+        },
+        "progressao_niveis": [
+            {
+                "level": 1,
+                "beneficios": [
+                    "Conjuração",
+                    "Recuperação Arcana"
+                ]
+            },
+            {
+                "level": 2,
+                "beneficios": [
+                    "Tradição Arcana (Subclasse/Escola de Magia)"
+                ]
+            },
+            {
+                "level": 3,
+                "beneficios": [
+                    "Magias de 2º Círculo"
+                ]
+            },
+            {
+                "level": 4,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 5,
+                "beneficios": [
+                    "Magias de 3º Círculo"
+                ]
+            },
+            {
+                "level": 6,
+                "beneficios": [
+                    "Recurso da Tradição Arcana"
+                ]
+            },
+            {
+                "level": 7,
+                "beneficios": [
+                    "Magias de 4º Círculo"
+                ]
+            },
+            {
+                "level": 8,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 9,
+                "beneficios": [
+                    "Magias de 5º Círculo"
+                ]
+            },
+            {
+                "level": 10,
+                "beneficios": [
+                    "Recurso da Tradição Arcana"
+                ]
+            },
+            {
+                "level": 11,
+                "beneficios": [
+                    "Magias de 6º Círculo"
+                ]
+            },
+            {
+                "level": 12,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 13,
+                "beneficios": [
+                    "Magias de 7º Círculo"
+                ]
+            },
+            {
+                "level": 14,
+                "beneficios": [
+                    "Recurso da Tradição Arcana"
+                ]
+            },
+            {
+                "level": 15,
+                "beneficios": [
+                    "Magias de 8º Círculo"
+                ]
+            },
+            {
+                "level": 16,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 17,
+                "beneficios": [
+                    "Magias de 9º Círculo"
+                ]
+            },
+            {
+                "level": 18,
+                "beneficios": [
+                    "Maestria em Magia (Magias de 1º e 2º círculo viram truques)"
+                ]
+            },
+            {
+                "level": 19,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 20,
+                "beneficios": [
+                    "Assinatura Mística"
+                ]
+            }
+        ]
+    }
+]

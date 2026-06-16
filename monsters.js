@@ -118,22 +118,81 @@ function getTypeMenu() {
 }
 
 /**
- * Lista monstros filtrados
+ * Normaliza e extrai critério, valor e número da página de uma string de callback.
  */
-function listByFilter(criteria, value) {
+function parseCallback(data) {
+    const parts = data.split('_');
+    let page = 1;
+    let valueParts = parts.slice(3);
+    
+    if (valueParts.length > 0) {
+        const lastPart = valueParts[valueParts.length - 1];
+        if (/^p\d+$/.test(lastPart)) {
+            page = parseInt(lastPart.substring(1), 10);
+            valueParts = valueParts.slice(0, -1);
+        }
+    }
+    
+    const criteria = parts[2];
+    const value = valueParts.join('_');
+    
+    return { criteria, value, page };
+}
+
+/**
+ * Lista monstros filtrados com paginação de 10 em 10 itens.
+ */
+function listByFilter(criteria, value, page = 1) {
     const filtered = monsters.filter(m => {
         if (criteria === 'cr' || criteria === 'nd') return m.nd.toString() === value.toString();
         if (criteria === 'type' || criteria === 'tipo') return m.tipo === value;
         return false;
     });
 
-    if (filtered.length === 0) return "Nenhum monstro encontrado.";
+    if (filtered.length === 0) {
+        return {
+            text: "Nenhum monstro encontrado.",
+            markup: { inline_keyboard: [[{ text: "⬅️ Voltar", callback_data: "m_filter_main" }]] }
+        };
+    }
 
-    // Limita a 20 resultados para não bugar o Telegram, caso a lista seja gigante
-    const lista = filtered.slice(0, 20).map(m => `• /monster ${m.nome}`).join('\n');
-    const total = filtered.length > 20 ? `\n\n_...e mais ${filtered.length - 20} monstros._` : "";
+    const itemsPerPage = 10;
+    const totalPages = Math.ceil(filtered.length / itemsPerPage);
+    const currentPage = Math.max(1, Math.min(page, totalPages));
+    
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const paginatedItems = filtered.slice(startIndex, endIndex);
 
-    return `🔎 *Monstros (ND ${value}):*\n\n${lista}${total}`;
+    const lista = paginatedItems.map(m => `• /monster ${m.nome}`).join('\n');
+    
+    const infoText = `🔎 *Monstros (${value}):*\n_Página ${currentPage} de ${totalPages} (Total: ${filtered.length})_\n\n${lista}`;
+
+    // Constrói os botões de navegação
+    const navButtons = [];
+    if (currentPage > 1) {
+        navButtons.push({
+            text: "⬅️ Anterior",
+            callback_data: `m_list_${criteria}_${value}_p${currentPage - 1}`
+        });
+    }
+    if (currentPage < totalPages) {
+        navButtons.push({
+            text: "Próxima ➡️",
+            callback_data: `m_list_${criteria}_${value}_p${currentPage + 1}`
+        });
+    }
+
+    const inline_keyboard = [];
+    if (navButtons.length > 0) {
+        inline_keyboard.push(navButtons);
+    }
+    inline_keyboard.push([{ text: "⬅️ Voltar", callback_data: "m_filter_main" }]);
+
+    return {
+        text: infoText,
+        markup: { inline_keyboard }
+    };
 }
 
 module.exports = {
@@ -142,5 +201,6 @@ module.exports = {
     getFilterButtons,
     getCRMenu,
     getTypeMenu,
+    parseCallback,
     listByFilter
 };

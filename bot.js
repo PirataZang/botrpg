@@ -9,6 +9,7 @@ const npc = require('./npc');
 const weather = require('./weather');
 const loot = require('./loot');
 const races = require('./races');
+const classes = require('./classes');
 
 // DICA: Mantenha o TOKEN no .env por segurança, mas para teste deixamos aqui
 const TOKEN = "8689733515:AAG5REtRFUxysZHLcrCKntIxdslIZ9f7HQM";
@@ -66,6 +67,24 @@ bot.onText(/\/beast(.*)/, (msg, match) => {
     bot.sendMessage(chatId, beasts.formatBeast(beast), { parse_mode: 'Markdown' });
 });
 
+// 🎓 CLASSES
+bot.onText(/\/class(.*)/, (msg, match) => {
+    const chatId = msg.chat.id;
+    const input = match[1].trim();
+
+    if (!input) {
+        return bot.sendMessage(chatId, "🎓 *Guia de Classes:* Escolha uma classe para ver seus detalhes.", {
+            parse_mode: 'Markdown',
+            reply_markup: classes.getClassesMenu()
+        });
+    }
+
+    const classData = classes.getClass(input);
+    if (!classData) return bot.sendMessage(chatId, '❌ Classe não encontrada');
+
+    bot.sendMessage(chatId, classes.formatClass(classData), { parse_mode: 'Markdown' });
+});
+
 // 🎭 NPC
 bot.onText(/\/npc/, (msg) => {
     const chatId = msg.chat.id;
@@ -120,6 +139,8 @@ const helpText = `
 • \`/clima\` - Gera um clima aleatório.
 • \`/loot\` - Gera opções de loot para o mestre.
 • \`/racas\` - Consulta os guias de raças (bônus e ônus).
+• \`/class\` - Consulta o guia de classes (dados de vida, proficiências, progressão).
+• \`/class <nome>\` - Busca uma classe específica (ex: \`/class mago\` ou \`/class wizard\`).
 
 ━━━━━━━━━━━━━━━━━━━━
 _Dica: Comandos sem nome abrem filtros!_`;
@@ -129,7 +150,8 @@ const menuMarkup = {
         [{ text: "🎲 Rolar Dado", callback_data: "cmd_roll" }, { text: "🎒 Item Aleatório", callback_data: "cmd_item" }],
         [{ text: "👹 Monstros", callback_data: "cmd_monster" }, { text: "🐾 Feras", callback_data: "cmd_beast" }],
         [{ text: "🎭 Gerar NPC", callback_data: "cmd_npc" }, { text: "☁️ Clima", callback_data: "cmd_weather" }],
-        [{ text: "👑 Loot do Mestre", callback_data: "cmd_loot" }, { text: "🧬 Guia de Raças", callback_data: "cmd_races" }]
+        [{ text: "👑 Loot do Mestre", callback_data: "cmd_loot" }],
+        [{ text: "🧬 Guia de Raças", callback_data: "cmd_races" }, { text: "🎓 Guia de Classes", callback_data: "cmd_classes" }]
     ]
 };
 
@@ -233,6 +255,18 @@ bot.on('callback_query', (query) => {
         const raceKey = data.replace("race_", "");
         text = races.getRaceInfo(raceKey);
         markup = { inline_keyboard: [[{ text: "⬅️ Voltar às Raças", callback_data: "cmd_races" }]] };
+    } else if (data === "cmd_classes") {
+        text = "🎓 *Guia de Classes:* Escolha uma classe para ver seus detalhes.";
+        markup = classes.getClassesMenu();
+    } else if (data.startsWith("class_")) {
+        const classIndex = data.replace("class_", "");
+        const c = classes.getClassByIndex(classIndex);
+        if (c) {
+            text = classes.formatClass(c);
+        } else {
+            text = "❌ Classe não encontrada.";
+        }
+        markup = { inline_keyboard: [[{ text: "⬅️ Voltar às Classes", callback_data: "cmd_classes" }]] };
     } else if (data === "cmd_monster") {
         text = "👹 *Bestiário de Monstros*: Escolha um filtro ou digite o nome.";
         markup = { inline_keyboard: [...monsters.getFilterButtons().inline_keyboard, [{ text: "🏠 Menu Principal", callback_data: "cmd_menu" }]] };
@@ -250,9 +284,10 @@ bot.on('callback_query', (query) => {
         text = "Selecione o tipo de monstro:";
         markup = monsters.getTypeMenu();
     } else if (data.startsWith("m_list_")) {
-        const parts = data.split('_');
-        text = monsters.listByFilter(parts[2], parts[3]);
-        markup = { inline_keyboard: [[{ text: "⬅️ Voltar", callback_data: "m_filter_main" }]] };
+        const parsed = monsters.parseCallback(data);
+        const result = monsters.listByFilter(parsed.criteria, parsed.value, parsed.page);
+        text = result.text;
+        markup = result.markup;
     }
 
     // --- Lógica de Feras (Beasts) ---
@@ -265,9 +300,10 @@ bot.on('callback_query', (query) => {
         text = "Selecione o tipo de criatura:";
         markup = beasts.getTipoMenu();
     } else if (data.startsWith("list_")) {
-        const parts = data.split('_');
-        text = beasts.listByFilter(parts[1], parts[2]);
-        markup = { inline_keyboard: [[{ text: "⬅️ Voltar", callback_data: "filter_main" }]] };
+        const parsed = beasts.parseCallback(data);
+        const result = beasts.listByFilter(parsed.criteria, parsed.value, parsed.page);
+        text = result.text;
+        markup = result.markup;
     }
 
     // Edita a mensagem para evitar spam

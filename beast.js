@@ -156,9 +156,31 @@ function getTipoMenu() {
 }
 
 /**
- * Filtra a lista e retorna os nomes
+ * Normaliza e extrai critério, valor e número da página de uma string de callback.
  */
-function listByFilter(criteria, value) {
+function parseCallback(data) {
+    const parts = data.split('_');
+    let page = 1;
+    let valueParts = parts.slice(2);
+    
+    if (valueParts.length > 0) {
+        const lastPart = valueParts[valueParts.length - 1];
+        if (/^p\d+$/.test(lastPart)) {
+            page = parseInt(lastPart.substring(1), 10);
+            valueParts = valueParts.slice(0, -1);
+        }
+    }
+    
+    const criteria = parts[1];
+    const value = valueParts.join('_');
+    
+    return { criteria, value, page };
+}
+
+/**
+ * Filtra a lista, realiza a paginação de 10 em 10 itens e retorna a mensagem e botões.
+ */
+function listByFilter(criteria, value, page = 1) {
     const filtered = beasts.filter(b => {
         if (criteria === 'nd') return b.nd.toString() === value.toString();
         if (criteria === 'tipo') {
@@ -167,10 +189,50 @@ function listByFilter(criteria, value) {
         return false;
     });
 
-    if (filtered.length === 0) return "Nenhuma criatura encontrada.";
+    if (filtered.length === 0) {
+        return {
+            text: "Nenhuma criatura encontrada.",
+            markup: { inline_keyboard: [[{ text: "⬅️ Voltar", callback_data: "filter_main" }]] }
+        };
+    }
 
-    const lista = filtered.map(b => `• /beast ${b.nome}`).join('\n');
-    return `🔎 *Resultados (${value}):*\n\n${lista}`;
+    const itemsPerPage = 10;
+    const totalPages = Math.ceil(filtered.length / itemsPerPage);
+    const currentPage = Math.max(1, Math.min(page, totalPages));
+    
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const paginatedItems = filtered.slice(startIndex, endIndex);
+
+    const lista = paginatedItems.map(b => `• /beast ${b.nome}`).join('\n');
+    
+    const infoText = `🔎 *Resultados (${value}):*\n_Página ${currentPage} de ${totalPages} (Total: ${filtered.length})_\n\n${lista}`;
+
+    // Constrói os botões de navegação
+    const navButtons = [];
+    if (currentPage > 1) {
+        navButtons.push({
+            text: "⬅️ Anterior",
+            callback_data: `list_${criteria}_${value}_p${currentPage - 1}`
+        });
+    }
+    if (currentPage < totalPages) {
+        navButtons.push({
+            text: "Próxima ➡️",
+            callback_data: `list_${criteria}_${value}_p${currentPage + 1}`
+        });
+    }
+
+    const inline_keyboard = [];
+    if (navButtons.length > 0) {
+        inline_keyboard.push(navButtons);
+    }
+    inline_keyboard.push([{ text: "⬅️ Voltar", callback_data: "filter_main" }]);
+
+    return {
+        text: infoText,
+        markup: { inline_keyboard }
+    };
 }
 
 module.exports = {
@@ -179,5 +241,6 @@ module.exports = {
     getFilterButtons,
     getNDMenu,
     getTipoMenu,
+    parseCallback,
     listByFilter
 };
