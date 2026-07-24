@@ -28,3 +28,5 @@ docker-compose.override.yml
 # arquivos temporários
 *.tmp
 *.log
+# MentorCLI
+.mentor/
