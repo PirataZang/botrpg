@@ -73,7 +73,7 @@ bot.onText(/\/class(.*)/, (msg, match) => {
     const input = match[1].trim();
 
     if (!input) {
-        return bot.sendMessage(chatId, "🎓 *Guia de Classes:* Escolha uma classe para ver seus detalhes.", {
+        return bot.sendMessage(chatId, "🎓 *Guia de Classes:* Escolha uma classe para ver seus detalhes e habilidades.", {
             parse_mode: 'Markdown',
             reply_markup: classes.getClassesMenu()
         });
