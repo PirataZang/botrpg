@@ -36,6 +36,7 @@ function getClassesMenu() {
         const row = classes.slice(i, i + 3).map((c, index) => {
             const globalIndex = i + index;
             const emojis = {
+                "barbaro": "🪓"
                 "bardo": "🎵",
                 "clerigo": "✨",
                 "druida": "🍃",
