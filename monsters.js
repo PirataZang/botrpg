@@ -30,6 +30,13 @@ function getMonster(name) {
 }
 
 /**
+ * Busca monstro pelo índice no JSON
+ */
+function getMonsterByIndex(index) {
+    return monsters[index] || null;
+}
+
+/**
  * Formata a ficha do monstro com Link e Modificadores
  */
 function formatMonster(monster) {
@@ -140,14 +147,50 @@ function parseCallback(data) {
 }
 
 /**
- * Lista monstros filtrados com paginação de 10 em 10 itens.
+ * Extrai índice do monstro e contexto da lista de um callback m_show_.
+ * Formato: m_show_<index>_<criteria>_<value>_p<page>
+ */
+function parseShowCallback(data) {
+    const parts = data.split('_');
+    const index = parseInt(parts[2], 10);
+    const criteria = parts[3];
+    let page = 1;
+    let valueParts = parts.slice(4);
+
+    if (valueParts.length > 0) {
+        const lastPart = valueParts[valueParts.length - 1];
+        if (/^p\d+$/.test(lastPart)) {
+            page = parseInt(lastPart.substring(1), 10);
+            valueParts = valueParts.slice(0, -1);
+        }
+    }
+
+    return { index, criteria, value: valueParts.join('_'), page };
+}
+
+/**
+ * Botão para voltar da ficha do monstro para a lista filtrada.
+ */
+function getBackToListButton(criteria, value, page) {
+    return {
+        inline_keyboard: [[{
+            text: "⬅️ Voltar à lista",
+            callback_data: `m_list_${criteria}_${value}_p${page}`
+        }]]
+    };
+}
+
+/**
+ * Lista monstros filtrados como botões com paginação de 10 em 10 itens.
  */
 function listByFilter(criteria, value, page = 1) {
-    const filtered = monsters.filter(m => {
-        if (criteria === 'cr' || criteria === 'nd') return m.nd.toString() === value.toString();
-        if (criteria === 'type' || criteria === 'tipo') return m.tipo === value;
-        return false;
-    });
+    const filtered = monsters
+        .map((monster, index) => ({ monster, index }))
+        .filter(({ monster: m }) => {
+            if (criteria === 'cr' || criteria === 'nd') return m.nd.toString() === value.toString();
+            if (criteria === 'type' || criteria === 'tipo') return m.tipo === value;
+            return false;
+        });
 
     if (filtered.length === 0) {
         return {
@@ -163,10 +206,14 @@ function listByFilter(criteria, value, page = 1) {
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
     const paginatedItems = filtered.slice(startIndex, endIndex);
-
-    const lista = paginatedItems.map(m => `• /monster ${m.nome}`).join('\n');
     
-    const infoText = `🔎 *Monstros (${value}):*\n_Página ${currentPage} de ${totalPages} (Total: ${filtered.length})_\n\n${lista}`;
+    const infoText = `🔎 *Monstros (${value}):*\n_Página ${currentPage} de ${totalPages} (Total: ${filtered.length})_\n\nToque em um monstro para ver a ficha:`;
+
+    // Botões dos monstros (1 por linha), ex: "Carniçal (Ghoul)"
+    const monsterButtons = paginatedItems.map(({ monster: m, index }) => ([{
+        text: m.nome,
+        callback_data: `m_show_${index}_${criteria}_${value}_p${currentPage}`
+    }]));
 
     // Constrói os botões de navegação
     const navButtons = [];
@@ -183,7 +230,7 @@ function listByFilter(criteria, value, page = 1) {
         });
     }
 
-    const inline_keyboard = [];
+    const inline_keyboard = [...monsterButtons];
     if (navButtons.length > 0) {
         inline_keyboard.push(navButtons);
     }
@@ -197,10 +244,13 @@ function listByFilter(criteria, value, page = 1) {
 
 module.exports = {
     getMonster,
+    getMonsterByIndex,
     formatMonster,
     getFilterButtons,
     getCRMenu,
     getTypeMenu,
     parseCallback,
+    parseShowCallback,
+    getBackToListButton,
     listByFilter
 };

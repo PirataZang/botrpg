@@ -288,6 +288,16 @@ bot.on('callback_query', (query) => {
         const result = monsters.listByFilter(parsed.criteria, parsed.value, parsed.page);
         text = result.text;
         markup = result.markup;
+    } else if (data.startsWith("m_show_")) {
+        const parsed = monsters.parseShowCallback(data);
+        const monster = monsters.getMonsterByIndex(parsed.index);
+        if (monster) {
+            text = monsters.formatMonster(monster);
+            markup = monsters.getBackToListButton(parsed.criteria, parsed.value, parsed.page);
+        } else {
+            text = "❌ Monstro não encontrado.";
+            markup = { inline_keyboard: [[{ text: "⬅️ Voltar", callback_data: "m_filter_main" }]] };
+        }
     }
 
     // --- Lógica de Feras (Beasts) ---

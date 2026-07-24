@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "autoCreated": [
+    "context7",
+    "mcp-grep",
+    "playwright",
+    "filesystem",
+    "chrome-devtools"
+  ]
+}

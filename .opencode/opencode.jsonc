@@ -1,0 +1,47 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "tools": {
+    "context7_*": false,
+    "mcp-grep_*": false,
+    "playwright_*": false,
+    "filesystem_*": false,
+    "chrome-devtools_*": false
+  },
+  "agent": {
+    "context7": {
+      "description": "context7 operations",
+      "mode": "subagent",
+      "tools": {
+        "context7_*": true
+      }
+    },
+    "mcp-grep": {
+      "description": "mcp-grep operations",
+      "mode": "subagent",
+      "tools": {
+        "mcp-grep_*": true
+      }
+    },
+    "playwright": {
+      "description": "playwright operations",
+      "mode": "subagent",
+      "tools": {
+        "playwright_*": true
+      }
+    },
+    "filesystem": {
+      "description": "filesystem operations",
+      "mode": "subagent",
+      "tools": {
+        "filesystem_*": true
+      }
+    },
+    "chrome-devtools": {
+      "description": "chrome-devtools operations",
+      "mode": "subagent",
+      "tools": {
+        "chrome-devtools_*": true
+      }
+    }
+  }
+}
