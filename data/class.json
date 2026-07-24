@@ -1,5 +1,161 @@
 [
     {
+        "classe": "Bárbaro",
+        "link": "https://www.dndbeyond.com/classes/barbarian",
+        "descricao": "Um guerreiro feroz que canaliza sua fúria em combate para suportar grandes danos e desferir ataques devastadores.",
+        "atributos_principais": {
+            "primario": "Força",
+            "secundario": "Constituição"
+        },
+        "dados_de_vida": {
+            "dado_por_nivel": "1d12",
+            "hp_no_nivel_1": "12 + modificador de Constituição"
+        },
+        "proficiencias_iniciais": {
+            "armaduras": [
+                "Armaduras leves",
+                "Armaduras médias",
+                "Escudos"
+            ],
+            "armas": [
+                "Armas simples",
+                "Armas marciais"
+            ],
+            "testes_de_resistencia": [
+                "Força",
+                "Constituição"
+            ]
+        },
+        "progressao_niveis": [
+            {
+                "level": 1,
+                "beneficios": [
+                    "Fúria",
+                    "Defesa Sem Armadura"
+                ]
+            },
+            {
+                "level": 2,
+                "beneficios": [
+                    "Ataque Descuidado",
+                    "Sentido de Perigo"
+                ]
+            },
+            {
+                "level": 3,
+                "beneficios": [
+                    "Caminho Primitivo (Subclasse)",
+                    "Fúria (3 usos)"
+                ]
+            },
+            {
+                "level": 4,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 5,
+                "beneficios": [
+                    "Ataque Extra",
+                    "Movimento Rápido"
+                ]
+            },
+            {
+                "level": 6,
+                "beneficios": [
+                    "Recurso do Caminho Primitivo"
+                ]
+            },
+            {
+                "level": 7,
+                "beneficios": [
+                    "Instinto Feral"
+                ]
+            },
+            {
+                "level": 8,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 9,
+                "beneficios": [
+                    "Acerto Crítico Brutal (1 dado)",
+                    "Fúria (4 usos)"
+                ]
+            },
+            {
+                "level": 10,
+                "beneficios": [
+                    "Recurso do Caminho Primitivo"
+                ]
+            },
+            {
+                "level": 11,
+                "beneficios": [
+                    "Fúria Implacável"
+                ]
+            },
+            {
+                "level": 12,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 13,
+                "beneficios": [
+                    "Acerto Crítico Brutal (2 dados)"
+                ]
+            },
+            {
+                "level": 14,
+                "beneficios": [
+                    "Recurso do Caminho Primitivo"
+                ]
+            },
+            {
+                "level": 15,
+                "beneficios": [
+                    "Fúria Persistente"
+                ]
+            },
+            {
+                "level": 16,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 17,
+                "beneficios": [
+                    "Acerto Crítico Brutal (3 dados)",
+                    "Fúria (6 usos)"
+                ]
+            },
+            {
+                "level": 18,
+                "beneficios": [
+                    "Força Indomável"
+                ]
+            },
+            {
+                "level": 19,
+                "beneficios": [
+                    "ASI ou Talento"
+                ]
+            },
+            {
+                "level": 20,
+                "beneficios": [
+                    "Campeão Primitivo"
+                ]
+            }
+        ]
+    },
+    {
         "classe": "Bardo",
         "link": "https://www.dndbeyond.com/classes/bard",
         "descricao": "Um mestre da música e da magia que inspira seus aliados e manipula seus inimigos.",
