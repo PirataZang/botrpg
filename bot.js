@@ -172,6 +172,11 @@ bot.on('callback_query', (query) => {
     const messageId = query.message.message_id;
     const data = query.data;
 
+    // Botão informativo (indicador de página) — apenas fecha o "carregando" no cliente
+    if (data === "noop") {
+        return bot.answerCallbackQuery(query.id);
+    }
+
     let text = "Escolha uma opção:";
     let markup = {};
 
@@ -314,6 +319,16 @@ bot.on('callback_query', (query) => {
         const result = beasts.listByFilter(parsed.criteria, parsed.value, parsed.page);
         text = result.text;
         markup = result.markup;
+    } else if (data.startsWith("b_show_")) {
+        const parsed = beasts.parseShowCallback(data);
+        const beast = beasts.getBeastByIndex(parsed.index);
+        if (beast) {
+            text = beasts.formatBeast(beast);
+            markup = beasts.getBackToListButton(parsed.criteria, parsed.value, parsed.page);
+        } else {
+            text = "❌ Fera não encontrada.";
+            markup = { inline_keyboard: [[{ text: "⬅️ Voltar", callback_data: "filter_main" }]] };
+        }
     }
 
     // Edita a mensagem para evitar spam

@@ -22,6 +22,94 @@ function evalND(nd) {
 }
 
 /**
+ * Emojis por monstro (busca por palavra-chave no nome).
+ * A ordem importa: chaves mais específicas primeiro.
+ */
+const monsterEmojis = [
+    { keys: ['hobgoblin'], emoji: '⚔️' },
+    { keys: ['goblin'], emoji: '🗡️' },
+    { keys: ['esqueleto'], emoji: '💀' },
+    { keys: ['labareda', 'flameskull'], emoji: '☠️' },
+    { keys: ['zumbi'], emoji: '🧟' },
+    { keys: ['carnical', 'ghoul', 'ghast'], emoji: '🦴' },
+    { keys: ['kobold'], emoji: '🐲' },
+    { keys: ['cultista'], emoji: '🕯️' },
+    { keys: ['gnoll'], emoji: '🐕' },
+    { keys: ['orc'], emoji: '🪓' },
+    { keys: ['espreitador', 'mastiff'], emoji: '🐺' },
+    { keys: ['sombra'], emoji: '🌑' },
+    { keys: ['bugbear'], emoji: '🐻' },
+    { keys: ['espantalho'], emoji: '🎃' },
+    { keys: ['harpia', 'harpy'], emoji: '🦅' },
+    { keys: ['grimlock'], emoji: '🙈' },
+    { keys: ['troglodita'], emoji: '🦎' },
+    { keys: ['dretch'], emoji: '😈' },
+    { keys: ['diabrete', 'imp'], emoji: '👿' },
+    { keys: ['quasit'], emoji: '👺' },
+    { keys: ['cao infernal', 'hell hound'], emoji: '🔥' },
+    { keys: ['mephit do fogo', 'magma mephit'], emoji: '🔥' },
+    { keys: ['mephit'], emoji: '💨' },
+    { keys: ['kuo-toa'], emoji: '🐟' },
+    { keys: ['sahuagin'], emoji: '🦈' },
+    { keys: ['fungoide', 'esporo', 'fungus', 'spore'], emoji: '🍄' },
+    { keys: ['armadura animada', 'animated armor'], emoji: '🛡️' },
+    { keys: ['espada voadora', 'flying sword'], emoji: '⚔️' },
+    { keys: ['homunculo'], emoji: '🧪' },
+    { keys: ['fervoroso', 'firenewt'], emoji: '🦎' },
+    { keys: ['magma', 'magmin'], emoji: '🌋' },
+    { keys: ['gelatina', 'cube'], emoji: '🧊' },
+    { keys: ['geleia', 'ooze'], emoji: '🍮' },
+    { keys: ['scion', 'choker'], emoji: '🖐️' },
+    { keys: ['mimico', 'mimic'], emoji: '📦' },
+    { keys: ['ogre', 'ogrillon'], emoji: '👹' },
+    { keys: ['gargula', 'gargoyle'], emoji: '🗿' },
+    { keys: ['notico', 'nothic'], emoji: '👁️' },
+    { keys: ['aniquilador', 'rust'], emoji: '🪲' },
+    { keys: ['pegaso', 'peryton'], emoji: '🦌' },
+    { keys: ['fatuo', 'wisp'], emoji: '✨' },
+    { keys: ['anao de gelo', 'azer'], emoji: '❄️' },
+    { keys: ['anis', 'hag'], emoji: '🧙‍♀️' },
+    { keys: ['tumba', 'poltergeist'], emoji: '👻' },
+    { keys: ['lobisomem', 'werewolf'], emoji: '🐺' },
+    { keys: ['mumia', 'mummy'], emoji: '⚰️' },
+    { keys: ['mantipora', 'manticore'], emoji: '🦁' },
+    { keys: ['minotauro', 'minotaur'], emoji: '🐂' },
+    { keys: ['doppelganger'], emoji: '🪞' },
+    { keys: ['anconideo', 'hook'], emoji: '🪝' },
+    { keys: ['cavaleiro', 'knight'], emoji: '🛡️' },
+    { keys: ['veterano', 'veteran'], emoji: '🎖️' },
+    { keys: ['gladiador', 'gladiator'], emoji: '🤺' },
+    { keys: ['espectro da noite', 'wraith'], emoji: '🌫️' },
+    { keys: ['espectro', 'specter'], emoji: '🫥' },
+    { keys: ['fantasma', 'ghost'], emoji: '👻' },
+    { keys: ['banshee'], emoji: '😱' },
+    { keys: ['ettin'], emoji: '👥' },
+    { keys: ['sucubo', 'incubo', 'succubus', 'incubus'], emoji: '💋' },
+    { keys: ['elmo', 'helmed'], emoji: '🪖' },
+    { keys: ['yuan-ti'], emoji: '🐍' },
+    { keys: ['lamia'], emoji: '🧜‍♀️' },
+    { keys: ['gorgone', 'chuul'], emoji: '🦞' },
+    { keys: ['barghest'], emoji: '🐺' },
+    { keys: ['monticulo', 'shambling'], emoji: '🌿' },
+    { keys: ['golem'], emoji: '🗿' },
+    { keys: ['vrock'], emoji: '🦅' },
+    { keys: ['barbezu', 'bearded devil'], emoji: '😈' },
+    { keys: ['slaad'], emoji: '🐸' },
+    { keys: ['troll'], emoji: '🧌' },
+    { keys: ['unicornio', 'unicorn'], emoji: '🦄' },
+    { keys: ['vampir'], emoji: '🧛' }
+];
+
+/**
+ * Retorna o emoji que representa o monstro.
+ */
+function getMonsterEmoji(name) {
+    const n = normalizeStr(name);
+    const found = monsterEmojis.find(e => e.keys.some(k => n.includes(k)));
+    return found ? found.emoji : '👹';
+}
+
+/**
  * Busca monstro por nome (suporta busca parcial)
  */
 function getMonster(name) {
@@ -47,7 +135,7 @@ function formatMonster(monster) {
     return `
 📖 *FICHA DE MONSTRO*
 ━━━━━━━━━━━━━━━━━━━━
-👹 *${monster.nome.toUpperCase()}*
+${getMonsterEmoji(monster.nome)} *${monster.nome.toUpperCase()}*
 ━━━━━━━━━━━━━━━━━━━━
 ⭐ *ND:* ${monster.nd} | 🧬 *Tipo:* ${monster.tipo}
 ⚔️ *Qtd. Ataques:* ${monster.ataques}
@@ -209,32 +297,38 @@ function listByFilter(criteria, value, page = 1) {
     
     const infoText = `🔎 *Monstros (${value}):*\n_Página ${currentPage} de ${totalPages} (Total: ${filtered.length})_\n\nToque em um monstro para ver a ficha:`;
 
-    // Botões dos monstros (1 por linha), ex: "Carniçal (Ghoul)"
+    // Botões dos monstros (1 por linha), ex: "🦴 Carniçal (Ghoul)"
     const monsterButtons = paginatedItems.map(({ monster: m, index }) => ([{
-        text: m.nome,
+        text: `${getMonsterEmoji(m.nome)} ${m.nome}`,
         callback_data: `m_show_${index}_${criteria}_${value}_p${currentPage}`
     }]));
 
-    // Constrói os botões de navegação
+    // Botões de navegação destacados com indicador de página
     const navButtons = [];
-    if (currentPage > 1) {
+    if (totalPages > 1) {
+        if (currentPage > 1) {
+            navButtons.push({
+                text: "⏪ ANTERIOR",
+                callback_data: `m_list_${criteria}_${value}_p${currentPage - 1}`
+            });
+        }
         navButtons.push({
-            text: "⬅️ Anterior",
-            callback_data: `m_list_${criteria}_${value}_p${currentPage - 1}`
+            text: `📄 ${currentPage}/${totalPages}`,
+            callback_data: "noop"
         });
-    }
-    if (currentPage < totalPages) {
-        navButtons.push({
-            text: "Próxima ➡️",
-            callback_data: `m_list_${criteria}_${value}_p${currentPage + 1}`
-        });
+        if (currentPage < totalPages) {
+            navButtons.push({
+                text: "PRÓXIMA ⏩",
+                callback_data: `m_list_${criteria}_${value}_p${currentPage + 1}`
+            });
+        }
     }
 
     const inline_keyboard = [...monsterButtons];
     if (navButtons.length > 0) {
         inline_keyboard.push(navButtons);
     }
-    inline_keyboard.push([{ text: "⬅️ Voltar", callback_data: "m_filter_main" }]);
+    inline_keyboard.push([{ text: "🔙 Voltar aos Filtros", callback_data: "m_filter_main" }]);
 
     return {
         text: infoText,
