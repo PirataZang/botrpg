@@ -11,30 +11,53 @@ const loot = require('./loot');
 const races = require('./races');
 const classes = require('./classes');
 
-// DICA: Mantenha o TOKEN no .env por segurança, mas para teste deixamos aqui
-const TOKEN = "8689733515:AAG5REtRFUxysZHLcrCKntIxdslIZ9f7HQM";
-const bot = new TelegramBot(TOKEN, { polling: true });
+// Token vem do ambiente (.env localmente, env_file no docker-compose)
+try { process.loadEnvFile(); } catch { /* sem .env: usa as variáveis do ambiente */ }
 
-console.log('🤖 Bot rodando...');
+const TOKEN = process.env.TELEGRAM_TOKEN;
+if (!TOKEN) {
+    console.error('❌ TELEGRAM_TOKEN não definido. Crie um .env (veja .env.example).');
+    process.exit(1);
+}
+
+// O Telegram memoriza o último allowed_updates enviado; sem "callback_query" aqui os botões param de funcionar
+const bot = new TelegramBot(TOKEN, {
+    polling: { params: { allowed_updates: JSON.stringify(['message', 'callback_query']) } }
+});
+
+bot.on('polling_error', (err) => console.error('Erro de polling:', err.code, err.message));
+bot.on('error', (err) => console.error('Erro do bot:', err.message));
+
+bot.getMe()
+    .then((me) => console.log(`🤖 Bot @${me.username} rodando...`))
+    .catch((err) => console.error('❌ Falha ao conectar no Telegram:', err.message));
+
+// Para o polling ao encerrar o container, evitando conflito (409) no próximo start
+for (const signal of ['SIGINT', 'SIGTERM']) {
+    process.on(signal, () => bot.stopPolling().finally(() => process.exit(0)));
+}
+
+// Casa "/cmd", "/cmd@NomeDoBot" e "/cmd argumentos" — captura só os argumentos
+const command = (name) => new RegExp(`^\\/${name}(?:@\\w+)?(?:\\s+(.+))?$`, 'is');
 
 // 🎲 DADOS
-bot.onText(/\/roll (.+)/, (msg, match) => {
+bot.onText(command('roll'), (msg, match) => {
     const chatId = msg.chat.id;
-    const args = match[1].split(' ');
+    const args = (match[1] || '').trim().split(/\s+/).filter(Boolean);
     dice.handle(bot, chatId, args);
 });
 
 // 🎒 ITEM ALEATÓRIO
-bot.onText(/\/item/, (msg) => {
+bot.onText(command('item'), (msg) => {
     const chatId = msg.chat.id;
     const item = itens.getRandomItem();
     bot.sendMessage(chatId, `🎒 Item encontrado:\n\n*${item.nome}*\n${item.descricao}`, { parse_mode: 'Markdown' });
 });
 
 // 👹 MONSTRO (Ajustado para aceitar filtros)
-bot.onText(/\/monster(.*)/, (msg, match) => {
+bot.onText(command('monster'), (msg, match) => {
     const chatId = msg.chat.id;
-    const input = match[1].trim();
+    const input = (match[1] || '').trim();
 
     if (!input) {
         return bot.sendMessage(chatId, "👹 *Bestiário de Monstros*: Escolha um filtro ou digite o nome.", {
@@ -50,9 +73,9 @@ bot.onText(/\/monster(.*)/, (msg, match) => {
 });
 
 // 🐻 BESTAS
-bot.onText(/\/beast(.*)/, (msg, match) => {
+bot.onText(command('beast'), (msg, match) => {
     const chatId = msg.chat.id;
-    const input = match[1].trim();
+    const input = (match[1] || '').trim();
 
     if (!input) {
         return bot.sendMessage(chatId, "📖 *Bestiário de Feras*: Escolha um filtro ou digite o nome.", {
@@ -68,9 +91,9 @@ bot.onText(/\/beast(.*)/, (msg, match) => {
 });
 
 // 🎓 CLASSES
-bot.onText(/\/class(.*)/, (msg, match) => {
+bot.onText(command('class'), (msg, match) => {
     const chatId = msg.chat.id;
-    const input = match[1].trim();
+    const input = (match[1] || '').trim();
 
     if (!input) {
         return bot.sendMessage(chatId, "🎓 *Guia de Classes:* Escolha uma classe para ver seus detalhes e habilidades.", {
@@ -86,26 +109,26 @@ bot.onText(/\/class(.*)/, (msg, match) => {
 });
 
 // 🎭 NPC
-bot.onText(/\/npc/, (msg) => {
+bot.onText(command('npc'), (msg) => {
     const chatId = msg.chat.id;
     bot.sendMessage(chatId, npc.generateNPC(), { parse_mode: 'Markdown' });
 });
 
 // ☁️ CLIMA
-bot.onText(/\/clima/, (msg) => {
+bot.onText(command('clima'), (msg) => {
     const chatId = msg.chat.id;
     const clima = weather.getRandomWeather();
     bot.sendMessage(chatId, `☁️ *Clima Sorteado:*\n\n*${clima.nome}*\n${clima.descricao}`, { parse_mode: 'Markdown' });
 });
 
 // 👑 LOOT DO MESTRE
-bot.onText(/\/loot/, (msg) => {
+bot.onText(command('loot'), (msg) => {
     const chatId = msg.chat.id;
     bot.sendMessage(chatId, loot.generateLoot(), { parse_mode: 'Markdown' });
 });
 
 // 🧬 RAÇAS
-bot.onText(/\/racas/, (msg) => {
+bot.onText(command('racas'), (msg) => {
     const chatId = msg.chat.id;
     bot.sendMessage(chatId, "🧬 *Guia de Raças:* Escolha uma raça para ver seus detalhes.", {
         parse_mode: 'Markdown',
@@ -114,7 +137,7 @@ bot.onText(/\/racas/, (msg) => {
 });
 
 // 📚 HELP
-bot.onText(/\/help/, (msg) => {
+bot.onText(command('(?:help|start|menu)'), (msg) => {
     sendMenu(msg.chat.id);
 });
 
@@ -159,23 +182,29 @@ function sendMenu(chatId) {
     bot.sendMessage(chatId, helpText, { parse_mode: 'Markdown', reply_markup: menuMarkup });
 }
 
-// Captura qualquer mensagem que não seja comando
+const knownCommands = ['roll', 'item', 'monster', 'beast', 'class', 'npc', 'clima', 'loot', 'racas', 'help', 'start', 'menu'];
+
+// Em conversa privada, texto livre ou comando desconhecido abre o menu
 bot.on('message', (msg) => {
-    if (msg.text && !msg.text.startsWith('/')) {
+    if (!msg.text || msg.chat.type !== 'private') return;
+
+    const cmd = msg.text.match(/^\/(\w+)/);
+    if (!cmd || !knownCommands.includes(cmd[1].toLowerCase())) {
         sendMenu(msg.chat.id);
     }
 });
 
 // 🔘 CALLBACK QUERY (Tratamento de botões)
 bot.on('callback_query', (query) => {
+    // Fecha o "carregando" do botão no cliente
+    bot.answerCallbackQuery(query.id).catch(() => {});
+
+    // Mensagens muito antigas chegam sem `message`; não há o que editar
+    if (!query.message || !query.data || query.data === "noop") return;
+
     const chatId = query.message.chat.id;
     const messageId = query.message.message_id;
     const data = query.data;
-
-    // Botão informativo (indicador de página) — apenas fecha o "carregando" no cliente
-    if (data === "noop") {
-        return bot.answerCallbackQuery(query.id);
-    }
 
     let text = "Escolha uma opção:";
     let markup = {};
@@ -281,6 +310,7 @@ bot.on('callback_query', (query) => {
     }
     // --- Lógica de Monstros (Prefix m_) ---
     else if (data === "m_filter_main") {
+        text = "👹 *Bestiário de Monstros*: Escolha um filtro ou digite o nome.";
         markup = { inline_keyboard: [...monsters.getFilterButtons().inline_keyboard, [{ text: "🏠 Menu Principal", callback_data: "cmd_menu" }]] };
     } else if (data === "m_filter_cr_menu") {
         text = "Selecione o ND (Challenge Rating):";
@@ -307,6 +337,7 @@ bot.on('callback_query', (query) => {
 
     // --- Lógica de Feras (Beasts) ---
     else if (data === "filter_main") {
+        text = "📖 *Bestiário de Feras*: Escolha um filtro ou digite o nome.";
         markup = { inline_keyboard: [...beasts.getFilterButtons().inline_keyboard, [{ text: "🏠 Menu Principal", callback_data: "cmd_menu" }]] };
     } else if (data === "filter_nd_menu") {
         text = "Selecione o Nível de Desafio (ND):";
@@ -338,5 +369,7 @@ bot.on('callback_query', (query) => {
         parse_mode: 'Markdown',
         reply_markup: markup,
         disable_web_page_preview: true
-    }).catch(err => console.log("Erro ao editar: ", err.message));
+    }).catch(err => {
+        if (!err.message.includes('message is not modified')) console.error("Erro ao editar:", err.message);
+    });
 });

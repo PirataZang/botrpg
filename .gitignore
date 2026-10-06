@@ -30,3 +30,5 @@ docker-compose.override.yml
 *.log
 # MentorCLI
 .mentor/
+!.env.example
+*Zone.Identifier

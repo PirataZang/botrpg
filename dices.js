@@ -38,7 +38,7 @@ function handle(bot, chatId, args) {
     const mode = args[1]?.toLowerCase(); // adv ou dis
 
     if (!input) {
-        return bot.sendMessage(chatId, '❌ Usa assim: /dices 2d6 ou /dices d20');
+        return bot.sendMessage(chatId, '❌ Usa assim: /roll 2d6 ou /roll d20 (adv/dis opcional)');
     }
 
     const result = rollDice(input);

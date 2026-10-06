@@ -12,7 +12,9 @@
   "type": "commonjs",
   "dependencies": {
     "fantasy-name-generator": "^2.0.0",
-    "mentor-cli": "github:PirataZang/mentor-cli",
     "node-telegram-bot-api": "^0.67.0"
+  },
+  "devDependencies": {
+    "mentor-cli": "github:PirataZang/mentor-cli"
   }
 }

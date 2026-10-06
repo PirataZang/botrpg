@@ -1,16 +1,14 @@
-FROM node:latest
+# Versão fixa (LTS): "latest" muda de major sozinha e pode quebrar o bot num rebuild
+FROM node:24-slim
 
-# Define o diretório de trabalho dentro do container
 WORKDIR /usr/src/app
 
-# Copia os arquivos de dependências (package.json e package-lock.json)
+# Instala só as dependências de produção, exatamente como no package-lock.json
 COPY package*.json ./
+RUN npm ci --omit=dev
 
-# Instala as dependências, incluindo a biblioteca do Telegram (node-telegram-bot-api) já no package.json
-RUN npm install
-
-# Copia o resto dos arquivos do projeto
 COPY . .
 
-# Comando para rodar o bot
+USER node
+
 CMD ["node", "bot.js"]
