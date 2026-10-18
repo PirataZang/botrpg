@@ -10,6 +10,8 @@ const weather = require('./weather');
 const loot = require('./loot');
 const races = require('./races');
 const classes = require('./classes');
+const dungeon = require('./dungeon');
+const spells = require('./spells');
 
 // Token vem do ambiente (.env localmente, env_file no docker-compose)
 try { process.loadEnvFile(); } catch { /* sem .env: usa as variáveis do ambiente */ }
@@ -31,6 +33,22 @@ bot.on('error', (err) => console.error('Erro do bot:', err.message));
 bot.getMe()
     .then((me) => console.log(`🤖 Bot @${me.username} rodando...`))
     .catch((err) => console.error('❌ Falha ao conectar no Telegram:', err.message));
+
+// Menu de comandos do Telegram (botão "Menu"): comandos com argumento já abrem o input pronto (ex: /beast <nome>).
+bot.setMyCommands([
+    { command: 'menu', description: '📚 Abrir o menu principal' },
+    { command: 'roll', description: '🎲 Rolar dados (ex: /roll 2d6+3)' },
+    { command: 'monster', description: '👹 Monstros — filtros ou /monster <nome>' },
+    { command: 'beast', description: '🐾 Feras — filtros ou /beast <nome>' },
+    { command: 'spell', description: '📜 Feitiços — filtros ou /spell <nome>' },
+    { command: 'class', description: '🎓 Classes — menu ou /class <nome>' },
+    { command: 'racas', description: '🧬 Guia de raças' },
+    { command: 'dungeon', description: '🏰 Gerar uma dungeon' },
+    { command: 'npc', description: '🎭 Gerar um NPC' },
+    { command: 'item', description: '🎒 Item aleatório' },
+    { command: 'loot', description: '👑 Loot do mestre' },
+    { command: 'clima', description: '☁️ Clima aleatório' },
+]).catch((err) => console.error('Falha ao registrar comandos:', err.message));
 
 // Para o polling ao encerrar o container, evitando conflito (409) no próximo start
 for (const signal of ['SIGINT', 'SIGTERM']) {
@@ -108,6 +126,31 @@ bot.onText(command('class'), (msg, match) => {
     bot.sendMessage(chatId, classes.formatClass(classData), { parse_mode: 'Markdown' });
 });
 
+// 📜 FEITIÇOS
+bot.onText(command('(?:spell|feitico|feiticos|magia|magias)'), (msg, match) => {
+    const chatId = msg.chat.id;
+    const input = (match[1] || '').trim();
+
+    if (!input) {
+        return bot.sendMessage(chatId, "📜 *Grimório:* escolha a classe (ou busque pelo nome com `/spell <nome>`).", {
+            parse_mode: 'Markdown',
+            reply_markup: spells.getClassMenu()
+        });
+    }
+
+    const spell = spells.getSpell(input);
+    if (!spell) return bot.sendMessage(chatId, '❌ Feitiço não encontrado');
+    bot.sendMessage(chatId, spells.formatSpell(spell), { parse_mode: 'Markdown', disable_web_page_preview: true });
+});
+
+// 🏰 GERADOR DE DUNGEON
+bot.onText(command('dungeon'), (msg) => {
+    bot.sendMessage(msg.chat.id, "🏰 *Gerador de Dungeon:* escolha o nível dos jogadores.", {
+        parse_mode: 'Markdown',
+        reply_markup: dungeon.getLevelMenu()
+    });
+});
+
 // 🎭 NPC
 bot.onText(command('npc'), (msg) => {
     const chatId = msg.chat.id;
@@ -161,6 +204,9 @@ const helpText = `
 • \`/npc\` - Gera um NPC completo.
 • \`/clima\` - Gera um clima aleatório.
 • \`/loot\` - Gera opções de loot para o mestre.
+• \`/dungeon\` - Gera uma dungeon (ambiente, quest, monstros, baú d12 e desafios).
+• \`/spell\` - Grimório: filtra por classe e nível.
+• \`/spell <nome>\` - Busca um feitiço específico (ex: \`/spell fireball\`).
 • \`/racas\` - Consulta os guias de raças (bônus e ônus).
 • \`/class\` - Consulta o guia de classes (dados de vida, proficiências, progressão).
 • \`/class <nome>\` - Busca uma classe específica (ex: \`/class mago\` ou \`/class wizard\`).
@@ -173,8 +219,9 @@ const menuMarkup = {
         [{ text: "🎲 Rolar Dado", callback_data: "cmd_roll" }, { text: "🎒 Item Aleatório", callback_data: "cmd_item" }],
         [{ text: "👹 Monstros", callback_data: "cmd_monster" }, { text: "🐾 Feras", callback_data: "cmd_beast" }],
         [{ text: "🎭 Gerar NPC", callback_data: "cmd_npc" }, { text: "☁️ Clima", callback_data: "cmd_weather" }],
-        [{ text: "👑 Loot do Mestre", callback_data: "cmd_loot" }],
-        [{ text: "🧬 Guia de Raças", callback_data: "cmd_races" }, { text: "🎓 Guia de Classes", callback_data: "cmd_classes" }]
+        [{ text: "👑 Loot do Mestre", callback_data: "cmd_loot" }, { text: "🏰 Gerar Dungeon", callback_data: "cmd_dungeon" }],
+        [{ text: "🧬 Guia de Raças", callback_data: "cmd_races" }, { text: "🎓 Guia de Classes", callback_data: "cmd_classes" }],
+        [{ text: "📜 Feitiços", callback_data: "cmd_spells" }]
     ]
 };
 
@@ -182,7 +229,7 @@ function sendMenu(chatId) {
     bot.sendMessage(chatId, helpText, { parse_mode: 'Markdown', reply_markup: menuMarkup });
 }
 
-const knownCommands = ['roll', 'item', 'monster', 'beast', 'class', 'npc', 'clima', 'loot', 'racas', 'help', 'start', 'menu'];
+const knownCommands = ['roll', 'item', 'monster', 'beast', 'class', 'npc', 'clima', 'loot', 'racas', 'dungeon', 'spell', 'feitico', 'feiticos', 'magia', 'magias', 'help', 'start', 'menu'];
 
 // Em conversa privada, texto livre ou comando desconhecido abre o menu
 bot.on('message', (msg) => {
@@ -282,6 +329,36 @@ bot.on('callback_query', (query) => {
     } else if (data === "cmd_loot") {
         text = loot.generateLoot();
         markup = { inline_keyboard: [[{ text: "⬅️ Voltar ao Menu", callback_data: "cmd_menu" }]] };
+    } else if (data === "cmd_spells" || data === "sp_class") {
+        text = "📜 *Grimório:* escolha a classe (ou busque pelo nome com `/spell <nome>`).";
+        markup = spells.getClassMenu();
+    } else if (data.startsWith("sp_c_")) {
+        const classKey = data.replace("sp_c_", "");
+        text = "📜 *Selecione o nível do feitiço:*";
+        markup = spells.getLevelMenu(classKey);
+    } else if (data.startsWith("sp_show_")) {
+        const parsed = spells.parseShow(data);
+        const spell = spells.getSpellByIndex(parsed.index);
+        if (spell) {
+            text = spells.formatSpell(spell);
+            markup = spells.getBackToListButton(parsed.classKey, parsed.level, parsed.page);
+        } else {
+            text = "❌ Feitiço não encontrado.";
+            markup = { inline_keyboard: [[{ text: "⬅️ Voltar", callback_data: "sp_class" }]] };
+        }
+    } else if (data.startsWith("sp_l_")) {
+        const parsed = spells.parseList(data);
+        const result = spells.listByFilter(parsed.classKey, parsed.level, parsed.page);
+        text = result.text;
+        markup = result.markup;
+    } else if (data === "cmd_dungeon") {
+        text = "🏰 *Gerador de Dungeon:* escolha o nível dos jogadores.";
+        markup = dungeon.getLevelMenu();
+    } else if (data.startsWith("dgn_lvl_")) {
+        const level = parseInt(data.replace("dgn_lvl_", ""), 10);
+        const result = dungeon.generate(level);
+        text = result.text;
+        markup = result.markup;
     } else if (data === "cmd_races") {
         text = "🧬 *Guia de Raças:* Escolha uma raça para ver seus detalhes.";
         markup = races.getRacesMenu();
