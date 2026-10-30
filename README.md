@@ -1,64 +1,94 @@
 <div align="center">
 
-# ⚔️ 🐉 Lester RPG Bot 🐉 ⚔️
-
-### *Sua taverna de bolso. Dados, monstros, magias e masmorras, direto no Telegram.*
-
-<br>
-
-**📱 Escaneie para entrar na taverna**
-
-<a href="https://t.me/RPGSilverBot">
-  <img src="docs/qr-rpgsilverbot.png" alt="QR Code para abrir o @RPGSilverBot no Telegram" width="300">
-</a>
+<img src="docs/banner.svg" alt="Lester RPG Bot: sua taverna de bolso, D&D 5e direto no Telegram" width="100%">
 
 <br>
 
 [![Abrir no Telegram](https://img.shields.io/badge/Telegram-@RPGSilverBot-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/RPGSilverBot)
+![D&D 5e](https://img.shields.io/badge/D%26D-5e-C62828?style=for-the-badge&logo=dungeonsanddragons&logoColor=white)
+![PT-BR](https://img.shields.io/badge/idioma-PT--BR-F9A825?style=for-the-badge)
 
-![D&D 5e](https://img.shields.io/badge/D%26D-5e-C62828?style=flat-square&logo=dungeonsanddragons&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-24-5FA04E?style=flat-square&logo=nodedotjs&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-pronto-2496ED?style=flat-square&logo=docker&logoColor=white)
-![Idioma](https://img.shields.io/badge/idioma-PT--BR-F9A825?style=flat-square)
+<br>
+
+### 🏮 A taverna está aberta. Escaneie e entre. 🏮
+
+<a href="https://t.me/RPGSilverBot">
+  <img src="docs/qr-rpgsilverbot.svg" alt="QR Code para abrir o @RPGSilverBot no Telegram" width="340">
+</a>
+
+<sub>Ou toque aqui: <b><a href="https://t.me/RPGSilverBot">t.me/RPGSilverBot</a></b></sub>
+
+</div>
+
+<br>
+
+## 📜 O Pergaminho
+
+O **Lester RPG Bot** é o ajudante de mesa que todo Mestre (e todo jogador) queria ter. Em vez de folhear livros no meio da sessão, você pede e ele responde, **em português** e na hora, dentro do Telegram. Sem site, sem app, sem cadastro.
+
+> *"Roll for initiative!"* 🎲
+
+<div align="center">
+
+<img src="docs/demo.gif" alt="Demonstração: o bot rolando 2d6+3 e mostrando a ficha de um goblin" width="420">
+
+<sub>As respostas acima são as reais do bot.</sub>
 
 </div>
 
 ---
 
-## 📜 O que é?
+## 🗺️ Comece sua jornada em 30 segundos
 
-O **Lester RPG Bot** é o ajudante de mesa que todo Mestre (e todo jogador) queria ter. Em vez de folhear livros no meio da sessão, você pede e ele responde, **em português** e na hora, dentro do próprio Telegram. Sem site, sem app, sem cadastro.
-
-> *"Roll for initiative!"* 🎲
-
-## 🚀 Como começar (30 segundos)
-
-1. **Escaneie o QR Code** lá em cima, ou toque em **[t.me/RPGSilverBot](https://t.me/RPGSilverBot)**.
-2. Aperte **Iniciar** (`/start`).
-3. Pronto! O menu com botões abre e você já pode jogar. 🍻
+| | |
+|:-:|---|
+| **1** | 📱 **Escaneie o QR Code** acima, ou toque em **[t.me/RPGSilverBot](https://t.me/RPGSilverBot)** |
+| **2** | ▶️ Aperte **Iniciar** (`/start`) |
+| **3** | 🍻 Use os botões do menu e comece a jogar |
 
 > 💡 Também funciona em **grupos**: adicione o bot à mesa do seu grupo e use os comandos com `/comando`.
 
 ---
 
-## 🧙 Funcionalidades
+## 🧾 Ficha do Personagem
 
-| | Comando | O que faz |
-|---|---|---|
-| 🎲 | `/roll 2d6+3` | Rola qualquer combinação de dados, com **vantagem** e **desvantagem** (`/roll d20 adv`) |
-| 👹 | `/monster` · `/monster goblin` | Bestiário com **77 monstros** em PT-BR: ND, defesa, PV, atributos e ataques. Filtre por ND ou tipo |
-| 🐾 | `/beast` · `/beast lobo` | **32 feras** e animais para druidas, rangers e encontros na estrada |
-| 📜 | `/spell` · `/spell fireball` | Grimório com **319 feitiços** traduzidos, filtrados por classe e nível. Aceita nome em PT ou EN |
-| 🎓 | `/class` · `/class mago` | Guia das **12 classes**: dados de vida, proficiências e progressão por nível |
-| 🧬 | `/racas` | Guia das **9 raças**, com bônus e ônus de cada uma |
-| 🏰 | `/dungeon` | Gera uma **dungeon completa** pelo nível do grupo: ambiente, missão, monstros, baú d12 e obstáculos com CD |
-| 🎭 | `/npc` | NPC pronto para a mesa: nome, raça, classe e atributos |
-| 👑 | `/loot` | Tesouro para o Mestre: moedas, item comum e item mágico |
-| 🎒 | `/item` | Item aleatório para o bolso (ou para a bagunça) do aventureiro |
-| ☁️ | `/clima` | Clima sorteado, com efeitos de jogo |
-| 🧭 | `/menu` | Menu com botões para tudo isso |
+<div align="center">
 
-### ✨ Alguns exemplos
+| 👹 Monstros | 🐾 Feras | 📜 Feitiços | 🎓 Classes | 🧬 Raças |
+|:-:|:-:|:-:|:-:|:-:|
+| **77** | **32** | **319** | **12** | **9** |
+
+*tudo em PT-BR, baseado no SRD 5e*
+
+</div>
+
+---
+
+## ⚔️ Arsenal do Aventureiro
+
+### 🎲 Para todos na mesa
+
+| Comando | O que faz |
+|---|---|
+| `/roll 2d6+3` | Rola qualquer combinação de dados, com **vantagem** e **desvantagem** (`/roll d20 adv`) |
+| `/spell` · `/spell fireball` | **Grimório** com 319 feitiços, filtrados por classe e nível. Aceita o nome em PT ou EN |
+| `/class` · `/class mago` | Guia das **12 classes**: dados de vida, proficiências e progressão por nível |
+| `/racas` | Guia das **9 raças**, com bônus e ônus de cada uma |
+| `/item` | Um item aleatório para o bolso (ou para a bagunça) do aventureiro |
+
+### 🧙 Para o Mestre
+
+| Comando | O que faz |
+|---|---|
+| `/monster` · `/monster goblin` | **Bestiário** com ND, defesa, PV, atributos e ataques. Filtre por ND ou tipo |
+| `/beast` · `/beast lobo` | **Feras** e animais para druidas, rangers e encontros na estrada |
+| `/dungeon` | **Dungeon completa** pelo nível do grupo: ambiente, missão, monstros, baú d12 e obstáculos com CD |
+| `/npc` | NPC pronto para a mesa: nome, raça, classe e atributos |
+| `/loot` | Tesouro: moedas, item comum e item mágico |
+| `/clima` | Clima sorteado, com efeitos de jogo |
+| `/menu` | Abre o menu com botões para tudo isso |
+
+### ✨ Exemplos
 
 ```text
 /roll 3d8+2          → rola 3d8 e soma 2
@@ -68,13 +98,7 @@ O **Lester RPG Bot** é o ajudante de mesa que todo Mestre (e todo jogador) quer
 /class paladino      → o guia da classe
 ```
 
----
-
-## 🧰 Para o Mestre
-
-- ⚡ **Improviso sem pânico**: jogadores foram para onde você não planejou? `/dungeon`, `/npc` e `/loot` salvam a noite.
-- 📏 **Medidas em metros**: alcances e deslocamentos já convertidos.
-- 🔘 **Menus com botões**: quase tudo se resolve com toques, sem decorar comando.
+> 📏 Alcances e deslocamentos já vêm convertidos para **metros**. 🔘 Quase tudo se resolve com **botões**, sem decorar comando.
 
 ---
 
@@ -119,6 +143,6 @@ O bot público já está no ar, então **não precisa instalar nada** para jogar
 
 Feito com ☕ e muitos críticos por **[PirataZang](https://github.com/PirataZang)**
 
-*Conteúdo de regras baseado no SRD 5e.*
+<sub>Conteúdo de regras baseado no SRD 5e.</sub>
 
 </div>
