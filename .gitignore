@@ -32,3 +32,4 @@ docker-compose.override.yml
 .mentor/
 !.env.example
 *Zone.Identifier
+.devscope/
